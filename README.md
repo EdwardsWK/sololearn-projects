@@ -1,4 +1,4 @@
-# SoloLearn_Projects
+# SoloLearn Projects
 
 Welcome to my SoloLearn repository!
 
