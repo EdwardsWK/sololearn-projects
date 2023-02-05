@@ -1,9 +1,364 @@
 ===== PYTHON FOR BEGINNERS (https://www.sololearn.com/certificates/CT-EITFW4KN) =====
 _____ Basic Concepts _____
 
-	Goal!
-	You need to calculate the points earned by a soccer team.
-	The team won 18 games and ended 7 games as a draw.
-	A win brings 3 points, while a draw brings 1.
-	Create a program to calculate and output the total points earned by the team.
-		print(3*18+7)
+    Goal!
+    You need to calculate the points earned by a soccer team.
+    The team won 18 games and ended 7 games as a draw.
+    A win brings 3 points, while a draw brings 1.
+    Create a program to calculate and output the total points earned by the team.
+        print(3*18+7)
+
+    Do The Math
+    Write a program that will multiply the sum of 5 and 6 by 57.3 and output the result.
+    Remember that you can use parentheses to specify the order of operations.
+        print((5 + 6) * 57.3)
+
+    Exponentiation
+    Write code to output 4 raised to the 5th power.
+    Output the result using the print() statement.
+        print(4**5)
+
+    Flight Time (PROJECT)
+    You need to calculate the flight time of an upcoming trip. You are flying from LA to Sydney, covering a distance of 7425 miles, the plane flies at an average speed of 550 miles an hour.
+    Calculate and output the total flight time in hours.
+    Hint
+    The result should be a float.
+    Use the print statement to output the result.
+        distance = 7425
+        speed = 550
+        flight_time = float(distance / speed)
+        print(flight_time)
+
+_____ Strings _____
+
+    Output The String
+    You are given a code that should output a string with quotes.
+    However, it contains errors.
+    Task
+    Fix the given code to generate the expected output.
+    Remember, you need to escape the quotes in the strings to fix the errors in the code.
+        print('I\'m learning Python. It\'s easy.')
+
+    New Lines
+    Write a program to output the letters A B C D, each on a separate line.
+    You can use 3 quotes to add the new lines.
+        print("""A
+        B
+        C
+        D""")
+
+    Hey There
+    You’re given a task to write the word "hi" 42 times. Boring, right?
+    Write a program to do it for you.
+    Create a program to output "hi" 42 times, without any separators, on the same line.
+    Remember, you can multiply strings by numbers.
+        print("hi"*42)
+
+    Leaderboard (PROJECT)
+    You need to make a program for a leaderboard.
+    The program needs to output the numbers 1 to 9, each on a separate line, followed by a dot:
+    1.
+    2.
+    3.
+    ...
+    You can use the \n newline character to create line breaks, or, alternatively, create the desired output using three double quotes """.
+        print("""1.
+        2.
+        3.
+        4.
+        5.
+        6.
+        7.
+        8.
+        9.""")
+
+_____ Variables _____
+
+    Value of The Variable
+    The provided code stores the value 7 in a variable, and outputs it.
+    Change the code to output the value of the variable raised to the power of 3.
+        num = 7
+        num = num ** 3
+        print(num)
+
+    Desired Output
+    Somebody wrote code to take a string input and output it, repeated 10 times.
+    However, the code results in an error.
+    Fix the code to output the desired output.
+        x = input()
+        print(x*10)
+
+    Convert The Input
+    Write a program to take x and y as input and output the string x, repeated y times.
+    Sample Input
+    hi
+    3
+    Sample Output
+    hihihi
+    Remember to convert the input to the required data type.
+        x = input()
+        y = int(input())
+        print(x * y)
+
+    Tip Calculator (PROJECT)
+    When you go out to eat, you always tip 20% of the bill amount. But who’s got the time to calculate the right tip amount every time? Not you that’s for sure! You’re making a program to calculate tips and save some time.
+    Your program needs to take the bill amount as input and output the tip as a float.
+    Sample Input
+    50
+    Sample Output
+    10.0
+    Explanation: 20% of 50 is 10.
+    To calculate 20% of a given amount, you can multiply the number by 20 and divide it by 100: 50*20/100 = 10.0
+        bill = int(input())
+        bill = bill*.2
+        print(bill)
+
+_____ Control Flow _____
+
+    At The Boiling Point
+    Write a program that checks if the water is boiling.
+    Take the integer temperature in Celsius as input and output "Boiling" if the temperature is above or equal to 100.
+    Sample Input
+    105
+    Sample Output
+    Boiling
+    Do not output anything if the water is not boiling.
+        temp = int(input())
+        if temp > 99:
+            print("Boiling")
+
+    Face Control
+    Write a program to control entrance to a club.
+    Only people who are 18 or older are allowed to enter the club.
+    Your program takes the age of the person who tries to enter, and outputs "Allowed" if they are allowed to enter the club, and "Sorry" if they are younger than the allowed age.
+    Sample Input
+    24
+    Sample Output
+    Allowed
+        age = int(input())
+        if age > 17:
+         print("Allowed")
+        else:
+         print("Sorry")
+
+    Age Groups
+    Given the age of a person as an input, output their age group.
+    Here are the age groups you need to handle:
+    Child: 0 to 11
+    Teen: 12 to 17
+    Adult: 18 to 64
+    Sample Input
+    42
+    Sample Output
+    Adult
+    Remember, you can use the Boolean and operator to combine conditions, like x>0 and x<20.
+        age = int(input())
+        if age <= 11:
+            print("Child")
+        elif age <= 17:
+            print("Teen")
+        else:
+            print("Adult")
+
+    Call It Even
+    You are given a program that outputs all the numbers from 0 to 10.
+    Change the code to make it output only the even numbers.
+    Any integer that can be divided exactly by 2 is an even number.
+        x = 0
+        while x<=10:
+            if x%2==0:
+                print(x)
+            x+=1
+
+    Ticket Prices
+    You are making a ticketing system.
+    The price of a single ticket is $100.
+    For children under 3 years of age, the ticket is free.
+    Your program needs to take the ages of 5 passengers as input and output the total price for their tickets.
+    Sample Input
+    18
+    24
+    2
+    5
+    42
+    Sample Output
+    400
+    There is one child under 3 among the passengers, so the total price of 5 tickets is $400.
+        total = 0
+        #your code goes here
+        i = 1
+        while i <= 5:
+            age = int(input())
+            if age > 3:
+                total = total + 100
+            i += 1
+        print(total)
+
+    BMI Calculator (PROJECT)
+    Tracking your BMI is a useful way of checking if you’re maintaining a healthy weight. It’s calculated using a person's weight and height, using this formula: weight / height²
+    The resulting number indicates one of the following categories:
+    Underweight = less than 18.5
+    Normal = more or equal to 18.5 and less than 25
+    Overweight = more or equal to 25 and less than 30
+    Obesity = 30 or more
+    Let’s make finding out your BMI quicker and easier, by creating a program that takes a person's weight and height as input and outputs the corresponding BMI category.
+    Sample Input
+    85
+    1.9
+    Sample Output
+    Normal
+    Weight is in kg, height is in meters.
+    Note, that height is a float.
+        weight = int(input())
+        height = float(input())
+        bmi = weight / height**2
+        if bmi < 18.5:
+            print("Underweight")
+        elif bmi < 25:
+            print("Normal")
+        elif bmi < 30:
+            print("Overweight")
+        else:
+            print("Obesity")
+
+_____ Lists _____
+
+    Strings
+    Write a program that takes an input string and outputs the 3rd character of the string.
+        word = input()
+        print(word[2])
+
+    Bingo
+    Given a list of numbers, output "bingo" if it contains the input number.
+    Do not output anything if the number is not found.
+        x = [42, 8, 7, 1, 0, 124, 8897, 555, 3, 67, 99]
+        num = int(input())
+        if num in x:
+            print("bingo")
+
+    List of Numbers
+    for loops allow you to easily iterate through lists.
+    Given a list of numbers, calculate their sum using a for loop.
+    Output the sum after the loop.
+        x = [42, 8, 7, 1, 0, 124, 8897, 555, 3, 67, 99]
+        total = 0
+        for z in x:
+            total += z
+        print(total)
+
+    Date Picker
+    You are creating a date picker for a website and need to output all of the years in a given period.
+    Write a program that takes two integers as input and outputs the range of numbers between the two inputs as a list.
+    The output sequence should start with the first input number and end with the second input number, without including it.
+    Sample Input
+    2005
+    2011
+    Sample Output
+    [2005, 2006, 2007, 2008, 2009, 2010]
+    Convert a range object to a list and output it.
+        a = int(input())
+        b = int(input())
+        dates = list(range(a,b))
+        print(dates)
+
+    The Last Character
+    Write a program that takes a string as input and outputs the last character of that string.
+    Remember, you can use negative indices to index lists.
+        word =input()
+        print(word[-1])
+
+    Sum of Consecutive Numbers (PROJECT)
+    No one likes homework, but your math teacher has given you an assignment to find the sum of the first N numbers.
+    Let’s save some time by creating a program to do the calculation for you!
+    Take a number N as input and output the sum of all numbers from 1 to N (including N).
+    Sample Input
+    100
+    Sample Output
+    5050
+    Explanation: The sum of all numbers from 1 to 100 is equal to 5050.
+    You can iterate over a range and calculate the sum of all numbers in the range.
+    Remember, range(a, b) does not include b, thus you need to use b+1 to include b in the range.
+        n = int(input())
+        total = 0
+        #your code goes here
+        for x in range(n+1):
+            total = total + x
+        print(total)
+
+_____ Functions _____
+
+    Queue Management
+    You are working on a queue management program.
+    The queue is represented by a list.
+    Write a program to take an input, add it to the end of the queue, and output the resulting list.
+    The append() method can be used to add new items to the list.
+        queue = ['John', 'Amy', 'Bob', 'Adam']
+        queue.append(input())
+        print(queue)
+
+    Broken Keyboard
+    Your friend sent you a message, however his keyboard is broken and types a # instead of a space.
+    Replace all of the # characters in the given input with spaces and output the result.
+    You can use the replace() function of a string to replace one substring with another.
+        msg = input()
+        print(msg.replace('#', ' '))
+
+    Welcome, Sololearner!
+    We have a function that outputs "Welcome, user" as it is called. We want to make it more personalized, so redesign the given function so that it will take the name of the user as input and output the welcome message with it.
+    Sample Input
+    Tommy
+    Sample Output
+    Welcome, Tommy
+    Don't forget to indent the statement in the function.
+        def welcome():
+            name = input()
+            print("Welcome, " + name)
+        welcome()
+
+    Call The Function
+    The given program defines a function printBill(), which takes one string argument and outputs formatted text.
+    You need to take the user input and call the function by passing the input as its argument.
+    You need to only call the function, as it will take care of the output.
+        def printBill(text):
+            print("======")
+            print(text)
+            print("======")
+        printBill(input())
+
+    Area of a Rectangle
+    We need to calculate the area of a given rectangle.
+    Your program needs to take the width and length as input and output the area of the rectangle.
+    Complete the area function, which takes the length and width as arguments, to calculate and return the area.
+    Then call the function for the given inputs.
+    Sample Input 1
+    7
+    4
+    Sample Output 1
+    28
+    To find the area of a rectangle, multiply the length by the width.
+        def area(x, y):
+            #your code goes here
+            return x * y
+        w = int(input())
+        h = int(input())
+        #call the function
+        print(area(w, h))
+
+    Search Engine (PROJECT)
+    You’re working on a search engine. Watch your back Google!
+    The given code takes a text and a word as input and passes them to a function called search().
+    The search() function should return "Word found" if the word is present in the text, or "Word not found", if it’s not.
+    Sample Input
+    "This is awesome"
+    "awesome"
+    Sample Output
+    Word found
+    Define the search() function, so that the given code works as expected.
+        text = input()
+        word = input()
+        def search(text, word):
+            if(word in text):
+                return "Word found"
+            else:
+                return "Word not found"
+        print(search(text, word))

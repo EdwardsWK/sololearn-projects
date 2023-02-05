@@ -1,2502 +1,2147 @@
 ===== PYTHON FOR BEGINNERS (https://www.sololearn.com/certificates/CT-EITFW4KN) =====
-_____ Basic Concepts _____
-		
-	Do The Math
-	Write a program that will multiply the sum of 5 and 6 by 57.3 and output the result.
-	Remember that you can use parentheses to specify the order of operations.
-		print((5 + 6) * 57.3)
-		
-	Exponentiation
-	Write code to output 4 raised to the 5th power.
-	Output the result using the print() statement.
-	
-	Flight Time (PROJECT)
-	You need to calculate the flight time of an upcoming trip. You are flying from LA to Sydney, covering a distance of 7425 miles, the plane flies at an average speed of 550 miles an hour.
-	Calculate and output the total flight time in hours.
-	Hint
-	The result should be a float.
-	Use the print statement to output the result.
-		distance = 7425
-		speed = 550
-		flight_time = float(distance / speed)
-		print(flight_time)
-		
-_____ Strings _____
-	
-	Output The STring
-	You are given a code that should output a string with quotes.
-	However, it contains errors.
-	Task
-	Fix the given code to generate the expected output.
-	Remember, you need to escape the quotes in the strings to fix the errors in the code.
-		print('I\'m learning Python. It\'s easy.')
-	
-	New Lines
-	Write a program to output the letters A B C D, each on a separate line.
-	You can use 3 quotes to add the new lines.
-		print("""A
-		B
-		C
-		D""")
-		
-	Hey There
-	You’re given a task to write the word "hi" 42 times. Boring, right?
-	Write a program to do it for you.
-	Create a program to output "hi" 42 times, without any separators, on the same line.
-	Remember, you can multiply strings by numbers.
-		print("hi"*42)
-	
-	Leaderboard (PROJECT)
-	You need to make a program for a leaderboard.
-	The program needs to output the numbers 1 to 9, each on a separate line, followed by a dot:
-	1.
-	2.
-	3.
-	...
-	You can use the \n newline character to create line breaks, or, alternatively, create the desired output using three double quotes """.
-		print("""1.
-		2.
-		3.
-		4.
-		5.
-		6.
-		7.
-		8.
-		9.""")
-		
-_____ Variables _____
-	
-	Value of The Variable
-	The provided code stores the value 7 in a variable, and outputs it.
-	Change the code to output the value of the variable raised to the power of 3.
-		num = 7
-		num = num ** 3
-		print(num)
-	
-	Desired Output
-	Somebody wrote code to take a string input and output it, repeated 10 times.
-	However, the code results in an error.
-	Fix the code to output the desired output.
-		x = input()
-		print(x*10)
-		
-	Convert The Input
-	Write a program to take x and y as input and output the string x, repeated y times.
-	Sample Input
-	hi
-	3
-	Sample Output
-	hihihi
-	Remember to convert the input to the required data type.
-		x = input()
-		y = int(input())
-		print(x * y)
-	
-	Tip Calculator (PROJECT)
-	When you go out to eat, you always tip 20% of the bill amount. But who’s got the time to calculate the right tip amount every time? Not you that’s for sure! You’re making a program to calculate tips and save some time.
-	Your program needs to take the bill amount as input and output the tip as a float.
-	Sample Input
-	50
-	Sample Output
-	10.0
-	Explanation: 20% of 50 is 10.
-	To calculate 20% of a given amount, you can multiply the number by 20 and divide it by 100: 50*20/100 = 10.0
-		bill = int(input())
-		bill = bill*.2
-		print(bill)
-		
-_____ Control Flow _____
-
-	At The Boiling Point
-	Write a program that checks if the water is boiling.
-	Take the integer temperature in Celsius as input and output "Boiling" if the temperature is above or equal to 100.
-	Sample Input
-	105
-	Sample Output
-	Boiling
-	Do not output anything if the water is not boiling.
-	
-	Face Control
-	Write a program to control entrance to a club.
-	Only people who are 18 or older are allowed to enter the club.
-	Your program takes the age of the person who tries to enter, and outputs "Allowed" if they are allowed to enter the club, and "Sorry" if they are younger than the allowed age.
-	Sample Input
-	24
-	Sample Output
-	Allowed
-		age = int(input())
-		if age > 17:
-		 print("Allowed")
-		else:
-		 print("Sorry")
-	
-	Age Groups
-	Given the age of a person as an input, output their age group.
-	Here are the age groups you need to handle:
-	Child: 0 to 11
-	Teen: 12 to 17
-	Adult: 18 to 64
-	Sample Input
-	42
-	Sample Output
-	Adult
-	Remember, you can use the Boolean and operator to combine conditions, like x>0 and x<20.
-		age = int(input())
-		if age <= 11:
-			print("Child")
-		elif age <= 17:
-			print("Teen")
-		else:
-			print("Adult")
-	
-	Call It Even
-	You are given a program that outputs all the numbers from 0 to 10.
-	Change the code to make it output only the even numbers.
-	Any integer that can be divided exactly by 2 is an even number.
-		x = 0
-		while x<=10:
-			if x%2==0:
-				print(x)
-			x+=1
-	
-	Ticket Prices
-	You are making a ticketing system.
-	The price of a single ticket is $100.
-	For children under 3 years of age, the ticket is free.
-	Your program needs to take the ages of 5 passengers as input and output the total price for their tickets.
-	Sample Input
-	18
-	24
-	2
-	5
-	42
-	Sample Output
-	400
-	There is one child under 3 among the passengers, so the total price of 5 tickets is $400.
-		total = 0
-		#your code goes here
-		i = 1
-		while i <= 5:
-			age = int(input())
-			if age > 3:
-				total = total + 100
-			i += 1
-		print(total)
-	
-	BMI Calculator (PROJECT)
-	Tracking your BMI is a useful way of checking if you’re maintaining a healthy weight. It’s calculated using a person's weight and height, using this formula: weight / height²
-	The resulting number indicates one of the following categories:
-	Underweight = less than 18.5
-	Normal = more or equal to 18.5 and less than 25
-	Overweight = more or equal to 25 and less than 30
-	Obesity = 30 or more
-	Let’s make finding out your BMI quicker and easier, by creating a program that takes a person's weight and height as input and outputs the corresponding BMI category.
-	Sample Input
-	85
-	1.9
-	Sample Output
-	Normal
-	Weight is in kg, height is in meters.
-	Note, that height is a float.
-		weight = int(input())
-		height = float(input())
-		bmi = weight / height**2
-		if bmi < 18.5:
-			print("Underweight")
-		elif bmi < 25:
-			print("Normal")
-		elif bmi < 30:
-			print("Overweight")
-		else:
-			print("Obesity")
-	
-_____ Lists _____
-	
-	Strings
-	Write a program that takes an input string and outputs the 3rd character of the string.
-		word = input()
-		print(word[2])
-	
-	Bingo
-	Given a list of numbers, output "bingo" if it contains the input number.
-	Do not output anything if the number is not found.
-		x = [42, 8, 7, 1, 0, 124, 8897, 555, 3, 67, 99]
-		num = int(input())
-		if num in x:
-			print("bingo")
-	
-	List of Numbers
-	for loops allow you to easily iterate through lists.
-	Given a list of numbers, calculate their sum using a for loop.
-	Output the sum after the loop.
-		x = [42, 8, 7, 1, 0, 124, 8897, 555, 3, 67, 99]
-		total = 0
-		for z in x:
-			total += z
-		print(total)
-	
-	Date Picker
-	You are creating a date picker for a website and need to output all of the years in a given period.
-	Write a program that takes two integers as input and outputs the range of numbers between the two inputs as a list.
-	The output sequence should start with the first input number and end with the second input number, without including it.
-	Sample Input
-	2005
-	2011
-	Sample Output
-	[2005, 2006, 2007, 2008, 2009, 2010]
-	Convert a range object to a list and output it.
-		a = int(input())
-		b = int(input())
-		dates = list(range(a,b))
-		print(dates)
-	
-	The Last Character
-	Write a program that takes a string as input and outputs the last character of that string.
-	Remember, you can use negative indices to index lists.
-		word =input()
-		print(word[-1])
-	
-	Sum of Consecutive Numbers (PROJECT)
-	No one likes homework, but your math teacher has given you an assignment to find the sum of the first N numbers.
-	Let’s save some time by creating a program to do the calculation for you!
-	Take a number N as input and output the sum of all numbers from 1 to N (including N).
-	Sample Input
-	100
-	Sample Output
-	5050
-	Explanation: The sum of all numbers from 1 to 100 is equal to 5050.
-	You can iterate over a range and calculate the sum of all numbers in the range.
-	Remember, range(a, b) does not include b, thus you need to use b+1 to include b in the range.
-		n = int(input())
-		total = 0
-		#your code goes here
-		for x in range(n+1):
-			total = total + x
-		print(total)		
-	
-_____ Functions _____
-	
-	Queue Management
-	You are working on a queue management program.
-	The queue is represented by a list.
-	Write a program to take an input, add it to the end of the queue, and output the resulting list.
-	The append() method can be used to add new items to the list.
-		queue = ['John', 'Amy', 'Bob', 'Adam']
-		queue.append(input())
-		print(queue)
-	
-	Broken Keyboard
-	Your friend sent you a message, however his keyboard is broken and types a # instead of a space.
-	Replace all of the # characters in the given input with spaces and output the result.
-	You can use the replace() function of a string to replace one substring with another.
-		msg = input()
-		print(msg.replace('#', ' '))
-		
-	Welcome, Sololearner!
-	We have a function that outputs "Welcome, user" as it is called. We want to make it more personalized, so redesign the given function so that it will take the name of the user as input and output the welcome message with it.
-	Sample Input
-	Tommy
-	Sample Output
-	Welcome, Tommy
-	Don't forget to indent the statement in the function.
-		def welcome():
-			name = input()
-			print("Welcome, " + name)
-		welcome()
-		
-	Call The Function
-	The given program defines a function printBill(), which takes one string argument and outputs formatted text.
-	You need to take the user input and call the function by passing the input as its argument.
-	You need to only call the function, as it will take care of the output.
-		def printBill(text):
-			print("======")
-			print(text)
-			print("======")
-		printBill(input())
-	
-	Area of a Rectangle
-	We need to calculate the area of a given rectangle.
-	Your program needs to take the width and length as input and output the area of the rectangle.
-	Complete the area function, which takes the length and width as arguments, to calculate and return the area.
-	Then call the function for the given inputs.
-	Sample Input 1
-	7
-	4
-	Sample Output 1
-	28
-	To find the area of a rectangle, multiply the length by the width.
-		def area(x, y):
-			#your code goes here
-			return x * y
-		w = int(input())
-		h = int(input())
-
-		#call the function
-		print(area(w, h))	
-	
-	Search Engine (PROJECT)
-	You’re working on a search engine. Watch your back Google!
-	The given code takes a text and a word as input and passes them to a function called search().
-	The search() function should return "Word found" if the word is present in the text, or "Word not found", if it’s not.
-	Sample Input
-	"This is awesome"
-	"awesome"
-	Sample Output
-	Word found
-	Define the search() function, so that the given code works as expected.
-		text = input()
-		word = input()
-		def search(text, word):
-			if(word in text):
-				return "Word found"
-			else:
-				return "Word not found"
-
-		print(search(text, word))
-	
-	
+    
 ===== INTERMEDIATE PYTHON (https://www.sololearn.com/certificates/CT-VJVYIMOO) =====
 _____ Collection Types _____
-	
-	Car Data
-	You are working at a car dealership and store the car data in a dictionary:
-	car = {
-		'brand': 'BMW',
-		'year': 2018,
-		'color': 'red'
-	} 
-	Your program needs to take the key as input and output the corresponding value.
-	Sample Input
-	year
-	Sample Output
-	2018
-	The data is already defined in the code.
-		car = {
-			'brand':'BMW',
-			'year': 2018,
-			'color': 'red',
-			'mileage': 15000
-		}
-		print(car[input()])
-		
-	National Economic Freedom
-	You are working on data that represents the economic freedom rank by country.
-	Each country name and rank are stored in a dictionary, with the key being the country name.
-	Complete the program to take the country name as input and output its corresponding economic freedom rank.
-	In case the provided country name is not present in the data, output "Not found".
-	Recall the get() method of a dictionary, that allows you to specify a default value.
-		data = {
-			'Singapore': 1,
-			'Ireland': 6,
-			'United Kingdom': 7,
-			'Germany': 27,
-			'Armenia': 34,
-			'United States': 17,
-			'Canada': 9,
-			'Italy': 74
-		}
-		print(data.get(input(), "Not found"))
-		
-	Contact Search
-	You are given a list of contacts, where each contact is represented by a tuple, with the name and age of the contact.
-	Complete the program to get a string as input, search for the name in the list of contacts and output the age of the contact in the format presented below:
-	Sample Input
-	John
-	Sample Output
-	John is 31
-	If the contact is not found, the program should output "Not Found".
-		contacts = [
-			('James', 42),
-			('Amy', 24),
-			('John', 31),
-			('Amanda', 63),
-			('Bob', 18)
-		]
-		name = input()
-		for x in contacts:
-			if name in x:
-				print(str(x[0]) + " is " + str(x[1]))
-				break
-		else:
-			print("Not found")
-	
-	Square Up
-	Tuples can be used to output multiple values from a function.
-	You need to make a function called calc(), that will take the side length of a square as its argument and return the perimeter and area using a tuple.
-	The perimeter is the sum of all sides, while the area is the square of the side length.
-	Sample Input
-	3
-	Sample Output
-	Perimeter: 12
-	Area: 9
-	The given code takes a number from user input, passes it to the calc() function, and uses unpacking to get the returned values.
-		def calc(x):
-			#your code goes here
-			return x * 4, x ** 2
-		side = int(input())
-		p, a = calc(side)
-		print("Perimeter: " + str(p))
-		print("Area: " + str(a))
-	
-	You Are Qualified!
-	You are working on a recruitment platform, which should match the available jobs and the candidates based on their skills.
-	The skills required for the job, and the candidate's skills are stored in sets.
-	Complete the program to output the matched skill.
-	You can use the intersect operator to get the values present in both sets.
-		skills = {'Python', 'HTML', 'SQL', 'C++', 'Java', 'Scala'}
-		job_skills = {'HTML', 'CSS', 'JS', 'C#', 'NodeJS'}
-		print(list(skills & job_skills)[0])
-		
-	Ignore The Vowels
-	Given a word as input, output a list, containing only the letters of the word that are not vowels.
-	The vowels are a, e, i, o, u.
-	Sample Input
-	awesome
-	Sample Output
-	['w', 's', 'm']
-	Use a list comprehension to create the required list of letters and output it.
-		word = input()
-		vowels = ['a', 'e', 'i', 'o', 'u']
-		a = [i for i in word if i not in vowels]
-		print(a)	
-	
-	Letter Counter (PROJECT)
-	Given a string as input, you need to output how many times each letter appears in the string.
-	You decide to store the data in a dictionary, with the letters as the keys, and the corresponding counts as the values.
-	Create a program to take a string as input and output a dictionary, which represents the letter count.
-	Sample Input
-	hello
-	Sample Output
-	{'h': 1, 'e': 1, 'l': 2, 'o': 1}
-	You need to output the dictionary object.
-	Note, that the letters are in the order of appearance in the string.
-		text = input()
-		dict = {}
-		#your code goes here
-		for i in text:
-			dict[i]= text.count(i)
-		print(dict)
-	
+    
+    Car Data
+    You are working at a car dealership and store the car data in a dictionary:
+    car = {
+        'brand': 'BMW',
+        'year': 2018,
+        'color': 'red'
+    } 
+    Your program needs to take the key as input and output the corresponding value.
+    Sample Input
+    year
+    Sample Output
+    2018
+    The data is already defined in the code.
+        car = {
+            'brand':'BMW',
+            'year': 2018,
+            'color': 'red',
+            'mileage': 15000
+        }
+        print(car[input()])
+        
+    National Economic Freedom
+    You are working on data that represents the economic freedom rank by country.
+    Each country name and rank are stored in a dictionary, with the key being the country name.
+    Complete the program to take the country name as input and output its corresponding economic freedom rank.
+    In case the provided country name is not present in the data, output "Not found".
+    Recall the get() method of a dictionary, that allows you to specify a default value.
+        data = {
+            'Singapore': 1,
+            'Ireland': 6,
+            'United Kingdom': 7,
+            'Germany': 27,
+            'Armenia': 34,
+            'United States': 17,
+            'Canada': 9,
+            'Italy': 74
+        }
+        print(data.get(input(), "Not found"))
+        
+    Contact Search
+    You are given a list of contacts, where each contact is represented by a tuple, with the name and age of the contact.
+    Complete the program to get a string as input, search for the name in the list of contacts and output the age of the contact in the format presented below:
+    Sample Input
+    John
+    Sample Output
+    John is 31
+    If the contact is not found, the program should output "Not Found".
+        contacts = [
+            ('James', 42),
+            ('Amy', 24),
+            ('John', 31),
+            ('Amanda', 63),
+            ('Bob', 18)
+        ]
+        name = input()
+        for x in contacts:
+            if name in x:
+                print(str(x[0]) + " is " + str(x[1]))
+                break
+        else:
+            print("Not found")
+    
+    Square Up
+    Tuples can be used to output multiple values from a function.
+    You need to make a function called calc(), that will take the side length of a square as its argument and return the perimeter and area using a tuple.
+    The perimeter is the sum of all sides, while the area is the square of the side length.
+    Sample Input
+    3
+    Sample Output
+    Perimeter: 12
+    Area: 9
+    The given code takes a number from user input, passes it to the calc() function, and uses unpacking to get the returned values.
+        def calc(x):
+            #your code goes here
+            return x * 4, x ** 2
+        side = int(input())
+        p, a = calc(side)
+        print("Perimeter: " + str(p))
+        print("Area: " + str(a))
+    
+    You Are Qualified!
+    You are working on a recruitment platform, which should match the available jobs and the candidates based on their skills.
+    The skills required for the job, and the candidate's skills are stored in sets.
+    Complete the program to output the matched skill.
+    You can use the intersect operator to get the values present in both sets.
+        skills = {'Python', 'HTML', 'SQL', 'C++', 'Java', 'Scala'}
+        job_skills = {'HTML', 'CSS', 'JS', 'C#', 'NodeJS'}
+        print(list(skills & job_skills)[0])
+        
+    Ignore The Vowels
+    Given a word as input, output a list, containing only the letters of the word that are not vowels.
+    The vowels are a, e, i, o, u.
+    Sample Input
+    awesome
+    Sample Output
+    ['w', 's', 'm']
+    Use a list comprehension to create the required list of letters and output it.
+        word = input()
+        vowels = ['a', 'e', 'i', 'o', 'u']
+        a = [i for i in word if i not in vowels]
+        print(a)    
+    
+    Letter Counter (PROJECT)
+    Given a string as input, you need to output how many times each letter appears in the string.
+    You decide to store the data in a dictionary, with the letters as the keys, and the corresponding counts as the values.
+    Create a program to take a string as input and output a dictionary, which represents the letter count.
+    Sample Input
+    hello
+    Sample Output
+    {'h': 1, 'e': 1, 'l': 2, 'o': 1}
+    You need to output the dictionary object.
+    Note, that the letters are in the order of appearance in the string.
+        text = input()
+        dict = {}
+        #your code goes here
+        for i in text:
+            dict[i]= text.count(i)
+        print(dict)
+    
 _____ Functional Programming _____
 
-	How Much?
-	You are given code that should calculate the corresponding percentage of a price.
-	Somebody wrote a lambda function to accomplish that, however the lambda is wrong.
-	Fix the code to output the given percentage of the price.
-	Sample Input
-	50
-	10
-	Sample Output
-	5.0
-	The first input is the price, while the second input is the percentage we need to calculate: 10% of 50 is 5.0.
-		price = int(input())
-		perc = int(input())
-		res = (lambda x,y:x*y/100)(price, perc)
-		print(res)
-	
-	Getting A Raise
-	You work on a payroll program.
-	Given a list of salaries, you need to take the bonus everybody is getting as input and increase all the salaries by that amount.
-	Output the resulting list.
-	You can use the map() function to increase all the values of the list.
-		salaries = [2000, 1800, 3100, 4400, 1500]
-		bonus = int(input())
-		def add_things(x):
-			return x + bonus
-		result = list(map(add_things,salaries))
-		print(result)	
-	
-	Generating
-	Finding prime numbers is a common coding interview task.
-	The given code defines a function isPrime(x), which returns True if x is prime.
-	You need to create a generator function primeGenerator(), that will take two numbers as arguments, and use the isPrime() function to output the prime numbers in the given range (between the two arguments).
-	Sample Input
-	10
-	20
-	Sample Output
-	[11, 13, 17, 19]
-	The given code takes the two arguments as input and passes them to the generator function, outputting the result as a list.
-		def isPrime(x):
-			if x < 2:
-				return False
-			elif x == 2:
-				return True
-			for n in range(2, x):
-				if x % n ==0:
-					return False
-			return True
-		def primeGenerator(a, b):
-			#your code goes here
-			for number in range(a,b):
-				if isPrime(number):
-					yield number
-		f = int(input())
-		t = int(input())
-		print(list(primeGenerator(f, t)))
-	
-	Collecting Reports
-	You are working on an invoicing system.
-	The system has an already defined invoice() function, which takes the invoice number as argument and outputs it.
-	You need to add a decorator for the invoice() function, that will print the invoice in the following format:
-	Sample Input
-	42
-	Sample Output
-	***
-	INVOICE #42
-	***
-	END OF PAGE
-	The given code takes the invoice number as input and passes it to the invoice() function.
-		def decor(func):
-			def wrap(num):
-				print("***")
-				func(num)
-				print("***")
-				print("END OF PAGE")
-			return wrap
-		@decor
-		def invoice(num):
-			print("INVOICE #" +num)
-		invoice(input());
-	
-	Decimal to Binary
-	The given code defines a recursive function convert(), which needs to convert its argument from decimal to binary.
-	However, the code has an error.
-	Fix the code by adding the base case for the recursion, then take a number from user input and call the convert() function, to output the result.
-	Sample Input
-	8
-	Sample Output
-	1000
-	The binary representation of 8 is 1000.
-		def convert(num):
-			if num == 0:
-				return 0
-			return (num % 2 + 10 * convert(num // 2)) 
-		a = int(input())
-		print(convert(a))
-	
-	Making It Work
-	The given code defined a function called my_min(), which takes two arguments and returns the smaller one.
-	You need to improve the function, so that it can take any number of variables, so that the function call works.
-	Remember, *args can be accessed inside the function as a tuple.
-		def my_min(*args):
-			return min(args)
-			print(my_min(8, 13, 4, 42, 120, 7))
-	
-	Spelling Backwards (PROJECT)
-	Spelling Backwards
-	Given a string as input, use recursion to output each letter of the strings in reverse order, on a new line.
-	Sample Input
-	HELLO
-	Sample Output
-	O
-	L
-	L
-	E
-	H
-	Complete the recursive spell() function to produce the expected result.
-		def spell(txt):
-			#your code goes here
-			print(txt[::-1])
-			txt = input()
-			spell(txt)
-	
+    How Much?
+    You are given code that should calculate the corresponding percentage of a price.
+    Somebody wrote a lambda function to accomplish that, however the lambda is wrong.
+    Fix the code to output the given percentage of the price.
+    Sample Input
+    50
+    10
+    Sample Output
+    5.0
+    The first input is the price, while the second input is the percentage we need to calculate: 10% of 50 is 5.0.
+        price = int(input())
+        perc = int(input())
+        res = (lambda x,y:x*y/100)(price, perc)
+        print(res)
+    
+    Getting A Raise
+    You work on a payroll program.
+    Given a list of salaries, you need to take the bonus everybody is getting as input and increase all the salaries by that amount.
+    Output the resulting list.
+    You can use the map() function to increase all the values of the list.
+        salaries = [2000, 1800, 3100, 4400, 1500]
+        bonus = int(input())
+        def add_things(x):
+            return x + bonus
+        result = list(map(add_things,salaries))
+        print(result)    
+    
+    Generating
+    Finding prime numbers is a common coding interview task.
+    The given code defines a function isPrime(x), which returns True if x is prime.
+    You need to create a generator function primeGenerator(), that will take two numbers as arguments, and use the isPrime() function to output the prime numbers in the given range (between the two arguments).
+    Sample Input
+    10
+    20
+    Sample Output
+    [11, 13, 17, 19]
+    The given code takes the two arguments as input and passes them to the generator function, outputting the result as a list.
+        def isPrime(x):
+            if x < 2:
+                return False
+            elif x == 2:
+                return True
+            for n in range(2, x):
+                if x % n ==0:
+                    return False
+            return True
+        def primeGenerator(a, b):
+            #your code goes here
+            for number in range(a,b):
+                if isPrime(number):
+                    yield number
+        f = int(input())
+        t = int(input())
+        print(list(primeGenerator(f, t)))
+    
+    Collecting Reports
+    You are working on an invoicing system.
+    The system has an already defined invoice() function, which takes the invoice number as argument and outputs it.
+    You need to add a decorator for the invoice() function, that will print the invoice in the following format:
+    Sample Input
+    42
+    Sample Output
+    ***
+    INVOICE #42
+    ***
+    END OF PAGE
+    The given code takes the invoice number as input and passes it to the invoice() function.
+        def decor(func):
+            def wrap(num):
+                print("***")
+                func(num)
+                print("***")
+                print("END OF PAGE")
+            return wrap
+        @decor
+        def invoice(num):
+            print("INVOICE #" +num)
+        invoice(input());
+    
+    Decimal to Binary
+    The given code defines a recursive function convert(), which needs to convert its argument from decimal to binary.
+    However, the code has an error.
+    Fix the code by adding the base case for the recursion, then take a number from user input and call the convert() function, to output the result.
+    Sample Input
+    8
+    Sample Output
+    1000
+    The binary representation of 8 is 1000.
+        def convert(num):
+            if num == 0:
+                return 0
+            return (num % 2 + 10 * convert(num // 2)) 
+        a = int(input())
+        print(convert(a))
+    
+    Making It Work
+    The given code defined a function called my_min(), which takes two arguments and returns the smaller one.
+    You need to improve the function, so that it can take any number of variables, so that the function call works.
+    Remember, *args can be accessed inside the function as a tuple.
+        def my_min(*args):
+            return min(args)
+            print(my_min(8, 13, 4, 42, 120, 7))
+    
+    Spelling Backwards (PROJECT)
+    Spelling Backwards
+    Given a string as input, use recursion to output each letter of the strings in reverse order, on a new line.
+    Sample Input
+    HELLO
+    Sample Output
+    O
+    L
+    L
+    E
+    H
+    Complete the recursive spell() function to produce the expected result.
+        def spell(txt):
+            #your code goes here
+            print(txt[::-1])
+            txt = input()
+            spell(txt)
+    
 _____ OOP _____
 
-	Game Over
-	You are making a video game! The given code declares a Player class, with its attributes and an intro() method.
-	Complete the code to take the name and level from user input, create a Player object with the corresponding values and call the intro() method of that object.
-	Sample Input
-	Tony
-	12
-	Sample Output
-	Tony (Level 12)
-	Use the dot syntax to call the intro() method for the declared object.
-		class Player:
-			def __init__(self, name, level):
-				self.name = name
-				self.level = level
-			def intro(self):
-				print(self.name + " (Level " + self.level + ")")
-		#your code goes here
-		name = input()
-		level = input()
-		p = Player(name,level)
-		p.intro()
-		
-	Fine Art
-	You are making a drawing application, which has a Shape base class.
-	The given code defines a Rectangle class, creates a Rectangle object and calls its area() and perimeter() methods.
-	Do the following to complete the program:
-	1. Inherit the Rectangle class from Shape.
-	2. Define the perimeter() method in the Rectangle class, printing the perimeter of the rectangle.
-	The perimeter is equal to 2*(width+height)
-		class Shape: 
-			def __init__(self, w, h):
-				self.width = w
-				self.height = h
-			def area(self):
-				print(self.width*self.height)
-		class Rectangle(Shape):
-			#your code goes here
-			def perimeter(self):
-				print(2*(self.width + self.height))
-		w = int(input())
-		h = int(input())
-		r = Rectangle(w, h)
-		r.area()
-		r.perimeter()
-		
-	Shape Factory
-	We are improving our drawing application.
-	Our application needs to support adding and comparing two Shape objects.
-	Add the corresponding methods to enable addition + and comparison using the greater than > operator for the Shape class.
-	The addition should return a new object with the sum of the widths and heights of the operands, while the comparison should return the result of comparing the areas of the objects.
-	The given code creates two Shape objects from user input, outputs the area() of their addition and compares them.
-	class Shape: 
-		def __init__(self, w, h):
-			self.width = w
-			self.height = h
-		def area(self):
-			return self.width*self.height
-		#your code goes here
-		def __add__(self, other):
-			return Shape(self.width + other.width, self.height + other.height)
-		def __gt__(self, other):
-			return self.area() > other.area()
-	w1 = int(input())
-	h1 = int(input())
-	w2 = int(input())
-	h2 = int(input())
-	s1 = Shape(w1, h1)
-	s2 = Shape(w2, h2)
-	result = s1 + s2
-	print(result.area())
-	print(s1 > s2)
-	
-	Preservation
-	We are working on a game. Our Player class has name and private _lives attributes.
-	The hit() method should decrease the lives of the player by 1. In case the lives equal to 0, it should output "Game Over".
-	Complete the hit() method to make the program work as expected.
-	The code creates a Player object and calls its hit() method multiple times.
-		class Player:
-			def __init__(self, name, lives):
-				self.name = name
-				self._lives = lives
-			def hit(self):
-				#your code goes here
-				self._lives -= 1
-				if self._lives == 0:
-					print("Game Over")
-		p = Player("Cyberpunk77", 3)
-		p.hit()
-		p.hit()
-		p.hit()
-		
-	Define The Methods
-	The given code takes 2 numbers as input and calls the static area() method of the Shape class, to output the area of the shape, which is equal to the height multiplied by the width.
-	To make the code work, you need to define the Shape class, and the static area() method, which should return the multiplication of its two arguments.
-	Use the @staticmethod decorator to define a static method.
-		#your code goes here
-		class Shape:
-			def __init__(self, w, h):
-				self.width = w
-				self.heigh = h
-			@staticmethod
-			def area(width, height):
-				return width * height
-		w = int(input())
-		h = int(input())
-		print(Shape.area(w, h))
-		
-	Staying Alive
-	We are improving our game and need to add an isAlive property, which returns True if the lives count is greater than 0.
-	Complete the code by adding the isAlive property.
-	The code uses a while loop to hit the Player, until its lives count becomes 0, using the isAlive property to make the condition.
-		class Player:
-			def __init__(self, name, lives):
-				self.name = name
-				self._lives = lives
-			def hit(self):
-				self._lives -= 1
-			#your code goes here
-			@property
-			def isAlive(self):
-				if self._lives > 0:
-					return True
-		p = Player("Cyberpunk77", int(input()))
-		i = 1
-		while True:
-			p.hit()
-			print("Hit # " + str(i))
-			i += 1
-			if not p.isAlive:
-				print("Game Over")
-				break
+    Game Over
+    You are making a video game! The given code declares a Player class, with its attributes and an intro() method.
+    Complete the code to take the name and level from user input, create a Player object with the corresponding values and call the intro() method of that object.
+    Sample Input
+    Tony
+    12
+    Sample Output
+    Tony (Level 12)
+    Use the dot syntax to call the intro() method for the declared object.
+        class Player:
+            def __init__(self, name, level):
+                self.name = name
+                self.level = level
+            def intro(self):
+                print(self.name + " (Level " + self.level + ")")
+        #your code goes here
+        name = input()
+        level = input()
+        p = Player(name,level)
+        p.intro()
+        
+    Fine Art
+    You are making a drawing application, which has a Shape base class.
+    The given code defines a Rectangle class, creates a Rectangle object and calls its area() and perimeter() methods.
+    Do the following to complete the program:
+    1. Inherit the Rectangle class from Shape.
+    2. Define the perimeter() method in the Rectangle class, printing the perimeter of the rectangle.
+    The perimeter is equal to 2*(width+height)
+        class Shape: 
+            def __init__(self, w, h):
+                self.width = w
+                self.height = h
+            def area(self):
+                print(self.width*self.height)
+        class Rectangle(Shape):
+            #your code goes here
+            def perimeter(self):
+                print(2*(self.width + self.height))
+        w = int(input())
+        h = int(input())
+        r = Rectangle(w, h)
+        r.area()
+        r.perimeter()
+        
+    Shape Factory
+    We are improving our drawing application.
+    Our application needs to support adding and comparing two Shape objects.
+    Add the corresponding methods to enable addition + and comparison using the greater than > operator for the Shape class.
+    The addition should return a new object with the sum of the widths and heights of the operands, while the comparison should return the result of comparing the areas of the objects.
+    The given code creates two Shape objects from user input, outputs the area() of their addition and compares them.
+    class Shape: 
+        def __init__(self, w, h):
+            self.width = w
+            self.height = h
+        def area(self):
+            return self.width*self.height
+        #your code goes here
+        def __add__(self, other):
+            return Shape(self.width + other.width, self.height + other.height)
+        def __gt__(self, other):
+            return self.area() > other.area()
+    w1 = int(input())
+    h1 = int(input())
+    w2 = int(input())
+    h2 = int(input())
+    s1 = Shape(w1, h1)
+    s2 = Shape(w2, h2)
+    result = s1 + s2
+    print(result.area())
+    print(s1 > s2)
+    
+    Preservation
+    We are working on a game. Our Player class has name and private _lives attributes.
+    The hit() method should decrease the lives of the player by 1. In case the lives equal to 0, it should output "Game Over".
+    Complete the hit() method to make the program work as expected.
+    The code creates a Player object and calls its hit() method multiple times.
+        class Player:
+            def __init__(self, name, lives):
+                self.name = name
+                self._lives = lives
+            def hit(self):
+                #your code goes here
+                self._lives -= 1
+                if self._lives == 0:
+                    print("Game Over")
+        p = Player("Cyberpunk77", 3)
+        p.hit()
+        p.hit()
+        p.hit()
+        
+    Define The Methods
+    The given code takes 2 numbers as input and calls the static area() method of the Shape class, to output the area of the shape, which is equal to the height multiplied by the width.
+    To make the code work, you need to define the Shape class, and the static area() method, which should return the multiplication of its two arguments.
+    Use the @staticmethod decorator to define a static method.
+        #your code goes here
+        class Shape:
+            def __init__(self, w, h):
+                self.width = w
+                self.heigh = h
+            @staticmethod
+            def area(width, height):
+                return width * height
+        w = int(input())
+        h = int(input())
+        print(Shape.area(w, h))
+        
+    Staying Alive
+    We are improving our game and need to add an isAlive property, which returns True if the lives count is greater than 0.
+    Complete the code by adding the isAlive property.
+    The code uses a while loop to hit the Player, until its lives count becomes 0, using the isAlive property to make the condition.
+        class Player:
+            def __init__(self, name, lives):
+                self.name = name
+                self._lives = lives
+            def hit(self):
+                self._lives -= 1
+            #your code goes here
+            @property
+            def isAlive(self):
+                if self._lives > 0:
+                    return True
+        p = Player("Cyberpunk77", int(input()))
+        i = 1
+        while True:
+            p.hit()
+            print("Hit # " + str(i))
+            i += 1
+            if not p.isAlive:
+                print("Game Over")
+                break
 
-	Shooting Game (PROJECT)
-	You are creating a shooting game!
-	The game has two types of enemies, aliens and monsters. You shoot the aliens using your laser, and monsters using your gun.
-	Each hit decreases the lives of the enemies by 1.
-	The given code declares a generic Enemy class, as well as the Alien and Monster classes, with their corresponding lives count.
-	It also defines the hit() method for the Enemy class.
-	You need to do the following to complete the program:
-	1. Inherit the Alien and Monster classes from the Enemy class.
-	2. Complete the while loop that continuously takes the weapon of choice from user input and call the corresponding object's hit() method.
-	Sample Input
-	laser
-	laser
-	gun
-	exit
-	Sample Output
-	Alien has 4 lives
-	Alien has 3 lives
-	Monster has 2 lives
-	The while loop stops when the user enters 'exit'.
-		class Enemy:
-			name = ""
-			lives = 0
-			def __init__(self, name, lives):
-				self.name = name
-				self.lives = lives
-			def hit(self):
-				self.lives -= 1
-				if self.lives <= 0:
-					print(self.name + ' killed')
-				else:
-					print(self.name + ' has '+ str(self.lives) + ' lives')
-		class Monster(Enemy):
-			def __init__(self):
-				super().__init__('Monster', 3)
-			def hit(self):
-				super().hit()
-		class Alien(Enemy):
-			def __init__(self):
-				super().__init__('Alien', 5)
-			def hit(self):
-				super().hit()
-		m = Monster()
-		a = Alien()
-		while True:
-			x = input()
-			if x == 'exit':
-				break
-			elif x == 'laser':
-				a.hit()
-			elif x == 'gun':
-				m.hit()
+    Shooting Game (PROJECT)
+    You are creating a shooting game!
+    The game has two types of enemies, aliens and monsters. You shoot the aliens using your laser, and monsters using your gun.
+    Each hit decreases the lives of the enemies by 1.
+    The given code declares a generic Enemy class, as well as the Alien and Monster classes, with their corresponding lives count.
+    It also defines the hit() method for the Enemy class.
+    You need to do the following to complete the program:
+    1. Inherit the Alien and Monster classes from the Enemy class.
+    2. Complete the while loop that continuously takes the weapon of choice from user input and call the corresponding object's hit() method.
+    Sample Input
+    laser
+    laser
+    gun
+    exit
+    Sample Output
+    Alien has 4 lives
+    Alien has 3 lives
+    Monster has 2 lives
+    The while loop stops when the user enters 'exit'.
+        class Enemy:
+            name = ""
+            lives = 0
+            def __init__(self, name, lives):
+                self.name = name
+                self.lives = lives
+            def hit(self):
+                self.lives -= 1
+                if self.lives <= 0:
+                    print(self.name + ' killed')
+                else:
+                    print(self.name + ' has '+ str(self.lives) + ' lives')
+        class Monster(Enemy):
+            def __init__(self):
+                super().__init__('Monster', 3)
+            def hit(self):
+                super().hit()
+        class Alien(Enemy):
+            def __init__(self):
+                super().__init__('Alien', 5)
+            def hit(self):
+                super().hit()
+        m = Monster()
+        a = Alien()
+        while True:
+            x = input()
+            if x == 'exit':
+                break
+            elif x == 'laser':
+                a.hit()
+            elif x == 'gun':
+                m.hit()
 
 _____ Exceptions _____
 
-	Cash Out
-	An ATM machine takes the amount to be withdrawn as input and calls the corresponding withdrawal method.
-	In case the input is not a number, the machine should output "Please enter a number".
-	Use exception handling to take a number as input, call the withdraw() method with the input as its argument, and output "Please enter a number", in case the input is not a number.
-	A ValueError is raised when you try to convert a non-integer to an integer using int().
-		def withdraw(amount):
-			print(str(amount) + " withdrawn!")
-		#your code goes here
-		n = input()
-		try:
-			int(n)
-			withdraw(n)
-		except:
-			print("Please enter a number")
-			
-	Chef's Kiss
-	You are making a digital menu to order food.
-	The menu is stored as a list of items.
-	Your program needs to take the index of the item as input and output the item name.
-	In case the index is not valid, you should output "Item not found".
-	In case the index is valid and the item name is output successfully, you should output "Thanks for your order".
-	Sample Input
-	2
-	Sample Output
-	Cheeseburger
-	Thanks for your order
-	Handle the cases when the input is out of range, as well as when it is not a number.
-		menu = ['Fries', 'Sandwich', 'Cheeseburger', 'Coffee', 'Soda']
-		#your code goes here
-		try:
-			n=int(input())
-			print(menu[n])
-			print("Thanks for your order")
-		except:
-			print("Item not found")
-			
-	Say Something
-	You are making a program to post tweets. Each tweet must not exceed 42 characters.
-	Complete the program to raise an exception, in case the length of the tweet is more than 42 characters.
-		tweet = input()
-		try:
-			#your code goes here
-			if len(tweet) > 42:
-				raise Exception
-		except:
-			print("Error")
-		else:
-			print("Posted")
-			
-	Registration System (PROJECT)
-	You are making a registration form for a website.
-	The form has a name field, which should be more than 3 characters long.
-	Any name that has less than 4 characters is invalid.
-	Complete the code to take the name as input, and raise an exception if the name is invalid, outputting "Invalid Name". Output "Account Created" if the name is valid.
-	Sample Input
-	abc
-	Sample Output
-	Invalid Name
-	Use try/raise/except statements.
-		try:
-			name = input()
-			#your code goes here
-			if len(name) < 4:
-				raise Exception
-			else:
-				print("Account Created")
-			
-		except:
-			print("Invalid Name")		
-	##### CHATGPT #####
-		try:
-			name = input()
-			if len(name) < 4:
-				raise Exception("Invalid Name")
-		except Exception as e:
-			print(e)
-		else:
-			print("Account Created")
-			
+    Cash Out
+    An ATM machine takes the amount to be withdrawn as input and calls the corresponding withdrawal method.
+    In case the input is not a number, the machine should output "Please enter a number".
+    Use exception handling to take a number as input, call the withdraw() method with the input as its argument, and output "Please enter a number", in case the input is not a number.
+    A ValueError is raised when you try to convert a non-integer to an integer using int().
+        def withdraw(amount):
+            print(str(amount) + " withdrawn!")
+        #your code goes here
+        n = input()
+        try:
+            int(n)
+            withdraw(n)
+        except:
+            print("Please enter a number")
+            
+    Chef's Kiss
+    You are making a digital menu to order food.
+    The menu is stored as a list of items.
+    Your program needs to take the index of the item as input and output the item name.
+    In case the index is not valid, you should output "Item not found".
+    In case the index is valid and the item name is output successfully, you should output "Thanks for your order".
+    Sample Input
+    2
+    Sample Output
+    Cheeseburger
+    Thanks for your order
+    Handle the cases when the input is out of range, as well as when it is not a number.
+        menu = ['Fries', 'Sandwich', 'Cheeseburger', 'Coffee', 'Soda']
+        #your code goes here
+        try:
+            n=int(input())
+            print(menu[n])
+            print("Thanks for your order")
+        except:
+            print("Item not found")
+            
+    Say Something
+    You are making a program to post tweets. Each tweet must not exceed 42 characters.
+    Complete the program to raise an exception, in case the length of the tweet is more than 42 characters.
+        tweet = input()
+        try:
+            #your code goes here
+            if len(tweet) > 42:
+                raise Exception
+        except:
+            print("Error")
+        else:
+            print("Posted")
+            
+    Registration System (PROJECT)
+    You are making a registration form for a website.
+    The form has a name field, which should be more than 3 characters long.
+    Any name that has less than 4 characters is invalid.
+    Complete the code to take the name as input, and raise an exception if the name is invalid, outputting "Invalid Name". Output "Account Created" if the name is valid.
+    Sample Input
+    abc
+    Sample Output
+    Invalid Name
+    Use try/raise/except statements.
+        try:
+            name = input()
+            #your code goes here
+            if len(name) < 4:
+                raise Exception
+            else:
+                print("Account Created")
+            
+        except:
+            print("Invalid Name")        
+    ##### CHATGPT #####
+        try:
+            name = input()
+            if len(name) < 4:
+                raise Exception("Invalid Name")
+        except Exception as e:
+            print(e)
+        else:
+            print("Account Created")
+            
 _____ Working With Files _____
 
-	Reading Through
-	You need to make a program to read the given number of characters of a file.
-	Take a number N as input and output the first N characters of the books.txt file.
-	The given code opens the books.txt file. Use the file object to read the content of the file.
-		file = open("/usercode/files/books.txt")
-		#your code goes here
-		n = int(input())
-		print(file.read(n))
-		file.close()
-		
-	Filling Up With Numbers
-	Take a number N as input and write the numbers 1 to N to the file "numbers.txt", each number on a separate line.
-	Sample Input
-	4
-	Sample Output
-	1
-	2
-	3
-	4
-	The given code reads the content of the file and outputs it.
-	You can use \n to make line breaks.
-	Do not forget to close the file after writing to it.
-		n = int(input())
-		file = open("numbers.txt", "w+")
-		#your code goes here
-		for i in range(1,n+1):
-			file.write(str(i) + "")
-		file.close()
-		f = open("numbers.txt", "r")
-		print(f.read())
-		f.close()
-		
-	Book Club
-	You are given a books.txt file, which includes book titles, each on a separate line.
-	Create a program to output how many words each title contains, in the following format:
-	Line 1: 3 words
-	Line 2: 5 words
-	...
-	Make sure to match the above mentioned format in the output.
-	To count the number of words in a given string, you can use the split() function, or, alternatively, count the number of spaces (for example, if a string contains 2 spaces, then it contains 3 words).
-		with open("/usercode/files/books.txt") as f:
-			#your code goes here
-			j = 1
-			for line in f:
-				print("Line " + str(j) + ": " + str(len(line.split(" "))) + " words")
-				j+=1
+    Reading Through
+    You need to make a program to read the given number of characters of a file.
+    Take a number N as input and output the first N characters of the books.txt file.
+    The given code opens the books.txt file. Use the file object to read the content of the file.
+        file = open("/usercode/files/books.txt")
+        #your code goes here
+        n = int(input())
+        print(file.read(n))
+        file.close()
+        
+    Filling Up With Numbers
+    Take a number N as input and write the numbers 1 to N to the file "numbers.txt", each number on a separate line.
+    Sample Input
+    4
+    Sample Output
+    1
+    2
+    3
+    4
+    The given code reads the content of the file and outputs it.
+    You can use \n to make line breaks.
+    Do not forget to close the file after writing to it.
+        n = int(input())
+        file = open("numbers.txt", "w+")
+        #your code goes here
+        for i in range(1,n+1):
+            file.write(str(i) + "")
+        file.close()
+        f = open("numbers.txt", "r")
+        print(f.read())
+        f.close()
+        
+    Book Club
+    You are given a books.txt file, which includes book titles, each on a separate line.
+    Create a program to output how many words each title contains, in the following format:
+    Line 1: 3 words
+    Line 2: 5 words
+    ...
+    Make sure to match the above mentioned format in the output.
+    To count the number of words in a given string, you can use the split() function, or, alternatively, count the number of spaces (for example, if a string contains 2 spaces, then it contains 3 words).
+        with open("/usercode/files/books.txt") as f:
+            #your code goes here
+            j = 1
+            for line in f:
+                print("Line " + str(j) + ": " + str(len(line.split(" "))) + " words")
+                j+=1
 
-	Title Encoder (PROJECT)
-	You are given a file named "books.txt" with book titles, each on a separate line.
-	To encode the book titles you need to take the first letters of each word in the title and combine them.
-	For example, for the book title "Game of Thrones" the encoded version should be "GoT".
-	Complete the program to read the book title from the file and output the encoded versions, each on a new line.
-	You can use the .split() method to get a list of words in a string.
-		file = open("/usercode/files/books.txt", "r")
-		#your code goes here
-		for x in file:
-			title = x.split()
-			for a in title:
-				print(a[0],end="")
-			print()
-		file.close()
+    Title Encoder (PROJECT)
+    You are given a file named "books.txt" with book titles, each on a separate line.
+    To encode the book titles you need to take the first letters of each word in the title and combine them.
+    For example, for the book title "Game of Thrones" the encoded version should be "GoT".
+    Complete the program to read the book title from the file and output the encoded versions, each on a new line.
+    You can use the .split() method to get a list of words in a string.
+        file = open("/usercode/files/books.txt", "r")
+        #your code goes here
+        for x in file:
+            title = x.split()
+            for a in title:
+                print(a[0],end="")
+            print()
+        file.close()
 
 ===== PYTHON DATA STRUCTURES (https://www.sololearn.com/certificates/CT-1OPQL4NI) =====
 _____ Working With Strings _____
 
-	How Many Vowels
-	You need to make a program that counts the number of vowels in a given text.
-	The vowels are a, e, i, o, and u.
-	Take a string as input and output the number of vowels.
-	Sample Input:
-	this is great
-	Sample Output:
-	4
-	There are 4 vowels in the given text.
-		#your code goes here
-		i = input()
-		count = 0
-		for w in i:
-			if w=="a" or w=="e" or w=="i" or w=="o" or w=="u":
-				count += 1
-		print(count)
+    How Many Vowels
+    You need to make a program that counts the number of vowels in a given text.
+    The vowels are a, e, i, o, and u.
+    Take a string as input and output the number of vowels.
+    Sample Input:
+    this is great
+    Sample Output:
+    4
+    There are 4 vowels in the given text.
+        #your code goes here
+        i = input()
+        count = 0
+        for w in i:
+            if w=="a" or w=="e" or w=="i" or w=="o" or w=="u":
+                count += 1
+        print(count)
 
-	Line Them Up
-	Let's test your coding skills!
-	Take a string as input and output each letter of the string on a new line, repeated N times, where N is the position of the letter in the string.
-	Sample Input:
-	data
-	Sample Output:
-	d
-	aa
-	ttt
-	aaaa
-	Hint: Use a loop to iterate over the string, keeping the position number of the current iteration in a variable. Then use multiplication to repeat the letters.
-		#your code goes here
-		word = input()
-		print()
-		i = 0
-		while (i<len(word)):
-			print(word[i]*(i+1))
-			i+=1
+    Line Them Up
+    Let's test your coding skills!
+    Take a string as input and output each letter of the string on a new line, repeated N times, where N is the position of the letter in the string.
+    Sample Input:
+    data
+    Sample Output:
+    d
+    aa
+    ttt
+    aaaa
+    Hint: Use a loop to iterate over the string, keeping the position number of the current iteration in a variable. Then use multiplication to repeat the letters.
+        #your code goes here
+        word = input()
+        print()
+        i = 0
+        while (i<len(word)):
+            print(word[i]*(i+1))
+            i+=1
 
-	Editing Guide
-	You are making a text editor and need to implement find/replace functionality.
-	The code declares a text string. You need to take two string inputs, which represent the substring to find and what to replace it with in the text.
-	Your program needs to output the number of replacements made, along with the new text.
-	For example, for the given text "I weigh 80 kilograms. He weighs 65 kilograms.":
-	Sample Input
-	kilograms
-	kg
-	Sample Output
-	2
-	I weigh 80 kg. He weighs 65 kg.
-	The program replaced 2 occurrences of the word kilograms with kg.
-	Note, that you need to output the number of replacements, before the replaced text.
-		text = "Amy has 128 dollars, while David has 54 dollars. Amy is going to the zoo. David watches soccer."
-		a=input()
-		b=input()
-		print(text.count(a))
-		print(text.replace(a,b))
-		
-	Letter Frequency (PROJECT)
-	You are making a program to analyze text.
-	Take the text as the first input and a letter as the second input, and output the frequency of that letter in the text as a whole percentage.
-	Sample Input:
-	hello
-	l
-	Sample Output:
-	40
-	Explanation : The letter l appears 2 times in the text hello, which has 5 letters. So, the frequency would be (2/5)*100 = 40.
-	Division result is a float. Use the int() function to convert the result to an integer.
-		#your code goes here
-		stri = input()
-		L = input()
-		print(int(stri.count(L)/len(stri)*100))
-		
+    Editing Guide
+    You are making a text editor and need to implement find/replace functionality.
+    The code declares a text string. You need to take two string inputs, which represent the substring to find and what to replace it with in the text.
+    Your program needs to output the number of replacements made, along with the new text.
+    For example, for the given text "I weigh 80 kilograms. He weighs 65 kilograms.":
+    Sample Input
+    kilograms
+    kg
+    Sample Output
+    2
+    I weigh 80 kg. He weighs 65 kg.
+    The program replaced 2 occurrences of the word kilograms with kg.
+    Note, that you need to output the number of replacements, before the replaced text.
+        text = "Amy has 128 dollars, while David has 54 dollars. Amy is going to the zoo. David watches soccer."
+        a=input()
+        b=input()
+        print(text.count(a))
+        print(text.replace(a,b))
+        
+    Letter Frequency (PROJECT)
+    You are making a program to analyze text.
+    Take the text as the first input and a letter as the second input, and output the frequency of that letter in the text as a whole percentage.
+    Sample Input:
+    hello
+    l
+    Sample Output:
+    40
+    Explanation : The letter l appears 2 times in the text hello, which has 5 letters. So, the frequency would be (2/5)*100 = 40.
+    Division result is a float. Use the int() function to convert the result to an integer.
+        #your code goes here
+        stri = input()
+        L = input()
+        print(int(stri.count(L)/len(stri)*100))
+        
 _____ Lists _____
 
-	Apple of My Eye
-	You are given a 2D matrix, which represents the number of people in a room, grouped by their eye color and gender.
-	The first row represents the male gender, while the second row represents females.
-	The columns are the eye colors, in the following order: brown, blue, green, black
-	data = [
-	 	[23, 11, 5, 14],
-		[8, 32, 20, 5]
-	] 
-	The data shows that, for example, there are 20 green eyed females in the room (2nd row, 3rd column).
-	Our program needs to take eye color as input and output the percentage of people with that eye color in the room.
-	Sample Input:
-	blue
-	Sample Output:
-	36
-	Explanation: There are 11+32=43 people with blue eyes, which is 36% of the total.
-	Note, that the output should be an integer: use the int() function to convert the result.
-		data = [
-	[23, 11, 5, 14],
-	[8, 32, 20, 5]
-	]
-		color = input()
-		#your code goes here
-		total = 118
-		if color=="brown":
-			print(int((data[0][0]+data[1][0])*100/total))
-		elif color=="blue":
-			print(int((data[0][1]+data[1][1])*100/total))
-		elif color=="green":
-			print(int((data[0][2]+data[1][2])*100/total))
-		else:
-			print(int((data[0][3]+data[1][3])*100/total))
-			
-	Fancy Houses
-	You are analyzing house prices. The given code declares a list with house prices in the neighborhood.
-	You need to calculate and output the number of houses that have a price that is above the average.
-	To calculate the average price of the houses, you need to divide the sum of all prices by the number of houses.
-	Use sum(list) to calculate the sum of all items in the list and len(list) to get the number of items.
-		prices = [125000, 78000, 110000, 65000, 300000, 250000, 210000, 150000, 165000, 140000, 125000, 85000, 90000, 128000, 230000, 225000, 100000, 300000]
-		#your code goes here
-		avg = sum(prices)/len(prices)
-		count = 0
-		for i in prices:
-			if i>avg:
-				count += 1
-		print(count)
-		
-	Insect Control
-	The number of insects in a lab doubles in size every month.
-	Take the initial number of insects as input and output a list, showing the number of insects for each of the next 12 months, starting with 0, which is the initial value.
-	So, the resulting list should contain 12 items, each showing the number of insects at the beginning of that month.
-	Sample Input:
-	10
-	Sample Output:
-	[10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120, 10240, 20480]
-	Create a list comprehension to generate the required list.
-	The formula to calculate the number of insects after N months will be: count*2ᴺ, where count is the initial number of insects.
-		n = int(input())
-		insects = [n*2**i for i in range(12)]
-		print(insects)
-		
-	Average Word Length (PROJECT)
-	Given a sentence as input, calculate and output the average word length of that sentence.
-	To calculate the average word length, you need to divide the sum of all word lengths by the number of words in the sentence.
-	Sample Input:
-	this is some text
-	Sample Output:
-	3.5
-	Explanation: There are 4 words in the given input, with a total of 14 letters, so the average length will be: 14/4 = 3.5
-	Strings have a split() method, which returns the string split into a list, with the given separator. By default, the separator is a space, so calling split() will return a list containing the words of the string as items.
-		text = input()
-		words = text.split()
-		total = sum(map(len,words))/len(words)
-		print(total)
-		
+    Apple of My Eye
+    You are given a 2D matrix, which represents the number of people in a room, grouped by their eye color and gender.
+    The first row represents the male gender, while the second row represents females.
+    The columns are the eye colors, in the following order: brown, blue, green, black
+    data = [
+         [23, 11, 5, 14],
+        [8, 32, 20, 5]
+    ] 
+    The data shows that, for example, there are 20 green eyed females in the room (2nd row, 3rd column).
+    Our program needs to take eye color as input and output the percentage of people with that eye color in the room.
+    Sample Input:
+    blue
+    Sample Output:
+    36
+    Explanation: There are 11+32=43 people with blue eyes, which is 36% of the total.
+    Note, that the output should be an integer: use the int() function to convert the result.
+        data = [
+    [23, 11, 5, 14],
+    [8, 32, 20, 5]
+    ]
+        color = input()
+        #your code goes here
+        total = 118
+        if color=="brown":
+            print(int((data[0][0]+data[1][0])*100/total))
+        elif color=="blue":
+            print(int((data[0][1]+data[1][1])*100/total))
+        elif color=="green":
+            print(int((data[0][2]+data[1][2])*100/total))
+        else:
+            print(int((data[0][3]+data[1][3])*100/total))
+            
+    Fancy Houses
+    You are analyzing house prices. The given code declares a list with house prices in the neighborhood.
+    You need to calculate and output the number of houses that have a price that is above the average.
+    To calculate the average price of the houses, you need to divide the sum of all prices by the number of houses.
+    Use sum(list) to calculate the sum of all items in the list and len(list) to get the number of items.
+        prices = [125000, 78000, 110000, 65000, 300000, 250000, 210000, 150000, 165000, 140000, 125000, 85000, 90000, 128000, 230000, 225000, 100000, 300000]
+        #your code goes here
+        avg = sum(prices)/len(prices)
+        count = 0
+        for i in prices:
+            if i>avg:
+                count += 1
+        print(count)
+        
+    Insect Control
+    The number of insects in a lab doubles in size every month.
+    Take the initial number of insects as input and output a list, showing the number of insects for each of the next 12 months, starting with 0, which is the initial value.
+    So, the resulting list should contain 12 items, each showing the number of insects at the beginning of that month.
+    Sample Input:
+    10
+    Sample Output:
+    [10, 20, 40, 80, 160, 320, 640, 1280, 2560, 5120, 10240, 20480]
+    Create a list comprehension to generate the required list.
+    The formula to calculate the number of insects after N months will be: count*2ᴺ, where count is the initial number of insects.
+        n = int(input())
+        insects = [n*2**i for i in range(12)]
+        print(insects)
+        
+    Average Word Length (PROJECT)
+    Given a sentence as input, calculate and output the average word length of that sentence.
+    To calculate the average word length, you need to divide the sum of all word lengths by the number of words in the sentence.
+    Sample Input:
+    this is some text
+    Sample Output:
+    3.5
+    Explanation: There are 4 words in the given input, with a total of 14 letters, so the average length will be: 14/4 = 3.5
+    Strings have a split() method, which returns the string split into a list, with the given separator. By default, the separator is a space, so calling split() will return a list containing the words of the string as items.
+        text = input()
+        words = text.split()
+        total = sum(map(len,words))/len(words)
+        print(total)
+        
 _____Dictionaries, Tuples, Sets_____
 
-	Fuzzy Search
-	You are making a phonebook. The contacts are stored in a dictionary, where the key is the name and the value is a list, representing the number and the email of the contact.
-	You need to implement search: take the name of the contact as input and output the email.
-	If the contact is not found, output "Not found".
-	Note, that the email is the second element of the list.
-		contacts = {
-			"David": ["123-321-88", "david@test.com"],
-			"James": ["241-879-093", "james@test.com"],
-			"Bob": ["987-004-322", "bob@test.com"],
-			"Amy": ["340-999-213", "a@test.com"]
-		}
-		#your code goes here
-		name = input()
-		if name in contacts:
-			print(contacts[name][1])
-		else:
-			print("Not found")
-			
-	Mapping Software
-	You are working on a mapping software. The map is stored as a list of points, where each item is represented as a tuple, containing the X and Y coordinates of the point.
-	You need to calculate and output the distance to the closest point from the point (0, 0).
-	To calculate the distance of the point (x, y) from (0, 0), use the following formula: √x²+y²
-	You can iterate over the list and use tuple unpacking to get the x and y coordinates of each point: for (x, y) in points: and output the smallest value.
-		points = [
-			(12, 55),
-			(880, 123),
-			(64, 64),
-			(190, 1024),
-			(77, 33),
-			(42, 11),
-			(0, 90)
-		]
-		#your code goes here
-		distance = list(range(len(points)))
-		z = 0
-		import math
-		for (x,y) in points:
-			distance[z] = math.sqrt((x**2)+(y**2))
-			z += 1
-		print(min(distance))
-		
-	Words In Common
-	Given two sentences, you need to find and output the number of the common words (words that are present in both sentences).
-	Sample Input:
-	this is some text
-	I would like this tea and some cookies
-	Sample Output:
-	2
-	The words 'some' and 'this' appear in both sentences.
-	You can use the split() function to get a list of words in a string and then use the set() function to convert it into a set. For example, to convert the list x to a set you can use: set(x)
-		s1 = input()
-		s2 = input()
-		list1 = s1.split()
-		list2 = s2.split()
-		print(len(set(list1)&set(list2)))
-		
-	Revenue Growth Analysis (PROJECT)
-	You are analyzing sales data from a ticket office.
-	The ticket for an adult is $20, while the ticket for a child under 18 is $5.
-	The data you are given is in a dictionary format, where the keys are the sold ticket numbers, and the values are the customer ages.
-	For example, "123-08": 24 means that the ticket was bought a 24 year old.
-	Your goal is to calculate how much more money the office would make if it would change the ticket discount age to the given input.
-	So, your program needs to take an integer as input and output the percentage of revenue growth, if the discount was given to people under that age.
-	For example, if the office made $15000 with the original discount age, and would make $18000 with 14 as the discount age, then the growth would be ((18000-15000)/15000)*100 = 20%
-	So, for the input 14, your program should output 20. The output should be an integer (use int() to convert the result).
-	To iterate over the values of a dictionary, you can use the .values() function:
-	for value in data.values()
-		data = {
-			"100-90": 25, "42-01": 48, "55-09": 12, "128-64": 71, "002-22": 18, "321-54": 19, "097-32": 33, "065-135": 64, "99-043": 80, "111-99": 11, "123-019": 5, "109-890": 72, "132-123": 27, "32-908": 27, "008-09": 25, "055-967": 35, "897-99": 44, "890-98": 56, "344-32": 65, "43-955": 59, "001-233": 9, "089-111": 15, "090-090": 17, "56-777": 23, "44-909": 27, "13-111": 21, "87-432": 15, "87-433": 14, "87-434": 23, "87-435": 11, "87-436": 12, "87-437": 16, "94-121": 15, "94-122": 35, "80-089": 10, "87-456": 8, "87-430": 40
-		}
-		age = int(input())
-		#your code goes here
-		data_values = data.values()
-		total = 0You are given a dictionary that contains names and numbers of people.
+    Fuzzy Search
+    You are making a phonebook. The contacts are stored in a dictionary, where the key is the name and the value is a list, representing the number and the email of the contact.
+    You need to implement search: take the name of the contact as input and output the email.
+    If the contact is not found, output "Not found".
+    Note, that the email is the second element of the list.
+        contacts = {
+            "David": ["123-321-88", "david@test.com"],
+            "James": ["241-879-093", "james@test.com"],
+            "Bob": ["987-004-322", "bob@test.com"],
+            "Amy": ["340-999-213", "a@test.com"]
+        }
+        #your code goes here
+        name = input()
+        if name in contacts:
+            print(contacts[name][1])
+        else:
+            print("Not found")
+            
+    Mapping Software
+    You are working on a mapping software. The map is stored as a list of points, where each item is represented as a tuple, containing the X and Y coordinates of the point.
+    You need to calculate and output the distance to the closest point from the point (0, 0).
+    To calculate the distance of the point (x, y) from (0, 0), use the following formula: √x²+y²
+    You can iterate over the list and use tuple unpacking to get the x and y coordinates of each point: for (x, y) in points: and output the smallest value.
+        points = [
+            (12, 55),
+            (880, 123),
+            (64, 64),
+            (190, 1024),
+            (77, 33),
+            (42, 11),
+            (0, 90)
+        ]
+        #your code goes here
+        distance = list(range(len(points)))
+        z = 0
+        import math
+        for (x,y) in points:
+            distance[z] = math.sqrt((x**2)+(y**2))
+            z += 1
+        print(min(distance))
+        
+    Words In Common
+    Given two sentences, you need to find and output the number of the common words (words that are present in both sentences).
+    Sample Input:
+    this is some text
+    I would like this tea and some cookies
+    Sample Output:
+    2
+    The words 'some' and 'this' appear in both sentences.
+    You can use the split() function to get a list of words in a string and then use the set() function to convert it into a set. For example, to convert the list x to a set you can use: set(x)
+        s1 = input()
+        s2 = input()
+        list1 = s1.split()
+        list2 = s2.split()
+        print(len(set(list1)&set(list2)))
+        
+    Revenue Growth Analysis (PROJECT)
+    You are analyzing sales data from a ticket office.
+    The ticket for an adult is $20, while the ticket for a child under 18 is $5.
+    The data you are given is in a dictionary format, where the keys are the sold ticket numbers, and the values are the customer ages.
+    For example, "123-08": 24 means that the ticket was bought a 24 year old.
+    Your goal is to calculate how much more money the office would make if it would change the ticket discount age to the given input.
+    So, your program needs to take an integer as input and output the percentage of revenue growth, if the discount was given to people under that age.
+    For example, if the office made $15000 with the original discount age, and would make $18000 with 14 as the discount age, then the growth would be ((18000-15000)/15000)*100 = 20%
+    So, for the input 14, your program should output 20. The output should be an integer (use int() to convert the result).
+    To iterate over the values of a dictionary, you can use the .values() function:
+    for value in data.values()
+        data = {
+            "100-90": 25, "42-01": 48, "55-09": 12, "128-64": 71, "002-22": 18, "321-54": 19, "097-32": 33, "065-135": 64, "99-043": 80, "111-99": 11, "123-019": 5, "109-890": 72, "132-123": 27, "32-908": 27, "008-09": 25, "055-967": 35, "897-99": 44, "890-98": 56, "344-32": 65, "43-955": 59, "001-233": 9, "089-111": 15, "090-090": 17, "56-777": 23, "44-909": 27, "13-111": 21, "87-432": 15, "87-433": 14, "87-434": 23, "87-435": 11, "87-436": 12, "87-437": 16, "94-121": 15, "94-122": 35, "80-089": 10, "87-456": 8, "87-430": 40
+        }
+        age = int(input())
+        #your code goes here
+        data_values = data.values()
+        total = 0You are given a dictionary that contains names and numbers of people.
 You need to create a DataFrame from the dictionary and add an index to it, which should be the name values.
 Then take a name from user input and output the row in the DataFrame, which corresponds to that row.
-		stotal = 0
-		for x in data_values:
-			if x >= 18:
-				total += 20
-			else:
-				total += 5
-		for y in data_values:
-			if y >= age:
-				stotal += 20
-			else:
-				stotal += 5
-		res = ((stotal-total)/total)*100
-		print(int(res))
+        stotal = 0
+        for x in data_values:
+            if x >= 18:
+                total += 20
+            else:
+                total += 5
+        for y in data_values:
+            if y >= age:
+                stotal += 20
+            else:
+                stotal += 5
+        res = ((stotal-total)/total)*100
+        print(int(res))
 
 _____ User-Defined Data Structures _____
 
-	Come Back
-	You need to make a back button for a browser.
-	You use a stack to store the website links visited. Each new link visited is pushed onto the stack.
-	The back button needs to pop the top link from the stack and navigate to it.
-	The given code declares a Browser class as a stack and implements some of its methods. Then, some links are pushed onto the stack.
-	A while loop is then used to go back to all links and print them.
-	Implement the required pop() method for the Browser, so that the given code works as expected.
-	Note, that the pop() method needs to return the value, so that it can be printed.
-		class Browser:
-			def __init__(self):
-				self.links = []	
-				def is_empty(self):
-				return self.links == []
-			def push(self, link):
-				self.links.insert(0, link)				
-			def pop(self):
-				return self.links.pop(0)
-		x = Browser()
-		x.push('about:blank')
-		x.push('www.sololearn.com')
-		x.push('www.sololearn.com/courses/')
-		x.push('www.sololearn.com/courses/python/')
-		while not x.is_empty():
-			print(x.pop())
+    Come Back
+    You need to make a back button for a browser.
+    You use a stack to store the website links visited. Each new link visited is pushed onto the stack.
+    The back button needs to pop the top link from the stack and navigate to it.
+    The given code declares a Browser class as a stack and implements some of its methods. Then, some links are pushed onto the stack.
+    A while loop is then used to go back to all links and print them.
+    Implement the required pop() method for the Browser, so that the given code works as expected.
+    Note, that the pop() method needs to return the value, so that it can be printed.
+        class Browser:
+            def __init__(self):
+                self.links = []    
+                def is_empty(self):
+                return self.links == []
+            def push(self, link):
+                self.links.insert(0, link)                
+            def pop(self):
+                return self.links.pop(0)
+        x = Browser()
+        x.push('about:blank')
+        x.push('www.sololearn.com')
+        x.push('www.sololearn.com/courses/')
+        x.push('www.sololearn.com/courses/python/')
+        while not x.is_empty():
+            print(x.pop())
 
-	On A Call
-	You are making a call center application, which should handle customers in a queue.
-	The CallCenter class is implemented as a Queue. Each element of the queue has the topic of the call as its value. The two possible values are 'general' and 'technical'. A 'general' call takes on average 5 minutes to handle, while a 'technical' call requires 10 minutes.
-	The given code adds multiple customers to the Queue from user input.
-	You need to dequeue all added customers, calculate and output the total time required to handle all calls.
-	Use a while loop to dequeue all the customers from the queue, until it is empty.
-		class CallCenter:
-			def __init__(self):
-				self.customers = []
-			def is_empty(self):
-				return self.customers == []
-			def add(self, x):
-				self.customers.insert(0, x)
-			def next(self):
-				return self.customers.pop()
-		c = CallCenter()
-		while True:
-			n = input()
-			if n == 'end':
-				break
-			c.add(n)
-		#your code goes here
-		time = 0
-		while True:
-			if c.is_empty():
-				break
-			item = c.next()
-			if item == 'general':
-				time += 5
-			if item == 'technical':
-				time += 10	
-		print(time)
-		
-	Name That Tune
-	You are making a Music Player, which allows you to create a playlist of tracks.
-	The given code defines Player and Track classes, where the Player is a linked list, chaining together Track objects.
-	The code takes a number of tracks from user input and adds them to the playlist.
-	You need to iterate over the linked list and output all the tracks in the playlist in the order of playback.
-	Use a while loop to iterate over the linked list.
-		class Track:
-			def __init__(self, title, next):
-				self.title = title
-				self.next = next
-		class Player:
-			def __init__(self):
-				self.head = None
-			def add(self, title):
-				if not self.head:
-					self.head = Track(title, None)
-					return
-				curr = self.head
-				while curr.next:
-					curr = curr.next
-				curr.next = Track(title, None)
-		p = Player()
-		while True:
-			x = input()
-			if x == 'end':
-				break
-			p.add(x)
-		#your code goes here
-		n = p.head
-		while n != None:
-			print(n.title)
-			n = n.next
-		print()
+    On A Call
+    You are making a call center application, which should handle customers in a queue.
+    The CallCenter class is implemented as a Queue. Each element of the queue has the topic of the call as its value. The two possible values are 'general' and 'technical'. A 'general' call takes on average 5 minutes to handle, while a 'technical' call requires 10 minutes.
+    The given code adds multiple customers to the Queue from user input.
+    You need to dequeue all added customers, calculate and output the total time required to handle all calls.
+    Use a while loop to dequeue all the customers from the queue, until it is empty.
+        class CallCenter:
+            def __init__(self):
+                self.customers = []
+            def is_empty(self):
+                return self.customers == []
+            def add(self, x):
+                self.customers.insert(0, x)
+            def next(self):
+                return self.customers.pop()
+        c = CallCenter()
+        while True:
+            n = input()
+            if n == 'end':
+                break
+            c.add(n)
+        #your code goes here
+        time = 0
+        while True:
+            if c.is_empty():
+                break
+            item = c.next()
+            if item == 'general':
+                time += 5
+            if item == 'technical':
+                time += 10    
+        print(time)
+        
+    Name That Tune
+    You are making a Music Player, which allows you to create a playlist of tracks.
+    The given code defines Player and Track classes, where the Player is a linked list, chaining together Track objects.
+    The code takes a number of tracks from user input and adds them to the playlist.
+    You need to iterate over the linked list and output all the tracks in the playlist in the order of playback.
+    Use a while loop to iterate over the linked list.
+        class Track:
+            def __init__(self, title, next):
+                self.title = title
+                self.next = next
+        class Player:
+            def __init__(self):
+                self.head = None
+            def add(self, title):
+                if not self.head:
+                    self.head = Track(title, None)
+                    return
+                curr = self.head
+                while curr.next:
+                    curr = curr.next
+                curr.next = Track(title, None)
+        p = Player()
+        while True:
+            x = input()
+            if x == 'end':
+                break
+            p.add(x)
+        #your code goes here
+        n = p.head
+        while n != None:
+            print(n.title)
+            n = n.next
+        print()
 
-	Let's Connect
-	You are making a social network called X.
-	Connections between the users are stored as a graph.
-	The given code declares an X class with its add_friend() method and creates some connections for 5 users.
-	You need to take a number as input and output the number of connections of the corresponding user.
-	Each user's connections are stored in the adj matrix.
-			class X(): 
-				def __init__(self, size): 
-					self.adj = [ [0] * size for i in range(size)]
-					self.size = size 
-				def add_friend(self, x, y): 
-					if x > self.size or y > self.size or x < 0 or y < 0: 
-						print("Error") 
-					else: 
-						self.adj[x-1][y-1] = 1 
-						self.adj[y-1][x-1] = 1 
-				def remove_friend(self, x, y): 
-					if x > self.size or y > self.size or x < 0 or y < 0: 
-						print("Error") 
-					else: 
-						self.adj[x-1][y-1] = 0 
-						self.adj[y-1][x-1] = 0 
-			x = X(5)
-			x.add_friend(1, 3) 
-			x.add_friend(1, 5)
-			x.add_friend(2, 5)
-			x.add_friend(2, 4)
-			x.add_friend(4, 5)
-			n = int(input())
-			#your code goes here
-			a = 0
-			for i in range(len(x.adj)):
-				if i+1 == n:
-					for j in x.adj[i]:
-						if j == 1:
-							a += 1
-			print(a)
+    Let's Connect
+    You are making a social network called X.
+    Connections between the users are stored as a graph.
+    The given code declares an X class with its add_friend() method and creates some connections for 5 users.
+    You need to take a number as input and output the number of connections of the corresponding user.
+    Each user's connections are stored in the adj matrix.
+            class X(): 
+                def __init__(self, size): 
+                    self.adj = [ [0] * size for i in range(size)]
+                    self.size = size 
+                def add_friend(self, x, y): 
+                    if x > self.size or y > self.size or x < 0 or y < 0: 
+                        print("Error") 
+                    else: 
+                        self.adj[x-1][y-1] = 1 
+                        self.adj[y-1][x-1] = 1 
+                def remove_friend(self, x, y): 
+                    if x > self.size or y > self.size or x < 0 or y < 0: 
+                        print("Error") 
+                    else: 
+                        self.adj[x-1][y-1] = 0 
+                        self.adj[y-1][x-1] = 0 
+            x = X(5)
+            x.add_friend(1, 3) 
+            x.add_friend(1, 5)
+            x.add_friend(2, 5)
+            x.add_friend(2, 4)
+            x.add_friend(4, 5)
+            n = int(input())
+            #your code goes here
+            a = 0
+            for i in range(len(x.adj)):
+                if i+1 == n:
+                    for j in x.adj[i]:
+                        if j == 1:
+                            a += 1
+            print(a)
 
-	Balanced Parentheses (PROJECT)
-	Parentheses are balanced, if all opening parentheses have their corresponding closing parentheses.
-	Given an expression as input, we need to find out whether the parentheses are balanced or not.
-	For example, "(x+y)*(z-2*(6))" is balanced, while "7-(3(2*9))4) (1" is not balanced.
-	The problem can be solved using a stack.
-	Push each opening parenthesis to the stack and pop the last inserted opening parenthesis whenever a closing parenthesis is encountered.
-	If the closing bracket does not correspond to the opening bracket, then stop and say that the brackets are not balanced.
-	Also, after checking all the parentheses, we need to check the stack to be empty -- if it's not empty, then the parentheses are not balanced.
-	Implement the balanced() function to return True if the parentheses in the given expression are balanced, and False if not.
-	Sample Input:
-	(a( ) eee) )
-	Sample Output:
-	False
-	You can use a simple list for a stack. Use list.insert(0, item) to push on the stack, and list.pop(0) to pop the top item. You can access the top element of the stack using list[0].
-		def balanced(expression):
-			#your code goes here
-			count = 0
-			for char in expression:
-				if char == "(":
-					count += 1
-				elif char == ")":
-					if count == 0:
-						return False
-					count -= 1
-			return count == 0
-		print(balanced(input()))
-		
+    Balanced Parentheses (PROJECT)
+    Parentheses are balanced, if all opening parentheses have their corresponding closing parentheses.
+    Given an expression as input, we need to find out whether the parentheses are balanced or not.
+    For example, "(x+y)*(z-2*(6))" is balanced, while "7-(3(2*9))4) (1" is not balanced.
+    The problem can be solved using a stack.
+    Push each opening parenthesis to the stack and pop the last inserted opening parenthesis whenever a closing parenthesis is encountered.
+    If the closing bracket does not correspond to the opening bracket, then stop and say that the brackets are not balanced.
+    Also, after checking all the parentheses, we need to check the stack to be empty -- if it's not empty, then the parentheses are not balanced.
+    Implement the balanced() function to return True if the parentheses in the given expression are balanced, and False if not.
+    Sample Input:
+    (a( ) eee) )
+    Sample Output:
+    False
+    You can use a simple list for a stack. Use list.insert(0, item) to push on the stack, and list.pop(0) to pop the top item. You can access the top element of the stack using list[0].
+        def balanced(expression):
+            #your code goes here
+            count = 0
+            for char in expression:
+                if char == "(":
+                    count += 1
+                elif char == ")":
+                    if count == 0:
+                        return False
+                    count -= 1
+            return count == 0
+        print(balanced(input()))
+        
 ===== PYTHON FOR DATA SCIENCE (https://www.sololearn.com/certificates/CT-1XJAQMA3) =====
 _____ Introduction _____
 
-	Vaccinations Report
-	We have a report on the number of flu vaccinations in a class of 20 people.
-	It has the following numbers:
-	never: 5
-	once: 8
-	twice: 4
-	3 times: 3
-	What is the mean number of times those people have been vaccinated?
-	Output the result using the print() statement.
-	Hint: Think about the data this way: it contains 20 values, each representing the number of vaccinations the corresponding person had.
-		vac_nums = [0,0,0,0,0,
-			1,1,1,1,1,1,1,1,
-			2,2,2,2,
-			3,3,3
-			]
-		#your code goes here
-		mean = sum(vac_nums) / len(vac_nums)
-		print(mean)
-		
-	Vaccinations Dataset
-	Using the same vaccinations dataset, which includes the number of times people got the flu vaccine.
-	The dataset contains the following numbers:
-	never: 5
-	once: 8
-	twice: 4
-	3 times: 3
-	Calculate and output the variance.
-	We will soon learn about easier ways to calculate the variance and other summary statistics using Python. For now, use Python code to calculate the result using the corresponding equation.
-	Hint: The variance is the average of the squared differences from the mean.
-		vac_nums = [0,0,0,0,0,
-			1,1,1,1,1,1,1,1,
-			2,2,2,2,
-			3,3,3
-			]
-		#your code goes here
-		def variance(data):
-			# Mean of the data
-			mean = sum(data) / len(data)
-			# Square deviations
-			deviations = [(x - mean) ** 2 for x in data]
-			# Variance
-			variance = sum(deviations) / n
-			return variance
-		print(variance(vac_nums))
-		
+    Vaccinations Report
+    We have a report on the number of flu vaccinations in a class of 20 people.
+    It has the following numbers:
+    never: 5
+    once: 8
+    twice: 4
+    3 times: 3
+    What is the mean number of times those people have been vaccinated?
+    Output the result using the print() statement.
+    Hint: Think about the data this way: it contains 20 values, each representing the number of vaccinations the corresponding person had.
+        vac_nums = [0,0,0,0,0,
+            1,1,1,1,1,1,1,1,
+            2,2,2,2,
+            3,3,3
+            ]
+        #your code goes here
+        mean = sum(vac_nums) / len(vac_nums)
+        print(mean)
+        
+    Vaccinations Dataset
+    Using the same vaccinations dataset, which includes the number of times people got the flu vaccine.
+    The dataset contains the following numbers:
+    never: 5
+    once: 8
+    twice: 4
+    3 times: 3
+    Calculate and output the variance.
+    We will soon learn about easier ways to calculate the variance and other summary statistics using Python. For now, use Python code to calculate the result using the corresponding equation.
+    Hint: The variance is the average of the squared differences from the mean.
+        vac_nums = [0,0,0,0,0,
+            1,1,1,1,1,1,1,1,
+            2,2,2,2,
+            3,3,3
+            ]
+        #your code goes here
+        def variance(data):
+            # Mean of the data
+            mean = sum(data) / len(data)
+            # Square deviations
+            deviations = [(x - mean) ** 2 for x in data]
+            # Variance
+            variance = sum(deviations) / n
+            return variance
+        print(variance(vac_nums))
+        
 _____ Math Operations With NumPy _____
 
-	Houses On The Block
-	You are given an array that holds the square footage data for houses on a particular street.
-	A new house has just been constructed on that street.
-	Modify your program to take the new house value as input, add it to the array, and output the array sorted in ascending order.
-	Use the print statement to output the array object.
-		import numpy as np
-		data = np.array([1000, 2500, 1400, 1800, 900, 4200, 2200, 1900, 3500])
-		data = np.append(data,int(input()))
-		data = np.sort(data)
-		print(data)
-		
-	Take Your Seat
-	You are given an array that represents the occupancy of seats in a movie theater. A seat marked with 1 is occupied, while one marked 0 means the seat is free.
-	However, the array is flat and 1-dimensional. Transform it into a 2-dimensional array, representing the rows of the seats.
-	Each row in the theater has 5 seats and there are a total of 30 seats.
-	Reshape the array into the corresponding shape and output the row at the given index, which is taken from user input.
-	The row index is taken from user input in the given code.
-	import numpy as np
-	data = np.array([1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0])
-	row = int(input())
-	data = data.reshape(6,5)
-	print(data[row])
-	
-	Array of Numbers
-	You are given a task to find all of the whole numbers below 100 that are multiples of both 3 and 5.
-	Create an array of numbers below 100 that are multiples of both 3 and 5, and output it.
-	You can use the modulo operator % to check if a number is a multiple of another number.
-		import numpy as np
-		data = np.arange(1, 100)
-		data = data[(data%3 == 0) & (data%5 == 0)]
-		print(data)
-		
-	Infection Cases
-	The given array represents the daily number of infections for 30 days.
-	Find out how many days exceeded the average number of infections.
-	Create the condition and output the size of the resulting array.
-		import numpy as np
-		data = np.array([120, 98, 150, 65, 42, 100, 190, 220, 140, 110, 88, 89, 100, 120, 50, 180, 155, 42, 89, 77, 200, 190, 125, 98, 77, 40, 39, 59, 30, 67])
-		mean = np.mean(data)
-		counter = 0
-		for i in data:
-			if i>mean:
-				counter += 1
-		print(counter)
-		
-	House Prices (PROJECT)
-	You are given an array that represents house prices.
-	Calculate and output the percentage of houses that are within one standard deviation from the mean.
-	To calculate the percentage, divide the number of houses that satisfy the condition by the total number of houses, and multiply the result by 100.
-		import numpy as np
-		data = np.array([150000, 125000, 320000, 540000, 200000, 120000, 160000, 230000, 280000, 290000, 300000, 500000, 420000, 100000, 150000, 280000])
-		mean = np.mean(data)
-		std = np.std(data)
-		low = mean - std
-		high = mean + std
-		print(len(data[(low < data) & (data < high)]) / len(data) * 100)
-		
+    Houses On The Block
+    You are given an array that holds the square footage data for houses on a particular street.
+    A new house has just been constructed on that street.
+    Modify your program to take the new house value as input, add it to the array, and output the array sorted in ascending order.
+    Use the print statement to output the array object.
+        import numpy as np
+        data = np.array([1000, 2500, 1400, 1800, 900, 4200, 2200, 1900, 3500])
+        data = np.append(data,int(input()))
+        data = np.sort(data)
+        print(data)
+        
+    Take Your Seat
+    You are given an array that represents the occupancy of seats in a movie theater. A seat marked with 1 is occupied, while one marked 0 means the seat is free.
+    However, the array is flat and 1-dimensional. Transform it into a 2-dimensional array, representing the rows of the seats.
+    Each row in the theater has 5 seats and there are a total of 30 seats.
+    Reshape the array into the corresponding shape and output the row at the given index, which is taken from user input.
+    The row index is taken from user input in the given code.
+    import numpy as np
+    data = np.array([1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0])
+    row = int(input())
+    data = data.reshape(6,5)
+    print(data[row])
+    
+    Array of Numbers
+    You are given a task to find all of the whole numbers below 100 that are multiples of both 3 and 5.
+    Create an array of numbers below 100 that are multiples of both 3 and 5, and output it.
+    You can use the modulo operator % to check if a number is a multiple of another number.
+        import numpy as np
+        data = np.arange(1, 100)
+        data = data[(data%3 == 0) & (data%5 == 0)]
+        print(data)
+        
+    Infection Cases
+    The given array represents the daily number of infections for 30 days.
+    Find out how many days exceeded the average number of infections.
+    Create the condition and output the size of the resulting array.
+        import numpy as np
+        data = np.array([120, 98, 150, 65, 42, 100, 190, 220, 140, 110, 88, 89, 100, 120, 50, 180, 155, 42, 89, 77, 200, 190, 125, 98, 77, 40, 39, 59, 30, 67])
+        mean = np.mean(data)
+        counter = 0
+        for i in data:
+            if i>mean:
+                counter += 1
+        print(counter)
+        
+    House Prices (PROJECT)
+    You are given an array that represents house prices.
+    Calculate and output the percentage of houses that are within one standard deviation from the mean.
+    To calculate the percentage, divide the number of houses that satisfy the condition by the total number of houses, and multiply the result by 100.
+        import numpy as np
+        data = np.array([150000, 125000, 320000, 540000, 200000, 120000, 160000, 230000, 280000, 290000, 300000, 500000, 420000, 100000, 150000, 280000])
+        mean = np.mean(data)
+        std = np.std(data)
+        low = mean - std
+        high = mean + std
+        print(len(data[(low < data) & (data < high)]) / len(data) * 100)
+        
 _____ Data Manipulation With Pandas _____
 
 Locating Contacts
-	You are given a dictionary that contains names and numbers of people.
-	You need to create a DataFrame from the dictionary and add an index to it, which should be the name values.
-	Then take a name from user input and output the row in the DataFrame, which corresponds to that row.
-		import pandas as pd
-		data = {
-			'name': ['James', 'Billy', 'Bob', 'Amy', 'Tom'],
-			'number': ['1234', '5678', '2222', '1111', '0909']
-		}
-		df = pd.DataFrame(data, index = ["James", "Billy", "Bob", "Amy", "Tom"])
-		name = input()
-		print(df.loc[name])
+    You are given a dictionary that contains names and numbers of people.
+    You need to create a DataFrame from the dictionary and add an index to it, which should be the name values.
+    Then take a name from user input and output the row in the DataFrame, which corresponds to that row.
+        import pandas as pd
+        data = {
+            'name': ['James', 'Billy', 'Bob', 'Amy', 'Tom'],
+            'number': ['1234', '5678', '2222', '1111', '0909']
+        }
+        df = pd.DataFrame(data, index = ["James", "Billy", "Bob", "Amy", "Tom"])
+        name = input()
+        print(df.loc[name])
 
-	Names and Ranks
-	You are given a DataFrame that includes the names and ranks of people.
-	You need to take a rank as input and output the corresponding name column from the DataFrame as a Series.
-	Note that the rank is an integer, so you need to convert the user input to an integer.
-		import pandas as pd
-		data = {
-			 'name': ['James', 'Billy', 'Bob', 'Amy', 'Tom', 'Harry'],
-			 'rank': [4, 1, 3, 5, 2, 6]
-		}
-		df = pd.DataFrame(data, index=data['name'])
-		userrank = int(input())
-		print(df["name"][df["rank"] == userrank])
-		
-	Cases and Deaths
-	You are working with the 'ca-covid' CSV file that contains the COVID-19 infection data in California for the year 2020.
-	The file provides data on daily cases and deaths for the entire year.
-	Find and output the row that corresponds to December 31, 2020.
-	The requested date is the last row in the dataset, so you can use indexing to select it.
-		import pandas as pd
-		df = pd.read_csv("/usercode/files/ca-covid.csv")
-		df.set_index('date', inplace=True)
-		df.drop('state', axis=1, inplace=True)
-		print(df.iloc[-1])
+    Names and Ranks
+    You are given a DataFrame that includes the names and ranks of people.
+    You need to take a rank as input and output the corresponding name column from the DataFrame as a Series.
+    Note that the rank is an integer, so you need to convert the user input to an integer.
+        import pandas as pd
+        data = {
+             'name': ['James', 'Billy', 'Bob', 'Amy', 'Tom', 'Harry'],
+             'rank': [4, 1, 3, 5, 2, 6]
+        }
+        df = pd.DataFrame(data, index=data['name'])
+        userrank = int(input())
+        print(df["name"][df["rank"] == userrank])
+        
+    Cases and Deaths
+    You are working with the 'ca-covid' CSV file that contains the COVID-19 infection data in California for the year 2020.
+    The file provides data on daily cases and deaths for the entire year.
+    Find and output the row that corresponds to December 31, 2020.
+    The requested date is the last row in the dataset, so you can use indexing to select it.
+        import pandas as pd
+        df = pd.read_csv("/usercode/files/ca-covid.csv")
+        df.set_index('date', inplace=True)
+        df.drop('state', axis=1, inplace=True)
+        print(df.iloc[-1])
 
-	Day of The Week
-	You continue working with the COVID dataset for California.
-	Now, add the weekday names for each row as a new column, named 'weekday'.
-	Then, output the last 7 days data of the dataset.
-	Do not set any index on the DataFrame.
-	The given code converts the date column to datetime, so you do not need to change its format.
-	Use the .dt.strftime("%A") function on the date column to convert it into a weekday name.
-		import pandas as pd
-		df = pd.read_csv("/usercode/files/ca-covid.csv")
-		df.drop('state', axis=1, inplace=True)
-		df['date'] = pd.to_datetime(df['date'], format="%d.%m.%y")
-		df['weekday'] = df['date'].dt.strftime("%A")
-		print(df[-7:])
+    Day of The Week
+    You continue working with the COVID dataset for California.
+    Now, add the weekday names for each row as a new column, named 'weekday'.
+    Then, output the last 7 days data of the dataset.
+    Do not set any index on the DataFrame.
+    The given code converts the date column to datetime, so you do not need to change its format.
+    Use the .dt.strftime("%A") function on the date column to convert it into a weekday name.
+        import pandas as pd
+        df = pd.read_csv("/usercode/files/ca-covid.csv")
+        df.drop('state', axis=1, inplace=True)
+        df['date'] = pd.to_datetime(df['date'], format="%d.%m.%y")
+        df['weekday'] = df['date'].dt.strftime("%A")
+        print(df[-7:])
 
-	Number of Cases
-	Given the COVID data, find the day with maximum cases in a given month.
-	Take a month name as input and output the row that corresponds to the day with the maximum number of cases in that month.
-	You can filter the DataFrame for the given month first, and then select the row with the maximum cases.
-	Important: The output should be a DataFrame, which includes all the columns.
-	For example, for the month of February, the expected result would be:
-		cases deaths month
-		date
-		2020-02-26 15 0 February 
-	The given code adds a month column to the dataset, and adds an index. Do not change that part of the code.
-		import pandas as pd
-		df = pd.read_csv("/usercode/files/ca-covid.csv")
-		df.drop('state', axis=1, inplace=True)
-		df['date'] = pd.to_datetime(df['date'], format="%d.%m.%y")
-		df['month'] = df['date'].dt.month_name()
-		df.set_index('date', inplace=True)
-		monthuser = input()
-		maxim = df[df["month"]==monthuser]['cases'].max()
-		print(df[df['cases']==maxim])
-		
-	COVID Data Analysis (PROJECT)
-	You are working with the COVID dataset for California, which includes the number of cases and deaths for each day of 2020.
-	Find the day when the deaths/cases ratio was largest.
-	To do this, you need to first calculate the deaths/cases ratio and add it as a column to the DataFrame with the name 'ratio', then find the row that corresponds to the largest value.
-	Important: The output should be a DataFrame, containing all of the columns of the dataset for the corresponding row.
-		import pandas as pd
-		df = pd.read_csv("/usercode/files/ca-covid.csv")
-		df.drop('state', axis=1, inplace=True)
-		df.set_index('date', inplace=True)
-		df['ratio'] = df['deaths'] / df['cases']
-		print (df[df['ratio'] == df['ratio'].max()])
+    Number of Cases
+    Given the COVID data, find the day with maximum cases in a given month.
+    Take a month name as input and output the row that corresponds to the day with the maximum number of cases in that month.
+    You can filter the DataFrame for the given month first, and then select the row with the maximum cases.
+    Important: The output should be a DataFrame, which includes all the columns.
+    For example, for the month of February, the expected result would be:
+        cases deaths month
+        date
+        2020-02-26 15 0 February 
+    The given code adds a month column to the dataset, and adds an index. Do not change that part of the code.
+        import pandas as pd
+        df = pd.read_csv("/usercode/files/ca-covid.csv")
+        df.drop('state', axis=1, inplace=True)
+        df['date'] = pd.to_datetime(df['date'], format="%d.%m.%y")
+        df['month'] = df['date'].dt.month_name()
+        df.set_index('date', inplace=True)
+        monthuser = input()
+        maxim = df[df["month"]==monthuser]['cases'].max()
+        print(df[df['cases']==maxim])
+        
+    COVID Data Analysis (PROJECT)
+    You are working with the COVID dataset for California, which includes the number of cases and deaths for each day of 2020.
+    Find the day when the deaths/cases ratio was largest.
+    To do this, you need to first calculate the deaths/cases ratio and add it as a column to the DataFrame with the name 'ratio', then find the row that corresponds to the largest value.
+    Important: The output should be a DataFrame, containing all of the columns of the dataset for the corresponding row.
+        import pandas as pd
+        df = pd.read_csv("/usercode/files/ca-covid.csv")
+        df.drop('state', axis=1, inplace=True)
+        df.set_index('date', inplace=True)
+        df['ratio'] = df['deaths'] / df['cases']
+        print (df[df['ratio'] == df['ratio'].max()])
 
 ===== PYTHON CORE (https://www.sololearn.com/certificates/CT-YRMUP5CS) =====
 _____ Basic Concepts _____
 
-	Your First Program
-	Write a program to print "Python is fun".
-	Note that the sentence starts with a capital letter.
-	Hint
-	Use print() function.
-	Remember to enclose the text into single or double quotes.
-		#output "Python is fun"
-		print("Python is fun")
+    Your First Program
+    Write a program to print "Python is fun".
+    Note that the sentence starts with a capital letter.
+    Hint
+    Use print() function.
+    Remember to enclose the text into single or double quotes.
+        #output "Python is fun"
+        print("Python is fun")
 
-	Brain Freeze!
-	Today is a holiday at the children's camp, so all the children will be served ice cream.
-	There are 68 children in the group, and each child should get 2 scoops of ice cream.
-	Task
-	Write a program to calculate and output the total number of ice cream scoops we need.
-	Use the multiplication operator * inside the print() function.
-		#your code goes here
-		print(68*2)
-		
-	How Many Miles?
-	Calculate and output the number of miles in 1000 kilometers.
-	Hint
-	One mile is 1.6 kilometers, so find the quotient of 1000 and 1.6.
-	Use the floor division operator //.
-		#your code goes 
-		print(1000//1.6)
+    Brain Freeze!
+    Today is a holiday at the children's camp, so all the children will be served ice cream.
+    There are 68 children in the group, and each child should get 2 scoops of ice cream.
+    Task
+    Write a program to calculate and output the total number of ice cream scoops we need.
+    Use the multiplication operator * inside the print() function.
+        #your code goes here
+        print(68*2)
+        
+    How Many Miles?
+    Calculate and output the number of miles in 1000 kilometers.
+    Hint
+    One mile is 1.6 kilometers, so find the quotient of 1000 and 1.6.
+    Use the floor division operator //.
+        #your code goes 
+        print(1000//1.6)
 
-	Exponentiation (PROJECT)
-	Task:
-	Write a program to calculate the amount that will result from the doubling to understand which choice results in a larger amount.
-	Hint:
-	Let's see how exponentiation can be useful to perform the calculation.
-	For example, if we want to calculate how much money we will have on the 5th day, we can use this expression: 0.01*(2**5) = 0.32 dollars (multiply the penny by 2 raised to the power of 5).
-	Use the print statement to output the resulting amount.
-		# your code goes here
-		print(0.01*(2**30))
-		
+    Exponentiation (PROJECT)
+    Task:
+    Write a program to calculate the amount that will result from the doubling to understand which choice results in a larger amount.
+    Hint:
+    Let's see how exponentiation can be useful to perform the calculation.
+    For example, if we want to calculate how much money we will have on the 5th day, we can use this expression: 0.01*(2**5) = 0.32 dollars (multiply the penny by 2 raised to the power of 5).
+    Use the print statement to output the resulting amount.
+        # your code goes here
+        print(0.01*(2**30))
+        
  _____ Strings & Variables _____
  
-	I Code
-	Fix the given code to output I'm a programmer.
-	Hint
-	Escape the single quote inside the string.
-	Use backslash \ for escaping.
-		print('I\'m a programmer')
-		
-	More Lines, More Better
-	Working with strings is an essential programming skill.
-	Task
-	The given code outputs A B C D (each letter is separated by a space).
-	A
-	B
-	C
-	D
-	You can use either \n or three quotes to add new lines inside the given string.
-		print('A\nB\nC\nD')
-	
-	String Operations
-	The provided code outputs the string "ni".
-		print("ni")
-	Task:
-	Modify the code to output the string repeated 3 times, and add an ! (exclamation mark) at the end of the output.
-	Remember, you can concatenate strings using the + operator.
-		print("ni"*3+"!")
-	
-	Fun With Exponents
-	The provided code stores the value 7 in a variable, and outputs it.
-	Task
-	Change the code to output the value of the variable raised to the power of 3.
-	Exponentiation can be used to raise a number to the power of another.
-		x = 7 ** 3
-		print(x)
-		
-	Multiple Variables
-	You can use multiple variables to take multiple inputs for your program.
-	For example, the following code takes two inputs and stores them in the variables x and y:
-		x = input()
-		y = input()
-	Task:
-	Given the code above, output the input x repeated y times.
-	Sample Input:
-	awesome
-	3
-	Sample Output:
-	awesomeawesomeawesome
-	Remember, the input() function results in a string. You need to convert the result into the corresponding type, if you need to use it as a number.
-		x = input()
-		y = int(input())
-		print(x*y)
+    I Code
+    Fix the given code to output I'm a programmer.
+    Hint
+    Escape the single quote inside the string.
+    Use backslash \ for escaping.
+        print('I\'m a programmer')
+        
+    More Lines, More Better
+    Working with strings is an essential programming skill.
+    Task
+    The given code outputs A B C D (each letter is separated by a space).
+    A
+    B
+    C
+    D
+    You can use either \n or three quotes to add new lines inside the given string.
+        print('A\nB\nC\nD')
+    
+    String Operations
+    The provided code outputs the string "ni".
+        print("ni")
+    Task:
+    Modify the code to output the string repeated 3 times, and add an ! (exclamation mark) at the end of the output.
+    Remember, you can concatenate strings using the + operator.
+        print("ni"*3+"!")
+    
+    Fun With Exponents
+    The provided code stores the value 7 in a variable, and outputs it.
+    Task
+    Change the code to output the value of the variable raised to the power of 3.
+    Exponentiation can be used to raise a number to the power of another.
+        x = 7 ** 3
+        print(x)
+        
+    Multiple Variables
+    You can use multiple variables to take multiple inputs for your program.
+    For example, the following code takes two inputs and stores them in the variables x and y:
+        x = input()
+        y = input()
+    Task:
+    Given the code above, output the input x repeated y times.
+    Sample Input:
+    awesome
+    3
+    Sample Output:
+    awesomeawesomeawesome
+    Remember, the input() function results in a string. You need to convert the result into the corresponding type, if you need to use it as a number.
+        x = input()
+        y = int(input())
+        print(x*y)
 
-	Simple Calculator (PROJECT)
-	Write a program to take two integers as input and output their sum.
-	Sample Input:
-	2
-	8
-	Sample Output:
-	10
-	Remember, input() results in a string.
-		# your code goes here
-		x = int(input())
-		y = int(input())
-		print(x + y)
+    Simple Calculator (PROJECT)
+    Write a program to take two integers as input and output their sum.
+    Sample Input:
+    2
+    8
+    Sample Output:
+    10
+    Remember, input() results in a string.
+        # your code goes here
+        x = int(input())
+        y = int(input())
+        print(x + y)
 
 _____ Control Structures _____
 
-	At Boiling Point
-	Write a program that checks if the water is boiling.
-	Take the integer temperature in Celsius as input and output "Boiling" if the temperature is above or equal to 100.
-	Sample Input
-	105
-	Sample Output
-	Boiling
-	Do not output anything if the water is not boiling.
-		temp = int(input())
-		# your code goes here
-		if temp >= 100:
-			print("Boiling")
-	
-	Club Bouncer Code
-	Write a program to control entrance to a club.
-	Only people who are 18 or older are allowed to enter the club.
-	The given program takes the age and the name of the person who tries to enter. Complete the program to output "Welcome" followed by the name of the person if they are allowed to enter the club, and "Sorry" if they are younger than the allowed age.
-	Sample Input
-	24
-	James
-		age = int(input())
-		name = input()
-		# your code goes here
-		if age >= 18:
-			print("Welcome " + name)
-		else:
-			print("Sorry")
+    At Boiling Point
+    Write a program that checks if the water is boiling.
+    Take the integer temperature in Celsius as input and output "Boiling" if the temperature is above or equal to 100.
+    Sample Input
+    105
+    Sample Output
+    Boiling
+    Do not output anything if the water is not boiling.
+        temp = int(input())
+        # your code goes here
+        if temp >= 100:
+            print("Boiling")
+    
+    Club Bouncer Code
+    Write a program to control entrance to a club.
+    Only people who are 18 or older are allowed to enter the club.
+    The given program takes the age and the name of the person who tries to enter. Complete the program to output "Welcome" followed by the name of the person if they are allowed to enter the club, and "Sorry" if they are younger than the allowed age.
+    Sample Input
+    24
+    James
+        age = int(input())
+        name = input()
+        # your code goes here
+        if age >= 18:
+            print("Welcome " + name)
+        else:
+            print("Sorry")
 
-	Humidity Level
-	The comfortable relative humidity for humans is between 40% and 60%.
-	The given program takes the percent of humidity as input.
-	Task
-	Complete the code to output "norm" if the taken percent of humidity is in the range of 40 and 60 inclusive.
-	Don't output anything otherwise.
-	Sample Input
-	45
-	Sample Output
-	norm
-	Use the and operator to chain the conditions in the if statement.
-		humidity = int(input())
-		#your code goes here
-		if humidity >= 40 and humidity <= 60:
-			print("norm")
-			
-	Financial Transactions
-	Using an ATM, customers can access their bank deposits or credit accounts to do a variety of financial transactions.
-	You serve ATMs that accept only Visa and Amex bank cards.
-	The given program takes the type of a bank card as input.
-	Task
-	Complete the program to output "accepted" if the card is Visa or Amex.
-	Don't output anything otherwise.
-	Sample Input
-	Amex
-	Sample Output
-	accepted
-	Use the or operator in the if statement to handle the conditions properly.
-		type = input()
-		#your code goes here
-		if type == "Amex" or type == "Visa":
-			print("accepted")
+    Humidity Level
+    The comfortable relative humidity for humans is between 40% and 60%.
+    The given program takes the percent of humidity as input.
+    Task
+    Complete the code to output "norm" if the taken percent of humidity is in the range of 40 and 60 inclusive.
+    Don't output anything otherwise.
+    Sample Input
+    45
+    Sample Output
+    norm
+    Use the and operator to chain the conditions in the if statement.
+        humidity = int(input())
+        #your code goes here
+        if humidity >= 40 and humidity <= 60:
+            print("norm")
+            
+    Financial Transactions
+    Using an ATM, customers can access their bank deposits or credit accounts to do a variety of financial transactions.
+    You serve ATMs that accept only Visa and Amex bank cards.
+    The given program takes the type of a bank card as input.
+    Task
+    Complete the program to output "accepted" if the card is Visa or Amex.
+    Don't output anything otherwise.
+    Sample Input
+    Amex
+    Sample Output
+    accepted
+    Use the or operator in the if statement to handle the conditions properly.
+        type = input()
+        #your code goes here
+        if type == "Amex" or type == "Visa":
+            print("accepted")
 
-	Fruit Vending Machine
-	Imagine a vending machine that sells fruits. Each fruit has its own number, starting from 0.
-	Write a program for the vending machine, which will take n number as input from the customer and return the fruit with that index.
-		fruits = ["apple", "cherry", "banana", "kiwi", "lemon", "pear", "peach", "avocado"] 
-	If n< 0 or n>7 (the index of last fruit ), the program outputs "Wrong number".
-	Sample Input:
-	2
-	Sample Output:
-	banana
-	Remember that the first element of the list has 0 index.
-		fruits = ["apple", "cherry", "banana", "kiwi", "lemon", "pear", "peach", "avocado"]
-		num = int(input())
-		#your code goes here
-		if num < 0 or num > 7:
-			print("Wrong number")
-		else:
-			print(fruits[num])
+    Fruit Vending Machine
+    Imagine a vending machine that sells fruits. Each fruit has its own number, starting from 0.
+    Write a program for the vending machine, which will take n number as input from the customer and return the fruit with that index.
+        fruits = ["apple", "cherry", "banana", "kiwi", "lemon", "pear", "peach", "avocado"] 
+    If n< 0 or n>7 (the index of last fruit ), the program outputs "Wrong number".
+    Sample Input:
+    2
+    Sample Output:
+    banana
+    Remember that the first element of the list has 0 index.
+        fruits = ["apple", "cherry", "banana", "kiwi", "lemon", "pear", "peach", "avocado"]
+        num = int(input())
+        #your code goes here
+        if num < 0 or num > 7:
+            print("Wrong number")
+        else:
+            print(fruits[num])
 
-	Bingo
-	Given a list of numbers, output "bingo" if it contains the input number.
-	Do not output anything if the number is not found
-		items = [42, 88, 721, 12, 43, 22, 908]
-		num = int(input())
-		#your code goes here
-		if num in items:
-			print("bingo")
-	
-	The Middle Element
-	Given a list, calculate the middle element's index.
-	You can use the len() function to get the number of elements in the list and then floor divide it by 2 using two slashes (//).
-		items = [2, 4, 6, 8, 10, 12, 14]
-		#your code goes here
-		print((len(items))//2)
-	
-	Let's Do Some Magic
-	You have a magic box that doubles the count of items you put, in every day.
-	The given program takes the initial count of the items and the number of days as input.
-	Task
-	Write a program to calculate and output items' count on the last day.
-	Sample Input
-	3
-	2
-	Sample Output
-	12
-	Explanation
-	Day 1: 6 (3*2)
-	Day 2: 12 (6*2)
-	Use *= operator to multiply the count of the items by 2 in each iteration.
-		items = int(input())
-		days = int(input())
-		#your code goes here
-		while days > 0:
-			items *= 2
-			days -= 1
-		print(items)
-		
-	Iteration
-	for loops allow you to easily iterate through lists.
-	Given a list of numbers, output their sum.
-	Sample Input
-	1 3 7 5
-	Sample Output
-	16
-	Output the sum after the loop.
-		list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-		sum = 0
-		#your code goes here
-		for i in list:
-			sum += i
-		print(sum)
-		
-	Date Picker
-	You are making a date picker for a website and need to output all the years in a given period.
-	Write a program that takes two integers as input and outputs the range of numbers between the two inputs as a list.
-	The output sequence should start with the first input number and end with the second input number, without including it.
-	Sample Input
-	2005
-	2011
-	Sample Output
-	[2005, 2006, 2007, 2008, 2009, 2010]
-	You can convert a range object to a list and output it.
-		a = int(input())
-		b = int(input())
-		#your code goes here
-		print(list(range(a,b)))
+    Bingo
+    Given a list of numbers, output "bingo" if it contains the input number.
+    Do not output anything if the number is not found
+        items = [42, 88, 721, 12, 43, 22, 908]
+        num = int(input())
+        #your code goes here
+        if num in items:
+            print("bingo")
+    
+    The Middle Element
+    Given a list, calculate the middle element's index.
+    You can use the len() function to get the number of elements in the list and then floor divide it by 2 using two slashes (//).
+        items = [2, 4, 6, 8, 10, 12, 14]
+        #your code goes here
+        print((len(items))//2)
+    
+    Let's Do Some Magic
+    You have a magic box that doubles the count of items you put, in every day.
+    The given program takes the initial count of the items and the number of days as input.
+    Task
+    Write a program to calculate and output items' count on the last day.
+    Sample Input
+    3
+    2
+    Sample Output
+    12
+    Explanation
+    Day 1: 6 (3*2)
+    Day 2: 12 (6*2)
+    Use *= operator to multiply the count of the items by 2 in each iteration.
+        items = int(input())
+        days = int(input())
+        #your code goes here
+        while days > 0:
+            items *= 2
+            days -= 1
+        print(items)
+        
+    Iteration
+    for loops allow you to easily iterate through lists.
+    Given a list of numbers, output their sum.
+    Sample Input
+    1 3 7 5
+    Sample Output
+    16
+    Output the sum after the loop.
+        list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        sum = 0
+        #your code goes here
+        for i in list:
+            sum += i
+        print(sum)
+        
+    Date Picker
+    You are making a date picker for a website and need to output all the years in a given period.
+    Write a program that takes two integers as input and outputs the range of numbers between the two inputs as a list.
+    The output sequence should start with the first input number and end with the second input number, without including it.
+    Sample Input
+    2005
+    2011
+    Sample Output
+    [2005, 2006, 2007, 2008, 2009, 2010]
+    You can convert a range object to a list and output it.
+        a = int(input())
+        b = int(input())
+        #your code goes here
+        print(list(range(a,b)))
 
-	FizzBuzz (PROJECT)
-	FizzBuzz is a well known programming assignment, asked during interviews.
-	The given code solves the FizzBuzz problem and uses the words "Solo" and "Learn" instead of "Fizz" and "Buzz".
-	It takes an input n and outputs the numbers from 1 to n.
-	For each multiple of 3, print "Solo" instead of the number.
-	For each multiple of 5, prints "Learn" instead of the number.
-	For numbers which are multiples of both 3 and 5, output "SoloLearn".
-	You need to change the code to skip the even numbers, so that the logic only applies to odd numbers in the range.
-	Remember, the continue statement can be used to skip a loop iteration.
-		n = int(input())
-		for x in range(1, n,2):
-			if x % 3 == 0 and x % 5 == 0:
-				print("SoloLearn")
-			elif x % 3 == 0:
-				print("Solo")
-			elif x % 5 == 0:
-				print("Learn")
-			else:
-				print(x)
+    FizzBuzz (PROJECT)
+    FizzBuzz is a well known programming assignment, asked during interviews.
+    The given code solves the FizzBuzz problem and uses the words "Solo" and "Learn" instead of "Fizz" and "Buzz".
+    It takes an input n and outputs the numbers from 1 to n.
+    For each multiple of 3, print "Solo" instead of the number.
+    For each multiple of 5, prints "Learn" instead of the number.
+    For numbers which are multiples of both 3 and 5, output "SoloLearn".
+    You need to change the code to skip the even numbers, so that the logic only applies to odd numbers in the range.
+    Remember, the continue statement can be used to skip a loop iteration.
+        n = int(input())
+        for x in range(1, n,2):
+            if x % 3 == 0 and x % 5 == 0:
+                print("SoloLearn")
+            elif x % 3 == 0:
+                print("Solo")
+            elif x % 5 == 0:
+                print("Learn")
+            else:
+                print(x)
 
 _____ Functions & Modules _____
 
-	Welcome, SoloLearner!
-	We have a function that outputs "Welcome, user" as it is called. We want to make it more personalized, so redesign the given function so that it will take the given input as the name of the user and output the welcome message with it.
-	Sample Input
-	Tommy
-	Sample Output
-	Welcome, Tommy
-	Don't forget to call the function.
-		def welcome_message():
-			#redesign this function
-			name = input()
-			print("Welcome, " + name)
-		welcome_message()
+    Welcome, SoloLearner!
+    We have a function that outputs "Welcome, user" as it is called. We want to make it more personalized, so redesign the given function so that it will take the given input as the name of the user and output the welcome message with it.
+    Sample Input
+    Tommy
+    Sample Output
+    Welcome, Tommy
+    Don't forget to call the function.
+        def welcome_message():
+            #redesign this function
+            name = input()
+            print("Welcome, " + name)
+        welcome_message()
 
-	Matching Passwords
-	You are given a program with two inputs: one as password and the second one as password repeat. Complete and call the given function to output "Correct" if password and repeat are equal, and output "Wrong", if they are not.
-	Sample Input
-	nfs1598
-	nfs1598
-	Sample Output
-	Correct
-	Don't forget to add arguments when you call the function.
-		password = input()
-		repeat = input()
-		def validate(text1, text2):
-			#your code goes here
-			if text1 == text2:
-				print("Correct")
-			else:
-				print("Wrong")	
-		validate(password, repeat)
+    Matching Passwords
+    You are given a program with two inputs: one as password and the second one as password repeat. Complete and call the given function to output "Correct" if password and repeat are equal, and output "Wrong", if they are not.
+    Sample Input
+    nfs1598
+    nfs1598
+    Sample Output
+    Correct
+    Don't forget to add arguments when you call the function.
+        password = input()
+        repeat = input()
+        def validate(text1, text2):
+            #your code goes here
+            if text1 == text2:
+                print("Correct")
+            else:
+                print("Wrong")    
+        validate(password, repeat)
 
-	Hashtag Generator
-	We are creating our own social network application and need to have a hashtag generator program.
-	Complete the program to output the input text starting with the hashtag (#).
-	Also, if the user entered several words, the program should delete the spaces between them.
-	Sample Input
-	code sleep eat repeat
-	Sample Output
-	#codesleepeatrepeat
-	Hint
-	You can use the replace() function to replace the spaces (" ") with empty strings (""). See how it works:
-	s = "I like pears"
-	s1 = s.replace("pears", "apricots")
-	print(s1)
-	#prints I like apricots
-		s = input()
-		def hashtagGen(text):
-			#your code goes here
-			taggy = "#" + text.replace(" ", "")
-			return taggy
-		print(hashtagGen(s))
+    Hashtag Generator
+    We are creating our own social network application and need to have a hashtag generator program.
+    Complete the program to output the input text starting with the hashtag (#).
+    Also, if the user entered several words, the program should delete the spaces between them.
+    Sample Input
+    code sleep eat repeat
+    Sample Output
+    #codesleepeatrepeat
+    Hint
+    You can use the replace() function to replace the spaces (" ") with empty strings (""). See how it works:
+    s = "I like pears"
+    s1 = s.replace("pears", "apricots")
+    print(s1)
+    #prints I like apricots
+        s = input()
+        def hashtagGen(text):
+            #your code goes here
+            taggy = "#" + text.replace(" ", "")
+            return taggy
+        print(hashtagGen(s))
 
-	No Dice? No Problem
-	Two friends want to play backgammon, but have lost the dice.
-	Create a program to replace the dice. When the program is run, it should roll the dice and output the result of each die.
-	Hint
-	Use random.randint() function to generate random values in the range of 1 to 6 for each dice.
-	You will see a random.seed(int(input())) line in sample code. It initializes the pseudorandom number generator and, in this case, ensures functionality of test cases.
-		import random
-		random.seed(int(input())) #please don't touch this lane
-		#generate the random values for every dice
-		dice1 = random.randint(1,6)
-		dice2 = random.randint(1,6)
-		print(dice1)
-		print(dice2)
+    No Dice? No Problem
+    Two friends want to play backgammon, but have lost the dice.
+    Create a program to replace the dice. When the program is run, it should roll the dice and output the result of each die.
+    Hint
+    Use random.randint() function to generate random values in the range of 1 to 6 for each dice.
+    You will see a random.seed(int(input())) line in sample code. It initializes the pseudorandom number generator and, in this case, ensures functionality of test cases.
+        import random
+        random.seed(int(input())) #please don't touch this lane
+        #generate the random values for every dice
+        dice1 = random.randint(1,6)
+        dice2 = random.randint(1,6)
+        print(dice1)
+        print(dice2)
 
-	Celcius To Farenheit Converter (PROJECT)
-	You are making a Celsius to Fahrenheit converter.
-	Write a function to take the Celsius value as an argument and return the corresponding Fahrenheit value.
-	Sample Input
-	36
-	Sample Output
-	96.8
-	The following equation is used to calculate the Fahrenheit value: 9/5 * celsius + 32
-		celsius = int(input())
-		def conv(c):
-			#your code goes here
-			return (9/5) * c + 32
-		fahrenheit = conv(celsius)
-		print(fahrenheit)
+    Celcius To Farenheit Converter (PROJECT)
+    You are making a Celsius to Fahrenheit converter.
+    Write a function to take the Celsius value as an argument and return the corresponding Fahrenheit value.
+    Sample Input
+    36
+    Sample Output
+    96.8
+    The following equation is used to calculate the Fahrenheit value: 9/5 * celsius + 32
+        celsius = int(input())
+        def conv(c):
+            #your code goes here
+            return (9/5) * c + 32
+        fahrenheit = conv(celsius)
+        print(fahrenheit)
 
 _____ Exceptions & Files _____
 
-	Bank Card PIN System
-	We need to create a program that allows users to create their own PIN codes for their bank cards. Each PIN code consists of digits. Complete the program so that when the user enters a character, the program stops and outputs "Please enter a number" and when the user enters only digits, the program outputs "PIN code is created".
-	Sample Input
-	44a5
-	Sample Output
-	Please enter a number
-	Recall int() function, that occurs an error when the argument is not a number.
-		pin = input()
-		try:
-			#your code goes here
-			int(pin)
-			print("PIN code is created")
-		except ValueError:
-			#and here
-			print("Please enter a number")
-			
-	Making Coffee
-	A coffee vending machine makes 5 types of coffee:
-		coffee = ["Café Latte", "Caffe Americano", "Espresso", "Cappuccino", "Macchiato"] 
-	Each coffee option has its own number, starting with 0. Write a program that will take a number from the customer as input from the customer and serve the corresponding coffee type. If the customer enters a number that is out of the accepted range, the program should output "Invalid number". Regardless of coffee option result, the program should output "Have a good day" at the end.
-	Sample Input
-	7
-	Sample Output
-	Invalid number
-	Have a good day
-	Remember, that the first element of the list has 0 index.
-		coffee = ["Café Latte", "Caffe Americano", "Espresso", "Cappuccino", "Macchiato"]
-		choice = int(input())
-		try:
-			#your code goes here
-			print(coffee[choice])
-		except:
-			#and here
-			print("Invalid number")
-		finally:
-			#and finally here
-			print("Have a good day")
-			
-	Getting In Shape
-	Tom has done pull ups every day and recorded his results. He recorded each day's results in a new line, so that each line represents each day he has done pull ups.
-	Create a program that takes n number as input and outputs the n-th days result (starting from 0).
-	Sample Input
-	4
-	Sample Output
-	Day 4, 9 pull ups
-	Recall the readlines() function that returns a list containing each line in the file as a list item.
-		file = open("/usercode/files/pull_ups.txt")
-		n = int(input())
-		#your code goes here
-		list = file.readlines()
-		print(list[n])
-		file.close()
+    Bank Card PIN System
+    We need to create a program that allows users to create their own PIN codes for their bank cards. Each PIN code consists of digits. Complete the program so that when the user enters a character, the program stops and outputs "Please enter a number" and when the user enters only digits, the program outputs "PIN code is created".
+    Sample Input
+    44a5
+    Sample Output
+    Please enter a number
+    Recall int() function, that occurs an error when the argument is not a number.
+        pin = input()
+        try:
+            #your code goes here
+            int(pin)
+            print("PIN code is created")
+        except ValueError:
+            #and here
+            print("Please enter a number")
+            
+    Making Coffee
+    A coffee vending machine makes 5 types of coffee:
+        coffee = ["Café Latte", "Caffe Americano", "Espresso", "Cappuccino", "Macchiato"] 
+    Each coffee option has its own number, starting with 0. Write a program that will take a number from the customer as input from the customer and serve the corresponding coffee type. If the customer enters a number that is out of the accepted range, the program should output "Invalid number". Regardless of coffee option result, the program should output "Have a good day" at the end.
+    Sample Input
+    7
+    Sample Output
+    Invalid number
+    Have a good day
+    Remember, that the first element of the list has 0 index.
+        coffee = ["Café Latte", "Caffe Americano", "Espresso", "Cappuccino", "Macchiato"]
+        choice = int(input())
+        try:
+            #your code goes here
+            print(coffee[choice])
+        except:
+            #and here
+            print("Invalid number")
+        finally:
+            #and finally here
+            print("Have a good day")
+            
+    Getting In Shape
+    Tom has done pull ups every day and recorded his results. He recorded each day's results in a new line, so that each line represents each day he has done pull ups.
+    Create a program that takes n number as input and outputs the n-th days result (starting from 0).
+    Sample Input
+    4
+    Sample Output
+    Day 4, 9 pull ups
+    Recall the readlines() function that returns a list containing each line in the file as a list item.
+        file = open("/usercode/files/pull_ups.txt")
+        n = int(input())
+        #your code goes here
+        list = file.readlines()
+        print(list[n])
+        file.close()
 
-	New Lines
-	You are given the following list:
-		names = ["John", "Oscar", "Jacob"] 
-	Complete the program to create a file where you write the names from the list, each on a new line, and separately output them.
-	Output
-	John
-	Oscar
-	Jacob
-	Remember that "\n" represents a new line.
-		names = ["John", "Oscar", "Jacob"]
-		file = open("names.txt", "w+")
-		#write down the names into the file
-		for i in names:
-			file.write(i + "\n")
-		file.close()
-		file= open("names.txt", "r")
-		#output the content of file in console
-		print(file.read())
-		file.close()
-		
-	Book Titles (PROJECT)
-	You have been asked to make a special book categorization program, which assigns each book a special code based on its title.
-	The code is equal to the first letter of the book, followed by the number of characters in the title.
-	For example, for the book "Harry Potter", the code would be: H12, as it contains 12 characters (including the space).
-	You are provided a books.txt file, which includes the book titles, each one written on a separate line.
-	Read the title one by one and output the code for each book on a separate line.
-	For example, if the books.txt file contains:
-	Some book
-	Another book
-	Your program should output:
-	S9
-	A12
-	Recall the readlines() method, which returns a list containing the lines of the file.
-	Also, remember that all lines, except the last one, contain a \n at the end, which should not be included in the character count.
-		file = open("/usercode/files/books.txt", "r")
-		for line in file:
-			if line[-1] == "\n":
-				print(line[0] + str(len(line)-1))
-			else:
-				print(line[0] + str(len(line)))
-		#your code goes here
-		file.close()
-		
+    New Lines
+    You are given the following list:
+        names = ["John", "Oscar", "Jacob"] 
+    Complete the program to create a file where you write the names from the list, each on a new line, and separately output them.
+    Output
+    John
+    Oscar
+    Jacob
+    Remember that "\n" represents a new line.
+        names = ["John", "Oscar", "Jacob"]
+        file = open("names.txt", "w+")
+        #write down the names into the file
+        for i in names:
+            file.write(i + "\n")
+        file.close()
+        file= open("names.txt", "r")
+        #output the content of file in console
+        print(file.read())
+        file.close()
+        
+    Book Titles (PROJECT)
+    You have been asked to make a special book categorization program, which assigns each book a special code based on its title.
+    The code is equal to the first letter of the book, followed by the number of characters in the title.
+    For example, for the book "Harry Potter", the code would be: H12, as it contains 12 characters (including the space).
+    You are provided a books.txt file, which includes the book titles, each one written on a separate line.
+    Read the title one by one and output the code for each book on a separate line.
+    For example, if the books.txt file contains:
+    Some book
+    Another book
+    Your program should output:
+    S9
+    A12
+    Recall the readlines() method, which returns a list containing the lines of the file.
+    Also, remember that all lines, except the last one, contain a \n at the end, which should not be included in the character count.
+        file = open("/usercode/files/books.txt", "r")
+        for line in file:
+            if line[-1] == "\n":
+                print(line[0] + str(len(line)-1))
+            else:
+                print(line[0] + str(len(line)))
+        #your code goes here
+        file.close()
+        
 _____ More Types _____
 
-	Inventory Manager
-	Dictionaries can be used to store key:value pairs.
-	You have been asked to create an inventory management program for a store. You use a dictionary to track all of the store's inventory along with how many of each item the store has.
-		store = {"Orange": 2, "Watermelon": 0, "Apple": 8, "Banana": 42} 
-	Complete the provided code to output the number of apples present in the store.
-	Dictionaries can be indexed just like lists, using square brackets
-		store = {"Orange": 2, "Watermelon": 0, "Apple": 8, "Banana": 42}
-		#your code goes here
-		print(store["Apple"])
+    Inventory Manager
+    Dictionaries can be used to store key:value pairs.
+    You have been asked to create an inventory management program for a store. You use a dictionary to track all of the store's inventory along with how many of each item the store has.
+        store = {"Orange": 2, "Watermelon": 0, "Apple": 8, "Banana": 42} 
+    Complete the provided code to output the number of apples present in the store.
+    Dictionaries can be indexed just like lists, using square brackets
+        store = {"Orange": 2, "Watermelon": 0, "Apple": 8, "Banana": 42}
+        #your code goes here
+        print(store["Apple"])
 
-	Where's The Book?
-	You can use the .get() method to find keys in a dictionary, and use a second parameter to return a default value, in case the key is not found.
-	Rewrite the given code to use the .get() method instead of the if/else statements.
-	Also, change the output to "Book not found", when the book is not found.
-	Note how much shorter the resulting code is, compared to the if/else statement.
-		books = {
-			"Life of Pi": "Adventure Fiction", 
-			"The Three Musketeers": "Historical Adventure",
-			"Watchmen": "Comics", 
-			"Bird Box": "Horror",
-			"Harry Potter":"Fantasy Fiction",
-			"Good Omens": "Comedy"
-		}
-		book = input()
-		print(books.get(book, "Book not found"))
-		
-	Tuples
-	You are given coordinates of 2 points and need to find the straight line distance between them.
-	The coordinates are provided in a tuple, for example:
-		p = (8, 11) 
-	The first value represents the x coordinate, while the second value represents the y coordinate of the point p.
-	Complete the provided code to calculate and output the distance between the two given points.
-	The linear distance is the square root of the square of the horizontal distance plus the square of the vertical distance between two points.
-	The math.sqrt() function can be used to calculate the square root.
-		import math
-		p1 = (23, -88)
-		p2 = (6, 42)
-		res = math.sqrt(((p1[0] - p2[0])**2) + ((p1[1] - p2[1])**2))
-		print(res)
-		
-	List Slices
-	Write a program that takes a list as input and outputs the last element of that list.
-	The input list can be of any size.
-	Remember, you can use negative indices to slice lists.
-		x = input()
-		elements = x.split()
-		print(elements[-1])
-		
-	List Of Multiples
-	Write a program to take a number as input, and output a list of all the numbers below that number, that are a multiple of both, 3 and 5.
-	Sample Input
-	42
-	Sample Output
-	[0, 15, 30]
-	Use a list comprehension to generate the list of numbers that satisfy the condition.
-		x = int(input())
-		#your code goes here
-		list = [i for i in range(x) if i % 15 == 0]
-		print(list)
-		
-	Names And Ages
-	The .format() method provides an easy way to format strings.
-	Take as input a name and an age, and generate the output "name is age years old".
-	Sample Input
-	James
-	42
-	Sample Output
-	James is 42 years old
-	Recall, you can use braces to embed variable values into strings.
-		name = input()
-		age = int(input())
-		#your code goes here
-		print("{0} is {1} years old".format(name, age))
+    Where's The Book?
+    You can use the .get() method to find keys in a dictionary, and use a second parameter to return a default value, in case the key is not found.
+    Rewrite the given code to use the .get() method instead of the if/else statements.
+    Also, change the output to "Book not found", when the book is not found.
+    Note how much shorter the resulting code is, compared to the if/else statement.
+        books = {
+            "Life of Pi": "Adventure Fiction", 
+            "The Three Musketeers": "Historical Adventure",
+            "Watchmen": "Comics", 
+            "Bird Box": "Horror",
+            "Harry Potter":"Fantasy Fiction",
+            "Good Omens": "Comedy"
+        }
+        book = input()
+        print(books.get(book, "Book not found"))
+        
+    Tuples
+    You are given coordinates of 2 points and need to find the straight line distance between them.
+    The coordinates are provided in a tuple, for example:
+        p = (8, 11) 
+    The first value represents the x coordinate, while the second value represents the y coordinate of the point p.
+    Complete the provided code to calculate and output the distance between the two given points.
+    The linear distance is the square root of the square of the horizontal distance plus the square of the vertical distance between two points.
+    The math.sqrt() function can be used to calculate the square root.
+        import math
+        p1 = (23, -88)
+        p2 = (6, 42)
+        res = math.sqrt(((p1[0] - p2[0])**2) + ((p1[1] - p2[1])**2))
+        print(res)
+        
+    List Slices
+    Write a program that takes a list as input and outputs the last element of that list.
+    The input list can be of any size.
+    Remember, you can use negative indices to slice lists.
+        x = input()
+        elements = x.split()
+        print(elements[-1])
+        
+    List Of Multiples
+    Write a program to take a number as input, and output a list of all the numbers below that number, that are a multiple of both, 3 and 5.
+    Sample Input
+    42
+    Sample Output
+    [0, 15, 30]
+    Use a list comprehension to generate the list of numbers that satisfy the condition.
+        x = int(input())
+        #your code goes here
+        list = [i for i in range(x) if i % 15 == 0]
+        print(list)
+        
+    Names And Ages
+    The .format() method provides an easy way to format strings.
+    Take as input a name and an age, and generate the output "name is age years old".
+    Sample Input
+    James
+    42
+    Sample Output
+    James is 42 years old
+    Recall, you can use braces to embed variable values into strings.
+        name = input()
+        age = int(input())
+        #your code goes here
+        print("{0} is {1} years old".format(name, age))
 
-	Broken Keyboard
-	Your friend sent you a message, however his keyboard is broken and types a # instead of a space.
-	Replace all of the # characters with spaces and output the result.
-	You can use the replace() method of a string to replace one substring with another.
-		txt = input()
-		print(txt.replace("#", " "))
+    Broken Keyboard
+    Your friend sent you a message, however his keyboard is broken and types a # instead of a space.
+    Replace all of the # characters with spaces and output the result.
+    You can use the replace() method of a string to replace one substring with another.
+        txt = input()
+        print(txt.replace("#", " "))
 
-	How Many Words?
-	Given text as input, output the number of words it contains.
-	Sample Input
-	hello world
-	Sample Output
-	2
-	The split() method can be used to split the string into words.
-		txt = input()
-		word = txt.split(" ")
-		print(len(word))
+    How Many Words?
+    Given text as input, output the number of words it contains.
+    Sample Input
+    hello world
+    Sample Output
+    2
+    The split() method can be used to split the string into words.
+        txt = input()
+        word = txt.split(" ")
+        print(len(word))
 
-	Longest Word (PROJECT)
-	Given a text as input, find and output the longest word.
-	Sample Input
-	this is an awesome text
-	Sample Output
-	awesome
-	Recall the split(' ') method, which returns a list of words of the string.
-		txt = input().split()
-		print(max(txt, key = len))
-		
+    Longest Word (PROJECT)
+    Given a text as input, find and output the longest word.
+    Sample Input
+    this is an awesome text
+    Sample Output
+    awesome
+    Recall the split(' ') method, which returns a list of words of the string.
+        txt = input().split()
+        print(max(txt, key = len))
+        
 _____ Functional Programming _____
 
-	Lambdas
-	The given code takes a number as input and uses a lambda function to calculate its double and output the result.
-	Change the code to calculate the cube of the input and output it.
-	Sample Input
-	3
-	Sample Output
-	27
-	The cube of a number is its third power.
-		x = int(input())
-		y = (lambda z:z**3)(x)
-		print(y)
+    Lambdas
+    The given code takes a number as input and uses a lambda function to calculate its double and output the result.
+    Change the code to calculate the cube of the input and output it.
+    Sample Input
+    3
+    Sample Output
+    27
+    The cube of a number is its third power.
+        x = int(input())
+        y = (lambda z:z**3)(x)
+        print(y)
 
-	Filtering
-	Given a list of names, output a list that contains only the names that consist of more than 5 characters.
-	You can check the length of a string using the len() function and use the filter() function to define the condition.
-		names = ["David", "John", "Annabelle", "Johnathan", "Veronica"]
-		#your code goes here
-		result = list(filter(lambda x:len(x) > 5, names))
-		print(result)
-		
-	Split Generator
-	Given a string as input, create a generator function that splits the string into separate words and outputs the resulting list.
-	Sample Input
-	This is some text
-	Sample Output
-	['This', 'is', 'some', 'text']
-	You can use the split() function to split the input string.
-		txt = input()
-		def words():
-			#your code goes here
-			for words in txt.split(" "):
-				yield words
-		print(list(words()))
+    Filtering
+    Given a list of names, output a list that contains only the names that consist of more than 5 characters.
+    You can check the length of a string using the len() function and use the filter() function to define the condition.
+        names = ["David", "John", "Annabelle", "Johnathan", "Veronica"]
+        #your code goes here
+        result = list(filter(lambda x:len(x) > 5, names))
+        print(result)
+        
+    Split Generator
+    Given a string as input, create a generator function that splits the string into separate words and outputs the resulting list.
+    Sample Input
+    This is some text
+    Sample Output
+    ['This', 'is', 'some', 'text']
+    You can use the split() function to split the input string.
+        txt = input()
+        def words():
+            #your code goes here
+            for words in txt.split(" "):
+                yield words
+        print(list(words()))
 
-	Uppercasing
-	You are given code that takes input and prints it as a simple row of text.
-	Add the uppercase_decorator to make the text uppercase.
-	The upper() method can be used on strings to make them uppercase.
-		text = input()
-		def uppercase_decorator(func):
-			def wrapper(text):
-				#your code goes here
-				return func(text).upper()
-			return wrapper
-		@uppercase_decorator	
-		def display_text(text):
-				return text
-		print(display_text(text))
+    Uppercasing
+    You are given code that takes input and prints it as a simple row of text.
+    Add the uppercase_decorator to make the text uppercase.
+    The upper() method can be used on strings to make them uppercase.
+        text = input()
+        def uppercase_decorator(func):
+            def wrapper(text):
+                #your code goes here
+                return func(text).upper()
+            return wrapper
+        @uppercase_decorator    
+        def display_text(text):
+                return text
+        print(display_text(text))
 
-	Fun With Math
-	The provided code uses recursion to calculate the sum of all items in the input list.
-	Change the code to calculate and output the sum of the squares of all the list items.
-	You can use **2 exponentiation to calculate the square of a number.
-		def calc(list):
-			if len(list)==0:
-				return 0
-			else:
-				return list[0] **2+ calc(list[1:]) 
+    Fun With Math
+    The provided code uses recursion to calculate the sum of all items in the input list.
+    Change the code to calculate and output the sum of the squares of all the list items.
+    You can use **2 exponentiation to calculate the square of a number.
+        def calc(list):
+            if len(list)==0:
+                return 0
+            else:
+                return list[0] **2+ calc(list[1:]) 
 
-		list = [1, 3, 4, 2, 5]
-		x = calc(list)		
-		print(x)
+        list = [1, 3, 4, 2, 5]
+        x = calc(list)        
+        print(x)
 
-	Commonality
-	Sets are created using curly braces and they hold unique values.
-	Given two sets, find and output all the elements that are common to both sets.
-	For example, for the following sets:
-	{'a', 'b', 'c'}
-	{'c', 'd', 'e'}
-	The output should be {'c'}, as it is present in both sets.
-	The output should be a set, containing the common elements.
-		set1 = {2, 4, 5, 6}	
-		set2 = {4, 6, 7, 8, 11, 42, 2}	
-		set3 = set1 & set2
-		#your code goes here
-		print(set3)
+    Commonality
+    Sets are created using curly braces and they hold unique values.
+    Given two sets, find and output all the elements that are common to both sets.
+    For example, for the following sets:
+    {'a', 'b', 'c'}
+    {'c', 'd', 'e'}
+    The output should be {'c'}, as it is present in both sets.
+    The output should be a set, containing the common elements.
+        set1 = {2, 4, 5, 6}    
+        set2 = {4, 6, 7, 8, 11, 42, 2}    
+        set3 = set1 & set2
+        #your code goes here
+        print(set3)
 
-	Ordering
-	You are given a list of items, and need to find all the possible orders of the items.
-	The output should be a list, containing all possible orders.
-	Sample Input
-	['a', 'b']
-	Sample Output
-	[('a', 'b'), ('b', 'a')]
-	The itertools module contains many useful functions that can achieve the above mentioned task.
-		from itertools import permutations
-		items = ['x', 'y']
-		result=list(permutations(items))
-		#your code goes here
-		print(result)
-		
-	Fibonacci (PROJECT)
-	The Fibonacci sequence is one of the most famous formulas in mathematics.
-	Each number in the sequence is the sum of the two numbers that precede it.
-	For example, here is the Fibonacci sequence for 10 numbers, starting from 0: 0,1,1,2,3,5,8,13,21,34.
-	Write a program to take N (variable num in code template) positive numbers as input, and recursively calculate and output the first N numbers of the Fibonacci sequence (starting from 0).
-	Sample Input
-	6
-	Sample Output
-	0
-	1
-	1
-	2
-	3
-	5
-	If you are making the Fibonacci sequence for n numbers, you should use n<=1 condition as the base case.
-		num = int(input())
-		def fibonacci(n):
-			#complete the recursive function
-			count = 0
-			n1, n2 = 0, 1
-			while count < n:
-				print(n1)
-				nth = n1 + n2
-				n1 = n2
-				n2 = nth
-				count += 1
-		fibonacci(num)
+    Ordering
+    You are given a list of items, and need to find all the possible orders of the items.
+    The output should be a list, containing all possible orders.
+    Sample Input
+    ['a', 'b']
+    Sample Output
+    [('a', 'b'), ('b', 'a')]
+    The itertools module contains many useful functions that can achieve the above mentioned task.
+        from itertools import permutations
+        items = ['x', 'y']
+        result=list(permutations(items))
+        #your code goes here
+        print(result)
+        
+    Fibonacci (PROJECT)
+    The Fibonacci sequence is one of the most famous formulas in mathematics.
+    Each number in the sequence is the sum of the two numbers that precede it.
+    For example, here is the Fibonacci sequence for 10 numbers, starting from 0: 0,1,1,2,3,5,8,13,21,34.
+    Write a program to take N (variable num in code template) positive numbers as input, and recursively calculate and output the first N numbers of the Fibonacci sequence (starting from 0).
+    Sample Input
+    6
+    Sample Output
+    0
+    1
+    1
+    2
+    3
+    5
+    If you are making the Fibonacci sequence for n numbers, you should use n<=1 condition as the base case.
+        num = int(input())
+        def fibonacci(n):
+            #complete the recursive function
+            count = 0
+            n1, n2 = 0, 1
+            while count < n:
+                print(n1)
+                nth = n1 + n2
+                n1 = n2
+                n2 = nth
+                count += 1
+        fibonacci(num)
 
 _____ OOP _____
 
-	Student Class
-	The provided code defines a Student class, creates a Student object, and calls its greet() method.
-	However, the code has an error and does not run.
-	Fix the code to produce the expected output.
-	Hint: All methods need to have self as their first parameter.
-		class Student:
-			def __init__(self, name):
-				self.name = name
-			
-			def greet(self):
-				print(self.name+" says hi")
-		obj = Student("John")
-		obj.greet()
-		
-	Fun With Classes
-	Complete the provided code to inherit the Car class from the Vehicle class, create a Car object and call its horn() method, which is inherited from the Vehicle superclass.
-		class Vehicle: 
-			def horn(self):
-				print("Beep!")
-		class Car:
-			def __init__(self, name, color):
-				self.name = name
-				self.color = color
-		obj = Car("BMW", "red") 
-	Inheritance allows one class to derive or inherit the properties from another class.
-		class Vehicle: 
-			def horn(self):
-				print("Beep!")
-		class Car(Vehicle):
-			def __init__(self, name, color):
-				self.name = name
-				self.color = color
-		obj = Car("BMW", "red")
-		obj.horn()
+    Student Class
+    The provided code defines a Student class, creates a Student object, and calls its greet() method.
+    However, the code has an error and does not run.
+    Fix the code to produce the expected output.
+    Hint: All methods need to have self as their first parameter.
+        class Student:
+            def __init__(self, name):
+                self.name = name
+            
+            def greet(self):
+                print(self.name+" says hi")
+        obj = Student("John")
+        obj.greet()
+        
+    Fun With Classes
+    Complete the provided code to inherit the Car class from the Vehicle class, create a Car object and call its horn() method, which is inherited from the Vehicle superclass.
+        class Vehicle: 
+            def horn(self):
+                print("Beep!")
+        class Car:
+            def __init__(self, name, color):
+                self.name = name
+                self.color = color
+        obj = Car("BMW", "red") 
+    Inheritance allows one class to derive or inherit the properties from another class.
+        class Vehicle: 
+            def horn(self):
+                print("Beep!")
+        class Car(Vehicle):
+            def __init__(self, name, color):
+                self.name = name
+                self.color = color
+        obj = Car("BMW", "red")
+        obj.horn()
 
-	Bank Accounts
-	The __add__ method allows for the definition of a custom behavior for the + operator in our class.
-	The provided code is trying to add together two BankAccount objects, which should result in a new object with the sum of the balances of the given accounts.
-	Fix the code to make it work as expected and output the resulting account balance.
-	The __add__ method needs to take 2 parameters, which represents the objects you are adding.
-		class BankAccount:
-			def __init__(self, balance):
-				self.balance = balance
-			def __add__(self, other):
-				return BankAccount(self.balance + other.balance)
-		a = BankAccount(1024)
-		b = BankAccount(42)
-		result = a + b
-		print(result.balance)
+    Bank Accounts
+    The __add__ method allows for the definition of a custom behavior for the + operator in our class.
+    The provided code is trying to add together two BankAccount objects, which should result in a new object with the sum of the balances of the given accounts.
+    Fix the code to make it work as expected and output the resulting account balance.
+    The __add__ method needs to take 2 parameters, which represents the objects you are adding.
+        class BankAccount:
+            def __init__(self, balance):
+                self.balance = balance
+            def __add__(self, other):
+                return BankAccount(self.balance + other.balance)
+        a = BankAccount(1024)
+        b = BankAccount(42)
+        result = a + b
+        print(result.balance)
 
-	Making A Deposit
-	You are given a BankAccount class and need to add a deposit() method to it, which adds the given amount to the private balance property.
-	The code should declare a BankAccount object with an initial balance of 0, take a number from user input, add it to the balance using the deposit() method, and output the object.
-	Complete the required deposit() method so the code works as expected and produces the required output.
-	Remember, the methods in a class need to have self as their first parameter, which is used to access the properties.
-		class BankAccount:
-			def __init__(self, balance):
-				self._balance = balance
-			def __repr__(self):
-				 return "Account Balance: {}".format(self._balance)
-			def deposit(self, amount):
-				#your code goes here
-				self._balance += amount
-		acc = BankAccount(0)
-		acc.deposit(int(input()))
-		print(acc)
-		
-	Static Methods
-	Complete the given code to define a static add() method for the Calculator class, which returns the sum of its parameters.
-	The code takes two numbers as input, and should return their sum using the Calculator class's add() method.
-	Static methods can be called without creating an object of the class.
-		class Calculator:
-			#your code goes here
-			@staticmethod
-			def add(a,b):
-				return a+ b
-		n1 = int(input())
-		n2 = int(input())
-		print(Calculator.add(n1, n2))
+    Making A Deposit
+    You are given a BankAccount class and need to add a deposit() method to it, which adds the given amount to the private balance property.
+    The code should declare a BankAccount object with an initial balance of 0, take a number from user input, add it to the balance using the deposit() method, and output the object.
+    Complete the required deposit() method so the code works as expected and produces the required output.
+    Remember, the methods in a class need to have self as their first parameter, which is used to access the properties.
+        class BankAccount:
+            def __init__(self, balance):
+                self._balance = balance
+            def __repr__(self):
+                 return "Account Balance: {}".format(self._balance)
+            def deposit(self, amount):
+                #your code goes here
+                self._balance += amount
+        acc = BankAccount(0)
+        acc.deposit(int(input()))
+        print(acc)
+        
+    Static Methods
+    Complete the given code to define a static add() method for the Calculator class, which returns the sum of its parameters.
+    The code takes two numbers as input, and should return their sum using the Calculator class's add() method.
+    Static methods can be called without creating an object of the class.
+        class Calculator:
+            #your code goes here
+            @staticmethod
+            def add(a,b):
+                return a+ b
+        n1 = int(input())
+        n2 = int(input())
+        print(Calculator.add(n1, n2))
 
-	Property Values
-	Complete the provided code by creating an isEven property, which returns True if the value is even, and False if the value is odd.
-		class Number:
-			def __init__(self, num):
-				self.value = num
-		x = Number(int(input()))
-		print(x.isEven) 
-	Use the modulo operator % to check if the value is even or odd. The value is even if the remainder of dividing it by 2 is 0.
-		class Number:
-			def __init__(self, num):
-				self.value = num
-			@property
-			def isEven(self):
-				if self.value % 2 == 0:
-					return True
-				else:
-					return False
-			#your code goes here
-		x = Number(int(input()))
-		print(x.isEven)
-		
-	Juice Maker (PROJECT)
-	You are given a Juice class, which has name and capacity properties.
-	You need to complete the code to enable and adding of two Juice objects, resulting in a new Juice object with the combined capacity and names of the two juices being added.
-	For example, if you add an Orange juice with 1.0 capacity and an Apple juice with 2.5 capacity, the resulting juice should have:
-	name: Orange&Apple
-	capacity: 3.5
-	The names have been combined using an & symbol.
-	Use the __add__ method to define a custom behavior for the + operator and return the resulting object.
-		class Juice:
-			def __init__(self, name, capacity):
-				self.name = name
-				self.capacity = capacity
-			def __str__(self):
-				return (self.name + ' ('+str(self.capacity)+'L)')
-			def __add__(self,other):
-				new_name = self.name + "&" + other.name
-				new_capacity = self.capacity + other.capacity
-				return Juice(new_name, new_capacity)
-		a = Juice('Orange', 1.5)
-		b = Juice('Apple', 2.0)
-		result = a + b
-		print(result)
-		
+    Property Values
+    Complete the provided code by creating an isEven property, which returns True if the value is even, and False if the value is odd.
+        class Number:
+            def __init__(self, num):
+                self.value = num
+        x = Number(int(input()))
+        print(x.isEven) 
+    Use the modulo operator % to check if the value is even or odd. The value is even if the remainder of dividing it by 2 is 0.
+        class Number:
+            def __init__(self, num):
+                self.value = num
+            @property
+            def isEven(self):
+                if self.value % 2 == 0:
+                    return True
+                else:
+                    return False
+            #your code goes here
+        x = Number(int(input()))
+        print(x.isEven)
+        
+    Juice Maker (PROJECT)
+    You are given a Juice class, which has name and capacity properties.
+    You need to complete the code to enable and adding of two Juice objects, resulting in a new Juice object with the combined capacity and names of the two juices being added.
+    For example, if you add an Orange juice with 1.0 capacity and an Apple juice with 2.5 capacity, the resulting juice should have:
+    name: Orange&Apple
+    capacity: 3.5
+    The names have been combined using an & symbol.
+    Use the __add__ method to define a custom behavior for the + operator and return the resulting object.
+        class Juice:
+            def __init__(self, name, capacity):
+                self.name = name
+                self.capacity = capacity
+            def __str__(self):
+                return (self.name + ' ('+str(self.capacity)+'L)')
+            def __add__(self,other):
+                new_name = self.name + "&" + other.name
+                new_capacity = self.capacity + other.capacity
+                return Juice(new_name, new_capacity)
+        a = Juice('Orange', 1.5)
+        b = Juice('Apple', 2.0)
+        result = a + b
+        print(result)
+        
 _____ Regular Expressions _____
 
-	Contacts Database
-	We need to create a number formatting system for a contacts database.
-	Create a program that will take the phone number as input, and if the number starts with "00", replace them with "+".
-	The number should be printed after formatting.
-	Sample Input
-	0014860098
-	Sample Output
-	+14860098
-		import re
-		#your code goes here
-		num = input()
-		num = re.sub(r"^00","+",num)
-		print(num)
+    Contacts Database
+    We need to create a number formatting system for a contacts database.
+    Create a program that will take the phone number as input, and if the number starts with "00", replace them with "+".
+    The number should be printed after formatting.
+    Sample Input
+    0014860098
+    Sample Output
+    +14860098
+        import re
+        #your code goes here
+        num = input()
+        num = re.sub(r"^00","+",num)
+        print(num)
 
-	Start With Ends With
-	Write a program that takes a word as input, and outputs "Match" if the word has 4 letters, starts with "m" and ends with "e".
-	The program should output "No match" if these mentioned requirements aren't satisfied.
-	Sample Input
-	mine
-	Sample Output
-	Match
-	Don't forget to mention the start and end of the regular expression.
-		import re
-		word = input()
-		#your code goes here
-		pattern = r"m..e"
-		if re.match(pattern, word):
-			print("Match")
-		else:
-			print("No match")
-			
-	Online Shop Search
-	All the products in online shop have their own ID. Every ID consists of 4 symbols:
-	The first symbol: an uppercase character
-	The second symbol: an uppercase character
-	The third symbol: a digit
-	The forth symbol: a digit
-	Write a program for a search tool, that will take the ID as input and output "Searching" if the format is correct, and "Wrong format", if it's not.
-	Sample Input
-	LG17
-	Sample Output
-	Searching
-	Remember to use $ sign in pattern to set the ending of the ID string.
-		import re
-		id = input()
-		#your code goes here
-		if re.search(r"[A-Z][A-Z][0-9][0-9]$", id):
-			print("Searching")
-		else:
-			print("Wrong format")
-			
-	Authentication!
-	Let's imagine we are creating our own authentication system.
-	Create a program that takes a password as input and returns "Password created" if
-	- it has at least one uppercase character
-	- it has at least one number
-	The Program should output "Wrong format" if requirements above are not met.
-	Sample Input
-	Hal44gb8
-	Sample Output
-	Password created
-	Use metacharacter * that means zero or more repetitions.
-		import re
-		password = input()
-		pattern = r"\w*[A-Z]\w*[0-9]\w*"
-		#your code goes here
-		if re.match(pattern, password):
-			print("Password created")
-		else:
-			print("Wrong format")
+    Start With Ends With
+    Write a program that takes a word as input, and outputs "Match" if the word has 4 letters, starts with "m" and ends with "e".
+    The program should output "No match" if these mentioned requirements aren't satisfied.
+    Sample Input
+    mine
+    Sample Output
+    Match
+    Don't forget to mention the start and end of the regular expression.
+        import re
+        word = input()
+        #your code goes here
+        pattern = r"m..e"
+        if re.match(pattern, word):
+            print("Match")
+        else:
+            print("No match")
+            
+    Online Shop Search
+    All the products in online shop have their own ID. Every ID consists of 4 symbols:
+    The first symbol: an uppercase character
+    The second symbol: an uppercase character
+    The third symbol: a digit
+    The forth symbol: a digit
+    Write a program for a search tool, that will take the ID as input and output "Searching" if the format is correct, and "Wrong format", if it's not.
+    Sample Input
+    LG17
+    Sample Output
+    Searching
+    Remember to use $ sign in pattern to set the ending of the ID string.
+        import re
+        id = input()
+        #your code goes here
+        if re.search(r"[A-Z][A-Z][0-9][0-9]$", id):
+            print("Searching")
+        else:
+            print("Wrong format")
+            
+    Authentication!
+    Let's imagine we are creating our own authentication system.
+    Create a program that takes a password as input and returns "Password created" if
+    - it has at least one uppercase character
+    - it has at least one number
+    The Program should output "Wrong format" if requirements above are not met.
+    Sample Input
+    Hal44gb8
+    Sample Output
+    Password created
+    Use metacharacter * that means zero or more repetitions.
+        import re
+        password = input()
+        pattern = r"\w*[A-Z]\w*[0-9]\w*"
+        #your code goes here
+        if re.match(pattern, password):
+            print("Password created")
+        else:
+            print("Wrong format")
 
-	Social Media Pro
-	You are a social media marketing specialist doing research on social networks.
-	Write a program for your research that will take text as input and output all of the hashtags in it separately.
-	Sample Input
-	No #pressure, no #diamonds
-	Sample Output
-	#pressure
-	#diamonds
-	Remember that the re.findall() method returns a list of all substrings that match a pattern. So, you can use the regex r"#\w+" to find all words that start with a hashtag and output them on separate lines.
-		import re
-		text = input()
-		#your code goes here
-		#use re.findall() with r"#\w+" as the regex
-		pattern = r'#\w+'
-		search = re.findall(pattern,text)
-		result = '\n'.join(search) #joins results with a newline
-		print(result)
-		
-	Phone Number Validator (PROJECT)
-	You are given a number input, and need to check if it is a valid phone number.
-	A valid phone number has exactly 8 digits and starts with 1, 8 or 9.
-	Output "Valid" if the number is valid and "Invalid", if it is not.
-	Sample Input
-	81239870
-	Sample Output
-	Valid
-	You can use a regular expression to check if the input matches the given pattern.
-		import re
-		#your code goes here
-		pattern = r"^[189][0-9]{7}$"
-		if re.match(pattern, input()):
-			print("Valid")
-		else:
-			print("Invalid")
+    Social Media Pro
+    You are a social media marketing specialist doing research on social networks.
+    Write a program for your research that will take text as input and output all of the hashtags in it separately.
+    Sample Input
+    No #pressure, no #diamonds
+    Sample Output
+    #pressure
+    #diamonds
+    Remember that the re.findall() method returns a list of all substrings that match a pattern. So, you can use the regex r"#\w+" to find all words that start with a hashtag and output them on separate lines.
+        import re
+        text = input()
+        #your code goes here
+        #use re.findall() with r"#\w+" as the regex
+        pattern = r'#\w+'
+        search = re.findall(pattern,text)
+        result = '\n'.join(search) #joins results with a newline
+        print(result)
+        
+    Phone Number Validator (PROJECT)
+    You are given a number input, and need to check if it is a valid phone number.
+    A valid phone number has exactly 8 digits and starts with 1, 8 or 9.
+    Output "Valid" if the number is valid and "Invalid", if it is not.
+    Sample Input
+    81239870
+    Sample Output
+    Valid
+    You can use a regular expression to check if the input matches the given pattern.
+        import re
+        #your code goes here
+        pattern = r"^[189][0-9]{7}$"
+        if re.match(pattern, input()):
+            print("Valid")
+        else:
+            print("Invalid")
 
 _____ Pythonicness & Packaging _____
 
-	Infinite Sum
-	Given a function that takes 2 arguments and returns their sum.
-	But we get an error when we want to sum more than 2 numbers. Change the function and complete the code so that the function sums as many numbers as are input.
-	*args are accessible as the tuple args in the body of the function, so you can iterate through its items.
-		#change the function
-		def adder(x, *args):
-			print(x+sum(args))
-		adder(2, 3)
-		adder(2, 3, 4)
-		adder(1, 2, 3, 4, 5)
-		
-	Give Me My Money
-	You are given a program for a bank card withdrawal system: it takes the account and the amount that the user wants to withdraw, then outputs the remaining money. If the requested cash is greater than the balance, the program outputs "Error".
-	The bank wants to set a minimal value of $500 for withdrawal. Modernize the program so that it will output the same "Error" if the requested money is less than $500.
-	Sample Input
-	4500
-	300
-	Sample Output
-	Error
-	As with other operators, you can chain multiple conditions with the ternary operator.
-		balance = int(input())
-		to_cash = int(input())
-		#change the code
-		money_left = balance-to_cash if to_cash<=balance and to_cash>=500 else "Error"
-		print(money_left)
-		
-	Too Young To Ride
-	The carousel is designed for 3 people who are each at least 16 years old.
-	You are given a program that takes all 3 passengers' ages as inputs and inserts them in a list. Complete the program so that if it finds a value less than 16, it breaks the loop and outputs "Too young!".
-	If the age requirement is satisfied, the program outputs "Get ready!".
-	Sample Input
-	18
-	26
-	19
-	Sample Output
-	Get ready!
-	With the while loop, the code within the else block is called if the loop finishes normally, so that's where you need to output the "Get ready!" message.
-		ages = []
-		i = 0
-		while i<3:
-			age = int(input())
-			ages.append(age)
-			if min(ages) < 16:
-				print("Too young!")
-				break
-			i+=1
-		else:
-			print("Get ready!")
+    Infinite Sum
+    Given a function that takes 2 arguments and returns their sum.
+    But we get an error when we want to sum more than 2 numbers. Change the function and complete the code so that the function sums as many numbers as are input.
+    *args are accessible as the tuple args in the body of the function, so you can iterate through its items.
+        #change the function
+        def adder(x, *args):
+            print(x+sum(args))
+        adder(2, 3)
+        adder(2, 3, 4)
+        adder(1, 2, 3, 4, 5)
+        
+    Give Me My Money
+    You are given a program for a bank card withdrawal system: it takes the account and the amount that the user wants to withdraw, then outputs the remaining money. If the requested cash is greater than the balance, the program outputs "Error".
+    The bank wants to set a minimal value of $500 for withdrawal. Modernize the program so that it will output the same "Error" if the requested money is less than $500.
+    Sample Input
+    4500
+    300
+    Sample Output
+    Error
+    As with other operators, you can chain multiple conditions with the ternary operator.
+        balance = int(input())
+        to_cash = int(input())
+        #change the code
+        money_left = balance-to_cash if to_cash<=balance and to_cash>=500 else "Error"
+        print(money_left)
+        
+    Too Young To Ride
+    The carousel is designed for 3 people who are each at least 16 years old.
+    You are given a program that takes all 3 passengers' ages as inputs and inserts them in a list. Complete the program so that if it finds a value less than 16, it breaks the loop and outputs "Too young!".
+    If the age requirement is satisfied, the program outputs "Get ready!".
+    Sample Input
+    18
+    26
+    19
+    Sample Output
+    Get ready!
+    With the while loop, the code within the else block is called if the loop finishes normally, so that's where you need to output the "Get ready!" message.
+        ages = []
+        i = 0
+        while i<3:
+            age = int(input())
+            ages.append(age)
+            if min(ages) < 16:
+                print("Too young!")
+                break
+            i+=1
+        else:
+            print("Get ready!")
 
-	Adding Word (PROJECT)
-	You need to write a function that takes multiple words as its argument and returns a concatenated version of those words separated by dashes (-).
-	The function should be able to take a varying number of words as the argument.
-	Sample Input
-	this
-	is
-	great
-	Sample Output
-	this-is-great
-	Recall, using *args as a function parameter enables you to pass an arbitrary number of arguments to that function.
-		def concatenate(*args):
-			return '-'.join(args)
-		print(concatenate("I", "love", "Python", "!"))
+    Adding Word (PROJECT)
+    You need to write a function that takes multiple words as its argument and returns a concatenated version of those words separated by dashes (-).
+    The function should be able to take a varying number of words as the argument.
+    Sample Input
+    this
+    is
+    great
+    Sample Output
+    this-is-great
+    Recall, using *args as a function parameter enables you to pass an arbitrary number of arguments to that function.
+        def concatenate(*args):
+            return '-'.join(args)
+        print(concatenate("I", "love", "Python", "!"))
