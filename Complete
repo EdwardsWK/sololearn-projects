@@ -362,3 +362,7 @@ _____ Functions _____
             else:
                 return "Word not found"
         print(search(text, word))
+
+===== INTERMEDIATE PYTHON (https://www.sololearn.com/certificates/CT-VJVYIMOO) =====
+_____ Collection Types _____
+
