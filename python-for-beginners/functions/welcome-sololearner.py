@@ -9,8 +9,9 @@
     Welcome, Tommy
 """
 
+
 def welcome():
-    name = input()
+    name = input("Enter your name: ")
     print("Welcome, " + name)
 
 

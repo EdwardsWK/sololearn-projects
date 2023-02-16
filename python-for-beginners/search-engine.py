@@ -1,4 +1,4 @@
-"""Search Engine (PROJECT)
+"""Search Engine
 
     You’re working on a search engine. Watch your back Google!
     The given code takes a text and a word as input and passes them to a function called search().
@@ -15,8 +15,9 @@
 text = input("Enter a sentence: ")
 word = input("Enter a search word: ")
 
-def search(text, word):
-    if (word in text):
+
+def search(sentence, search_word):
+    if search_word in sentence:
         return "Word found"
     else:
         return "Word not found"

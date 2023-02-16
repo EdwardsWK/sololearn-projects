@@ -12,11 +12,13 @@
     Area: 9
 """
 
-def calc(x):
+
+def calculate(x):
     return x * 4, x ** 2
 
-side = int(input("Please enter the length of the square: "))
-perimeter, area = calc(side)
+
+side = int(input("Enter the length of the square: "))
+perimeter, area = calculate(side)
 
 print("Perimeter: " + str(perimeter))
 print("Area: " + str(area))

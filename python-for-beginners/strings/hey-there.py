@@ -6,4 +6,4 @@
     Create a program to output "hi" 42 times, without any separators, on the same line.
 """
 
-print("hi"*42)
+print("hi" * 42)

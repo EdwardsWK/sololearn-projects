@@ -12,7 +12,7 @@
     Do not output anything if the water is not boiling.
 """
 
-temp = int(input())
+temperature = int(input("Input a temperature: "))
 
-if temp >= 100:
+if temperature >= 100:
     print("Boiling")

@@ -1,6 +1,6 @@
 """Convert The Input
 
-    Write a program to take x and y as input and output the string x, repeated y times.
+    Write a program to take a string and a number as input and output the string, repeated x times.
 
     Sample Input
     hi
@@ -10,7 +10,7 @@
     hihihi
 """
 
-x = input()
-y = int(input())
+string = input("Input a string: ")
+times = int(input("Input number of repetitions: "))
 
-print(x * y)
+print(string * times)

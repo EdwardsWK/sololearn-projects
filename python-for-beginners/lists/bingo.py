@@ -5,7 +5,8 @@
 """
 
 x = [42, 8, 7, 1, 0, 124, 8897, 555, 3, 67, 99]
-num = int(input())
+
+num = int(input("Enter a number: "))
 
 if num in x:
     print("bingo")

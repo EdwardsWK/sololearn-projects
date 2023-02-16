@@ -18,8 +18,9 @@
     Normal
 """
 
-weight = int(input())
-height = float(input())
+weight = int(input("Input weight (kilograms): "))
+height = float(input("Input height (metres): "))
+
 bmi = weight / height**2
 
 if bmi < 18.5:

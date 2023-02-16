@@ -363,10 +363,11 @@ _____ Functions _____
                 return "Word not found"
         print(search(text, word))
 
+
 ===== INTERMEDIATE PYTHON (https://www.sololearn.com/certificates/CT-VJVYIMOO) =====
 _____ Collection Types _____
 
-Car Data
+    Car Data
     You are working at a car dealership and store the car data in a dictionary:
     car = {
         'brand': 'BMW',
@@ -387,7 +388,7 @@ Car Data
         }
         print(car[input()])
 
-National Economic Freedom
+    National Economic Freedom
     You are working on data that represents the economic freedom rank by country.
     Each country name and rank are stored in a dictionary, with the key being the country name.
     Complete the program to take the country name as input and output its corresponding economic freedom rank.
@@ -405,7 +406,7 @@ National Economic Freedom
         }
         print(data.get(input(), "Not found"))
 
-Contact Search
+    Contact Search
     You are given a list of contacts, where each contact is represented by a tuple, with the name and age of the contact.
     Complete the program to get a string as input, search for the name in the list of contacts and output the age of the contact in the format presented below:
     Sample Input
@@ -428,7 +429,7 @@ Contact Search
         else:
             print("Not found")
 
-Square Up
+    Square Up
     Tuples can be used to output multiple values from a function.
     You need to make a function called calc(), that will take the side length of a square as its argument and return the perimeter and area using a tuple.
     The perimeter is the sum of all sides, while the area is the square of the side length.
@@ -446,7 +447,7 @@ Square Up
         print("Perimeter: " + str(p))
         print("Area: " + str(a))
 
-You Are Qualified!
+    You Are Qualified!
     You are working on a recruitment platform, which should match the available jobs and the candidates based on their skills.
     The skills required for the job, and the candidate's skills are stored in sets.
     Complete the program to output the matched skill.
@@ -468,7 +469,7 @@ You Are Qualified!
         a = [i for i in word if i not in vowels]
         print(a)
 
-Letter Counter (PROJECT)
+    Letter Counter (PROJECT)
     Given a string as input, you need to output how many times each letter appears in the string.
     You decide to store the data in a dictionary, with the letters as the keys, and the corresponding counts as the values.
     Create a program to take a string as input and output a dictionary, which represents the letter count.
@@ -484,3 +485,219 @@ Letter Counter (PROJECT)
         for i in text:
             dict[i]= text.count(i)
         print(dict)
+
+ _____ Functional Programming _____
+
+    How Much?
+    You are given code that should calculate the corresponding percentage of a price.
+    Somebody wrote a lambda function to accomplish that, however the lambda is wrong.
+    Fix the code to output the given percentage of the price.
+    Sample Input
+    50
+    10
+    Sample Output
+    5.0
+    The first input is the price, while the second input is the percentage we need to calculate: 10% of 50 is 5.0.
+        price = int(input())
+        perc = int(input())
+        res = (lambda x,y:x*y/100)(price, perc)
+        print(res)
+
+    Getting A Raise
+    You work on a payroll program.
+    Given a list of salaries, you need to take the bonus everybody is getting as input and increase all the salaries by that amount.
+    Output the resulting list.
+    You can use the map() function to increase all the values of the list.
+        salaries = [2000, 1800, 3100, 4400, 1500]
+        bonus = int(input())
+        def add_things(x):
+            return x + bonus
+        result = list(map(add_things,salaries))
+        print(result)
+
+    Generating
+    Finding prime numbers is a common coding interview task.
+    The given code defines a function isPrime(x), which returns True if x is prime.
+    You need to create a generator function primeGenerator(), that will take two numbers as arguments, and use the isPrime() function to output the prime numbers in the given range (between the two arguments).
+    Sample Input
+    10
+    20
+    Sample Output
+    [11, 13, 17, 19]
+    The given code takes the two arguments as input and passes them to the generator function, outputting the result as a list.
+        def isPrime(x):
+            if x < 2:
+                return False
+            elif x == 2:
+                return True
+            for n in range(2, x):
+                if x % n ==0:
+                    return False
+            return True
+        def primeGenerator(a, b):
+            #your code goes here
+            for number in range(a,b):
+                if isPrime(number):
+                    yield number
+        f = int(input())
+        t = int(input())
+        print(list(primeGenerator(f, t)))
+
+    Collecting Reports
+    You are working on an invoicing system.
+    The system has an already defined invoice() function, which takes the invoice number as argument and outputs it.
+    You need to add a decorator for the invoice() function, that will print the invoice in the following format:
+    Sample Input
+    42
+    Sample Output
+    ***
+    INVOICE #42
+    ***
+    END OF PAGE
+    The given code takes the invoice number as input and passes it to the invoice() function.
+        def decor(func):
+            def wrap(num):
+                print("***")
+                func(num)
+                print("***")
+                print("END OF PAGE")
+            return wrap
+        @decor
+        def invoice(num):
+            print("INVOICE #" +num)
+        invoice(input());
+
+    Decimal to Binary
+    The given code defines a recursive function convert(), which needs to convert its argument from decimal to binary.
+    However, the code has an error.
+    Fix the code by adding the base case for the recursion, then take a number from user input and call the convert() function, to output the result.
+    Sample Input
+    8
+    Sample Output
+    1000
+    The binary representation of 8 is 1000.
+        def convert(num):
+            if num == 0:
+                return 0
+            return (num % 2 + 10 * convert(num // 2))
+        a = int(input())
+        print(convert(a))
+
+    Making It Work
+    The given code defined a function called my_min(), which takes two arguments and returns the smaller one.
+    You need to improve the function, so that it can take any number of variables, so that the function call works.
+    Remember, *args can be accessed inside the function as a tuple.
+        def my_min(*args):
+            return min(args)
+            print(my_min(8, 13, 4, 42, 120, 7))
+
+    Spelling Backwards (PROJECT)
+    Spelling Backwards
+    Given a string as input, use recursion to output each letter of the strings in reverse order, on a new line.
+    Sample Input
+    HELLO
+    Sample Output
+    O
+    L
+    L
+    E
+    H
+    Complete the recursive spell() function to produce the expected result.
+        def spell(txt):
+            #your code goes here
+            print(txt[::-1])
+            txt = input()
+            spell(txt)
+
+_____ OOP _____
+
+    Game Over
+    You are making a video game! The given code declares a Player class, with its attributes and an intro() method.
+    Complete the code to take the name and level from user input, create a Player object with the corresponding values and call the intro() method of that object.
+    Sample Input
+    Tony
+    12
+    Sample Output
+    Tony (Level 12)
+    Use the dot syntax to call the intro() method for the declared object.
+        class Player:
+            def __init__(self, name, level):
+                self.name = name
+                self.level = level
+            def intro(self):
+                print(self.name + " (Level " + self.level + ")")
+        #your code goes here
+        name = input()
+        level = input()
+        p = Player(name,level)
+        p.intro()
+
+    Fine Art
+    You are making a drawing application, which has a Shape base class.
+    The given code defines a Rectangle class, creates a Rectangle object and calls its area() and perimeter() methods.
+    Do the following to complete the program:
+    1. Inherit the Rectangle class from Shape.
+    2. Define the perimeter() method in the Rectangle class, printing the perimeter of the rectangle.
+    The perimeter is equal to 2*(width+height)
+        class Shape:
+            def __init__(self, w, h):
+                self.width = w
+                self.height = h
+            def area(self):
+                print(self.width*self.height)
+        class Rectangle(Shape):
+            #your code goes here
+            def perimeter(self):
+                print(2*(self.width + self.height))
+        w = int(input())
+        h = int(input())
+        r = Rectangle(w, h)
+        r.area()
+        r.perimeter()
+
+Shape Factory
+    We are improving our drawing application.
+    Our application needs to support adding and comparing two Shape objects.
+    Add the corresponding methods to enable addition + and comparison using the greater than > operator for the Shape class.
+    The addition should return a new object with the sum of the widths and heights of the operands, while the comparison should return the result of comparing the areas of the objects.
+    The given code creates two Shape objects from user input, outputs the area() of their addition and compares them.
+    class Shape:
+        def __init__(self, w, h):
+            self.width = w
+            self.height = h
+        def area(self):
+            return self.width*self.height
+        #your code goes here
+        def __add__(self, other):
+            return Shape(self.width + other.width, self.height + other.height)
+        def __gt__(self, other):
+            return self.area() > other.area()
+    w1 = int(input())
+    h1 = int(input())
+    w2 = int(input())
+    h2 = int(input())
+    s1 = Shape(w1, h1)
+    s2 = Shape(w2, h2)
+    result = s1 + s2
+    print(result.area())
+    print(s1 > s2)
+
+    Preservation
+    We are working on a game. Our Player class has name and private _lives attributes.
+    The hit() method should decrease the lives of the player by 1. In case the lives equal to 0, it should output "Game Over".
+    Complete the hit() method to make the program work as expected.
+    The code creates a Player object and calls its hit() method multiple times.
+        class Player:
+            def __init__(self, name, lives):
+                self.name = name
+                self._lives = lives
+            def hit(self):
+                #your code goes here
+                self._lives -= 1
+                if self._lives == 0:
+                    print("Game Over")
+        p = Player("Cyberpunk77", 3)
+        p.hit()
+        p.hit()
+        p.hit()
+

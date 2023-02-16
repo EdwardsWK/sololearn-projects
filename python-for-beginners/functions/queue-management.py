@@ -7,6 +7,7 @@
 """
 
 queue = ['John', 'Amy', 'Bob', 'Adam']
-queue.append(input())
+
+queue.append(input("Enter a name: "))
 
 print(queue)

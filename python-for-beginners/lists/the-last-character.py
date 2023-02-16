@@ -3,6 +3,6 @@
     Write a program that takes a string as input and outputs the last character of that string.
 """
 
-word = input()
+string = input("Enter a string: ")
 
-print(word[-1])
+print(string[-1])

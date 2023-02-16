@@ -13,11 +13,12 @@
     28
 """
 
-def area(x, y):
-    return x * y
+
+def area(w, h):
+    return w * h
 
 
-w = int(input())
-h = int(input())
+width = int(input())
+height = int(input())
 
-print(area(w, h))
+print(area(width, height))

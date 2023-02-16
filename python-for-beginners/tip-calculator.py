@@ -12,7 +12,8 @@
     10.0
 """
 
-bill = int(input())
-bill = bill * 0.2
+bill = int(input("Input the bill amount: "))
 
-print(bill)
+tip = bill * 0.2
+
+print(tip)

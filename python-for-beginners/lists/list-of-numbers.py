@@ -4,9 +4,11 @@
     Given a list of numbers, calculate their sum using a for loop.
  """
 
-x = [42, 8, 7, 1, 0, 124, 8897, 555, 3, 67, 99]
+number_array = [42, 8, 7, 1, 0, 124, 8897, 555, 3, 67, 99]
+
 total = 0
 
-for z in x:
-    total += z
+for number in number_array:
+    total += number
+
 print(total)

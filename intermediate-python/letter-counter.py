@@ -11,10 +11,11 @@
     {'h': 1, 'e': 1, 'l': 2, 'o': 1}
 """
 
-text = input("Please enter a word or sentence: ")
-dict = {}
+string = input("Please enter a word or sentence: ")
 
-for letter in text:
-    dict[letter]= text.count(letter)
+dictionary = {}
 
-print(dict)
+for letter in string:
+    dictionary[letter] = string.count(letter)
+
+print(dictionary)

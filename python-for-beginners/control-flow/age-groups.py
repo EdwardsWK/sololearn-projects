@@ -8,20 +8,14 @@
     Adult: 18 to 64
 
     Sample Input
-42
-Sample
-Output
-Adult
-Remember, you
-can
-use
-the
-Boolean and operator
-to
-combine
-conditions, like
-x > 0 and x < 20.
-age = int(input())
+    42
+
+    Sample Output
+    Adult
+"""
+
+age = int(input("Enter an age: "))
+
 if age <= 11:
     print("Child")
 elif age <= 17:

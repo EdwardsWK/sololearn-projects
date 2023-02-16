@@ -4,6 +4,6 @@
     Replace all of the # characters in the given input with spaces and output the result.
 """
 
-msg = input()
+message = input("Enter a sentence (Use # instead of spaces): ")
 
-print(msg.replace('#', ' '))
+print(message.replace('#', ' '))
