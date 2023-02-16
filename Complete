@@ -701,3 +701,93 @@ Shape Factory
         p.hit()
         p.hit()
 
+    Define The Methods
+    The given code takes 2 numbers as input and calls the static area() method of the Shape class, to output the area of the shape, which is equal to the height multiplied by the width.
+    To make the code work, you need to define the Shape class, and the static area() method, which should return the multiplication of its two arguments.
+        class Shape:
+            def __init__(self, w, h):
+                self.w2 = w
+                self.h2 = h
+            @staticmethod
+            def area(w2, h2):
+                return w2 * h2
+        width = int(input("Enter a width: "))
+        height = int(input("Enter a height: "))
+        print(Shape.area(width, height))
+
+    Staying Alive
+    We are improving our game and need to add an isAlive property, which returns True if the lives count is greater than 0.
+    Complete the code by adding the isAlive property.
+    The code uses a while loop to hit the Player, until its lives count becomes 0, using the isAlive property to make the condition.
+        class Player:
+            def __init__(self, name, lives):
+                self.name = name
+                self._lives = lives
+            def hit(self):
+                self._lives -= 1
+            #your code goes here
+            @property
+            def isAlive(self):
+                if self._lives > 0:
+                    return True
+        p = Player("Cyberpunk77", int(input()))
+        i = 1
+        while True:
+            p.hit()
+            print("Hit # " + str(i))
+            i += 1
+            if not p.isAlive:
+                print("Game Over")
+                break
+
+    Shooting Game (PROJECT)
+    You are creating a shooting game!
+    The game has two types of enemies, aliens and monsters. You shoot the aliens using your laser, and monsters using your gun.
+    Each hit decreases the lives of the enemies by 1.
+    The given code declares a generic Enemy class, as well as the Alien and Monster classes, with their corresponding lives count.
+    It also defines the hit() method for the Enemy class.
+    You need to do the following to complete the program:
+    1. Inherit the Alien and Monster classes from the Enemy class.
+    2. Complete the while loop that continuously takes the weapon of choice from user input and call the corresponding object's hit() method.
+    Sample Input
+    laser
+    laser
+    gun
+    exit
+    Sample Output
+    Alien has 4 lives
+    Alien has 3 lives
+    Monster has 2 lives
+    The while loop stops when the user enters 'exit'.
+        class Enemy:
+            name = ""
+            lives = 0
+            def __init__(self, name, lives):
+                self.name = name
+                self.lives = lives
+            def hit(self):
+                self.lives -= 1
+                if self.lives <= 0:
+                    print(self.name + ' killed')
+                else:
+                    print(self.name + ' has '+ str(self.lives) + ' lives')
+        class Monster(Enemy):
+            def __init__(self):
+                super().__init__('Monster', 3)
+            def hit(self):
+                super().hit()
+        class Alien(Enemy):
+            def __init__(self):
+                super().__init__('Alien', 5)
+            def hit(self):
+                super().hit()
+        m = Monster()
+        a = Alien()
+        while True:
+            x = input()
+            if x == 'exit':
+                break
+            elif x == 'laser':
+                a.hit()
+            elif x == 'gun':
+                m.hit()
