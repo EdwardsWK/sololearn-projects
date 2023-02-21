@@ -1,4 +1,4 @@
-"""Shooting Game (PROJECT)
+"""Shooting Game
 
     You are creating a shooting game! The game has two types of enemies, aliens and monsters
     You shoot the aliens using your laser, and monsters using your gun. Each hit decreases the lives of the enemies by 1.
