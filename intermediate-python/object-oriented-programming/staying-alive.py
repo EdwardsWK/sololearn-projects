@@ -20,7 +20,7 @@ class Player:
             return True
 
 
-player = Player("Cyberpunk77", int(input("Enter number of lives: ")))
+player = Player("Cyberpunk77", int(input("Input the number of lives: ")))
 
 i = 1
 

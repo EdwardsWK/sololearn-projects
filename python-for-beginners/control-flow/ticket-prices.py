@@ -23,7 +23,7 @@ total = 0
 i = 1
 
 while i <= 5:
-    age = int(input("Enter an age: "))
+    age = int(input("Input an age: "))
     if age > 3:
         total = total + 100
     i += 1

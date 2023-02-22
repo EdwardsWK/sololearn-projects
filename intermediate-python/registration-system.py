@@ -15,7 +15,7 @@
 """
 
 try:
-    name = input("Enter a name: ")
+    name = input("Input a name: ")
     if len(name) < 4:
         raise Exception("Invalid Name")
 

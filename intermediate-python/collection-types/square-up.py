@@ -17,7 +17,7 @@ def calculate(x):
     return x * 4, x ** 2
 
 
-side = int(input("Enter the length of the square: "))
+side = int(input("Input the length of the square: "))
 perimeter, area = calculate(side)
 
 print("Perimeter: " + str(perimeter))

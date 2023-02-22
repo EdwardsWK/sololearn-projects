@@ -11,7 +11,7 @@
 
 
 def welcome():
-    name = input("Enter your name: ")
+    name = input("Input your name: ")
     print("Welcome, " + name)
 
 

@@ -14,8 +14,8 @@
     [2005, 2006, 2007, 2008, 2009, 2010]
 """
 
-start_year = int(input("Enter a start year: "))
-end_year = int(input("Enter an end year: "))
+start_year = int(input("Input a start year: "))
+end_year = int(input("Input an end year: "))
 
 dates = list(range(start_year, end_year))
 

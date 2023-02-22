@@ -18,7 +18,7 @@ class Shape:
         return w2 * h2
 
 
-width = int(input("Enter a width: "))
-height = int(input("Enter a height: "))
+width = int(input("Input a width: "))
+height = int(input("Input a height: "))
 
 print(Shape.area(width, height))

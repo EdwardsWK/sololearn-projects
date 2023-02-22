@@ -23,8 +23,8 @@ class Player:
         print(self.name + " (Level " + self.level + ")")
 
 
-name = input("Enter a name: ")
-level = input("Enter a level: ")
+name = input("Input a name: ")
+level = input("Input a level: ")
 
 player = Player(name, level)
 

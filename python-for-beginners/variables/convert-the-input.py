@@ -10,7 +10,7 @@
     hihihi
 """
 
-string = input("Input a string: ")
-times = int(input("Input number of repetitions: "))
+text = input("Input a sentence: ")
+repetitions = int(input("Input number of repetitions: "))
 
-print(string * times)
+print(text * repetitions)

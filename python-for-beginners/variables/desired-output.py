@@ -6,6 +6,6 @@
     Fix the code to output the desired output.
 """
 
-string = input("Input a string: ")
+text = input("Input a sentence: ")
 
-print(string * 10)
+print(text * 10)

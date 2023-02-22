@@ -23,8 +23,8 @@ class Rectangle(Shape):
         print(2*(self.width + self.height))
 
 
-width = int(input("Enter a width: "))
-height = int(input("Enter a height: "))
+width = int(input("Input a width: "))
+height = int(input("Input a height: "))
 
 rectangle = Rectangle(width, height)
 

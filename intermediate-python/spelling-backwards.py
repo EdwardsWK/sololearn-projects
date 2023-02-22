@@ -18,6 +18,6 @@ def spell(text):
     print(text[::-1])
 
 
-string = input("Enter a word: ")
+text = input("Input a word: ")
 
-spell(string)
+spell(text)

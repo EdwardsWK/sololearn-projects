@@ -18,4 +18,4 @@ data = {
     'Italy': 74
 }
 
-print(data.get(input("Enter a country: "), "Not found"))
+print(data.get(input("Input a country: "), "Not found"))

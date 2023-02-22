@@ -11,8 +11,7 @@
     {'h': 1, 'e': 1, 'l': 2, 'o': 1}
 """
 
-string = input("Please enter a word or sentence: ")
-
+text = input("Input a word or sentence: ")
 dictionary = {}
 
 for letter in string:

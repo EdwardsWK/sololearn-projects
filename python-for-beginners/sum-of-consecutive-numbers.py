@@ -11,7 +11,7 @@
     5050
 """
 
-number = int(input("Enter a number: "))
+number = int(input("Input a number: "))
 
 total = 0
 

@@ -32,7 +32,7 @@ def prime_generator(start, end):
             yield number
 
 
-start = int(input("Enter the start of the range: "))
-end = int(input("Enter the end of the range: "))
+start = int(input("Input the start of the range: "))
+end = int(input("Input the end of the range: "))
 
 print(list(prime_generator(start, end)))

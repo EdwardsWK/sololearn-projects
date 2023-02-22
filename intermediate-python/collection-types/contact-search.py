@@ -19,7 +19,7 @@ contacts = [
     ('Bob', 18)
 ]
 
-name = input("Please enter a name: ")
+name = input("Input a name: ")
 
 for contact in contacts:
     if name in contact:

@@ -12,7 +12,7 @@ def withdraw(amount):
     print(str(amount) + " withdrawn!")
 
 
-withdrawal = input("Enter a withdrawal amount: ")
+withdrawal = input("Input a withdrawal amount: ")
 
 try:
     int(withdrawal)

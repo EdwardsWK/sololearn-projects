@@ -60,7 +60,7 @@ monster = Monster()
 alien = Alien()
 
 while True:
-    x = input("Enter a weapon (laser or gun) or exit: ")
+    x = input("Input a weapon (laser or gun) or exit: ")
     if x == 'exit':
         break
     elif x == 'laser':

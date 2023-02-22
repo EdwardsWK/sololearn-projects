@@ -13,7 +13,7 @@
     Allowed
 """
 
-age = int(input("Please enter your age: "))
+age = int(input("Input an age: "))
 
 if age > 17:
     print("Allowed")

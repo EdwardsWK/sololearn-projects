@@ -9,7 +9,7 @@
 
 salaries = [2000, 1800, 3100, 4400, 1500]
 
-bonus = int(input("Enter a bonus amount: "))
+bonus = int(input("Input a bonus amount: "))
 
 
 def add_things(wages):

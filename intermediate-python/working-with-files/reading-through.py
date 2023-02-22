@@ -5,7 +5,7 @@
 """
 
 file = open("/usercode/files/books.txt")
-word = int(input("Enter a word number: "))
+word = int(input("Input a word number: "))
 
 print(file.read(word))
 

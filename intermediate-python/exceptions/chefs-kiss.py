@@ -17,7 +17,7 @@
 
 menu = ['Fries', 'Sandwich', 'Cheeseburger', 'Coffee', 'Soda']
 
-food = int(input("Please enter a menu item: "))
+food = int(input("Input a menu item: "))
 
 try:
     if food not in range(len(menu)):

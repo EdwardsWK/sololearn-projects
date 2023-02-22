@@ -12,8 +12,8 @@
     5.0
 """
 
-price = int(input("Please input a price: "))
-percentage = int(input("Please enter a discount amount: "))
+price = int(input("Input a price: "))
+percentage = int(input("Input a discount amount: "))
 
 result = (lambda x, y: x * y/100)(price, percentage)
 

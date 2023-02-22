@@ -24,4 +24,4 @@ car = {
     'mileage': 15000
 }
 
-print(car[input("Please enter a category")])
+print(car[input("Input a category")])

@@ -14,7 +14,7 @@
     Adult
 """
 
-age = int(input("Enter an age: "))
+age = int(input("Input an age: "))
 
 if age <= 11:
     print("Child")

@@ -12,8 +12,8 @@
     Word found
 """
 
-text = input("Enter a sentence: ")
-word = input("Enter a search word: ")
+text = input("Input a sentence: ")
+word = input("Input a search word: ")
 
 
 def search(sentence, search_word):

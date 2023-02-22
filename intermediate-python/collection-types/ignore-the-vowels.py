@@ -10,10 +10,10 @@
     ['w', 's', 'm']
     """
 
-word = input("Please enter a word or sentence: ")
+text = input("Input a word or sentence: ")
 
 vowels = ['a', 'e', 'i', 'o', 'u']
 
-letters = [i for i in word if i not in vowels]
+letters = [i for i in text if i not in vowels]
 
 print(letters)

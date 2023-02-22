@@ -12,4 +12,4 @@ def print_bill(text):
     print("======")
 
 
-print_bill(input("Enter a word: "))
+print_bill(input("Input a word: "))

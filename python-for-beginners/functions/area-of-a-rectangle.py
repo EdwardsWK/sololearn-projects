@@ -18,7 +18,7 @@ def area(w, h):
     return w * h
 
 
-width = int(input())
-height = int(input())
+width = int(input("Input a width: "))
+height = int(input("Input a height: "))
 
 print(area(width, height))
