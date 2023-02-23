@@ -1392,3 +1392,158 @@ _____ Introduction _____
             variance = sum(deviations) / n
             return variance
         print(variance(vac_nums))
+
+    Basketball Players (PROJECT)
+    The given code includes a list of heights for various basketball players.
+    You need to calculate and output how many players are in the range of one standard deviation from the mean.
+    Output the result using the print statement.
+        players = [180, 172, 178, 185, 190, 195, 192, 200, 210, 190]
+        mean = sum(players)/len(players)
+        stdvar = (sum((v-mean)**2 for v in players)/len(players))**0.5
+        low, high = mean-stdvar,mean+stdvar
+        count = len([v for v in players if low < v < high])
+        print(count)
+
+_____ Math Operations With NumPy _____
+
+    Houses On The Block
+    You are given an array that holds the square footage data for houses on a particular street.
+    A new house has just been constructed on that street.
+    Modify your program to take the new house value as input, add it to the array, and output the array sorted in ascending order.
+    Use the print statement to output the array object.
+        import numpy as np
+        data = np.array([1000, 2500, 1400, 1800, 900, 4200, 2200, 1900, 3500])
+        data = np.append(data,int(input()))
+        data = np.sort(data)
+        print(data)
+
+    Take Your Seat
+    You are given an array that represents the occupancy of seats in a movie theater. A seat marked with 1 is occupied, while one marked 0 means the seat is free.
+    However, the array is flat and 1-dimensional. Transform it into a 2-dimensional array, representing the rows of the seats.
+    Each row in the theater has 5 seats and there are a total of 30 seats.
+    Reshape the array into the corresponding shape and output the row at the given index, which is taken from user input.
+    The row index is taken from user input in the given code.
+    import numpy as np
+    data = np.array([1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0])
+    row = int(input())
+    data = data.reshape(6,5)
+    print(data[row])
+
+    Array of Numbers
+    You are given a task to find all of the whole numbers below 100 that are multiples of both 3 and 5.
+    Create an array of numbers below 100 that are multiples of both 3 and 5, and output it.
+    You can use the modulo operator % to check if a number is a multiple of another number.
+        import numpy as np
+        data = np.arange(1, 100)
+        data = data[(data%3 == 0) & (data%5 == 0)]
+        print(data)
+
+    Infection Cases
+    The given array represents the daily number of infections for 30 days.
+    Find out how many days exceeded the average number of infections.
+    Create the condition and output the size of the resulting array.
+        import numpy as np
+        data = np.array([120, 98, 150, 65, 42, 100, 190, 220, 140, 110, 88, 89, 100, 120, 50, 180, 155, 42, 89, 77, 200, 190, 125, 98, 77, 40, 39, 59, 30, 67])
+        mean = np.mean(data)
+        counter = 0
+        for i in data:
+            if i>mean:
+                counter += 1
+        print(counter)
+
+    House Prices (PROJECT)
+    You are given an array that represents house prices.
+    Calculate and output the percentage of houses that are within one standard deviation from the mean.
+    To calculate the percentage, divide the number of houses that satisfy the condition by the total number of houses, and multiply the result by 100.
+        import numpy as np
+        data = np.array([150000, 125000, 320000, 540000, 200000, 120000, 160000, 230000, 280000, 290000, 300000, 500000, 420000, 100000, 150000, 280000])
+        mean = np.mean(data)
+        std = np.std(data)
+        low = mean - std
+        high = mean + std
+        print(len(data[(low < data) & (data < high)]) / len(data) * 100)
+
+_____ Data Manipulation With Pandas _____
+
+Contacts List
+    You are given a dictionary that contains names and numbers of people.
+    You need to create a DataFrame from the dictionary and add an index to it, which should be the name values.
+    Then take a name from user input and output the row in the DataFrame, which corresponds to that row.
+        import pandas as pd
+        data = {
+            'name': ['James', 'Billy', 'Bob', 'Amy', 'Tom'],
+            'number': ['1234', '5678', '2222', '1111', '0909']
+        }
+        df = pd.DataFrame(data, index = ["James", "Billy", "Bob", "Amy", "Tom"])
+        name = input()
+        print(df.loc[name])
+
+    Names and Ranks
+    You are given a DataFrame that includes the names and ranks of people.
+    You need to take a rank as input and output the corresponding name column from the DataFrame as a Series.
+    Note that the rank is an integer, so you need to convert the user input to an integer.
+        import pandas as pd
+        data = {
+             'name': ['James', 'Billy', 'Bob', 'Amy', 'Tom', 'Harry'],
+             'rank': [4, 1, 3, 5, 2, 6]
+        }
+        df = pd.DataFrame(data, index=data['name'])
+        user_rank = int(input())
+        print(df["name"][df["rank"] == user_rank])
+
+    Cases and Deaths
+    You are working with the 'ca-covid' CSV file that contains the COVID-19 infection data in California for the year 2020.
+    The file provides data on daily cases and deaths for the entire year.
+    Find and output the row that corresponds to December 31, 2020.
+    The requested date is the last row in the dataset, so you can use indexing to select it.
+        import pandas as pd
+        df = pd.read_csv("/usercode/files/ca-covid.csv")
+        df.set_index('date', inplace=True)
+        df.drop('state', axis=1, inplace=True)
+        print(df.iloc[-1])
+
+    Day of The Week
+    You continue working with the COVID dataset for California.
+    Now, add the weekday names for each row as a new column, named 'weekday'.
+    Then, output the last 7 days data of the dataset.
+    Do not set any index on the DataFrame.
+    The given code converts the date column to datetime, so you do not need to change its format.
+    Use the .dt.strftime("%A") function on the date column to convert it into a weekday name.
+        import pandas as pd
+        df = pd.read_csv("/usercode/files/ca-covid.csv")
+        df.drop('state', axis=1, inplace=True)
+        df['date'] = pd.to_datetime(df['date'], format="%d.%m.%y")
+        df['weekday'] = df['date'].dt.strftime("%A")
+        print(df[-7:])
+
+    Number of Cases
+    Given the COVID data, find the day with maximum cases in a given month.
+    Take a month name as input and output the row that corresponds to the day with the maximum number of cases in that month.
+    You can filter the DataFrame for the given month first, and then select the row with the maximum cases.
+    Important: The output should be a DataFrame, which includes all the columns.
+    For example, for the month of February, the expected result would be:
+        cases deaths month
+        date
+        2020-02-26 15 0 February
+    The given code adds a month column to the dataset, and adds an index. Do not change that part of the code.
+        import pandas as pd
+        df = pd.read_csv("/usercode/files/ca-covid.csv")
+        df.drop('state', axis=1, inplace=True)
+        df['date'] = pd.to_datetime(df['date'], format="%d.%m.%y")
+        df['month'] = df['date'].dt.month_name()
+        df.set_index('date', inplace=True)
+        monthuser = input()
+        maxim = df[df["month"]==monthuser]['cases'].max()
+        print(df[df['cases']==maxim])
+
+    COVID Data Analysis (PROJECT)
+    You are working with the COVID dataset for California, which includes the number of cases and deaths for each day of 2020.
+    Find the day when the deaths/cases ratio was largest.
+    To do this, you need to first calculate the deaths/cases ratio and add it as a column to the DataFrame with the name 'ratio', then find the row that corresponds to the largest value.
+    Important: The output should be a DataFrame, containing all of the columns of the dataset for the corresponding row.
+        import pandas as pd
+        df = pd.read_csv("/usercode/files/ca-covid.csv")
+        df.drop('state', axis=1, inplace=True)
+        df.set_index('date', inplace=True)
+        df['ratio'] = df['deaths'] / df['cases']
+        print (df[df['ratio'] == df['ratio'].max()])

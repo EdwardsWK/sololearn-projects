@@ -11,14 +11,14 @@
     Output the result using the print() statement.
 """
 
-vac_nums = [0,0,0,0,0,
-    1,1,1,1,1,1,1,1,
-    2,2,2,2,
-    3,3,3
-    ]
+vac_nums = [0, 0, 0, 0, 0,
+            1, 1, 1, 1, 1, 1, 1, 1,
+            2, 2, 2, 2,
+            3, 3, 3
+            ]
 
 total = sum(vac_nums)
-class_size = 20
+class_size = len(vac_nums)
 
 mean = total / class_size
 
